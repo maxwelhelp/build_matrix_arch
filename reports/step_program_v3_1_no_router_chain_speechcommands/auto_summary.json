@@ -1,0 +1,428 @@
+{
+  "run_dir": "runs/step_program_v3_1_no_router_chain_speechcommands",
+  "num_epochs": 10,
+  "best": {
+    "epoch": 1.0,
+    "train_loss": 2.3081629848480225,
+    "train_ce": 2.3081629848480225,
+    "train_acc": 0.09916666666666667,
+    "val_loss": 2.3046356868743896,
+    "val_acc": 0.1,
+    "best_acc": 0.1,
+    "gain_mean": 0.04880348254243533,
+    "update_norm_mean": 1.8117477159500122
+  },
+  "last": {
+    "epoch": 10.0,
+    "train_loss": 2.3039164072672524,
+    "train_ce": 2.3039164072672524,
+    "train_acc": 0.10033333333333333,
+    "val_loss": 2.3032728366851805,
+    "val_acc": 0.1,
+    "best_acc": 0.1,
+    "gain_mean": 0.045898727416992184,
+    "update_norm_mean": 2.754572457631429
+  },
+  "latest_analysis_file": "runs/step_program_v3_1_no_router_chain_speechcommands/analysis_epoch_010.json",
+  "latest_events_file": "runs/step_program_v3_1_no_router_chain_speechcommands/events_epoch_010.jsonl",
+  "event_counts_by_type": {
+    "layer": 8,
+    "utility": 48,
+    "op": 336
+  },
+  "exec_stats": {},
+  "top_grad": [
+    {
+      "type": "layer",
+      "address": "L0.input_skip_gate"
+    },
+    {
+      "type": "layer",
+      "address": "L0.mean_skip_gate"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S0"
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S0.K0.op.small_refine",
+      "prob": 0.03505775332450867
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S0.K0.op.diag_delta",
+      "prob": 0.05058031901717186
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S0.K0.op.low_rank",
+      "prob": 0.0211483221501112
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S0.K0.op.butterfly",
+      "prob": 0.026176663115620613
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S0.K0.op.blockdiag",
+      "prob": 0.04340540990233421
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S0.K0.op.compare",
+      "prob": 0.011291926726698875
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S0.K0.op.normalize",
+      "prob": 0.03125667944550514
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S1"
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S1.K0.op.small_refine",
+      "prob": 0.0448780283331871
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S1.K0.op.diag_delta",
+      "prob": 0.05182952061295509
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S1.K0.op.low_rank",
+      "prob": 0.04460698738694191
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S1.K0.op.butterfly",
+      "prob": 0.054332975298166275
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S1.K0.op.blockdiag",
+      "prob": 0.03160730376839638
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S1.K0.op.compare",
+      "prob": 0.021271299570798874
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S1.K0.op.normalize",
+      "prob": 0.025460271164774895
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S2"
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S2.K0.op.small_refine",
+      "prob": 0.03644633665680885
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S2.K0.op.diag_delta",
+      "prob": 0.05107105150818825
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S2.K0.op.low_rank",
+      "prob": 0.05026024580001831
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S2.K0.op.butterfly",
+      "prob": 0.055713947862386703
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S2.K0.op.blockdiag",
+      "prob": 0.039276205003261566
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S2.K0.op.compare",
+      "prob": 0.02870321460068226
+    },
+    {
+      "type": "op",
+      "address": "L0.B0.S2.K0.op.normalize",
+      "prob": 0.05255425348877907
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S0"
+    },
+    {
+      "type": "op",
+      "address": "L0.B1.S0.K0.op.small_refine",
+      "prob": 0.03495493903756142
+    },
+    {
+      "type": "op",
+      "address": "L0.B1.S0.K0.op.diag_delta",
+      "prob": 0.05059659853577614
+    },
+    {
+      "type": "op",
+      "address": "L0.B1.S0.K0.op.low_rank",
+      "prob": 0.021204274147748947
+    }
+  ],
+  "top_utility": [
+    {
+      "type": "utility",
+      "address": "L0.B0.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B2.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B2.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B2.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B3.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B3.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B3.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B0.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B0.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B0.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B1.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B1.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B1.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B2.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B2.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B2.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B3.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B3.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B3.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L2.B0.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L2.B0.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L2.B0.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L2.B1.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L2.B1.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L2.B1.S2"
+    }
+  ],
+  "low_utility_writers": [
+    {
+      "type": "utility",
+      "address": "L0.B0.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B2.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B2.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B2.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B3.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B3.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L0.B3.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B0.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B0.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B0.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B1.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B1.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B1.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B2.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B2.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B2.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B3.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B3.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L1.B3.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L2.B0.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L2.B0.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L2.B0.S2"
+    },
+    {
+      "type": "utility",
+      "address": "L2.B1.S0"
+    },
+    {
+      "type": "utility",
+      "address": "L2.B1.S1"
+    },
+    {
+      "type": "utility",
+      "address": "L2.B1.S2"
+    }
+  ],
+  "competing_primitives_low_margin": [],
+  "expensive_low_grad_computed": [],
+  "skipped_high_prob_primitives": [],
+  "suspicious": []
+}
