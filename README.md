@@ -2,12 +2,12 @@
 
 Clean repository for the differentiable matrix-program architecture builder.
 
-## Active direction: v3 clean sequential
+## Active next experiment: v3.1 no-router matrix chain
 
-The current active experiment is:
+The current next experiment is:
 
 ```text
-experiments/step_program/run_step_program_v3_clean_sequential.py
+experiments/step_program/run_step_program_v3_1_no_router_matrix_chain.py
 ```
 
 Core idea:
@@ -16,60 +16,46 @@ Core idea:
 Input/Evidence
   -> L0 -> L1 -> L2 -> L3
   -> inside each layer: S0 -> S1 -> S2
-  -> inside each step: K MatrixFamilyUnit substeps
+  -> inside each step: fixed matrix-operation chain
   -> final-layer output head
   -> loss
 ```
 
-v3 intentionally removes the main v2 shortcuts:
+v3.1 removes the remaining router-like softmax family choice from v3.
+
+There is no operation selection.  Every operation runs in fixed order and receives gradient:
 
 ```text
-no layer-route soup
-no free step-read router
-no identity primitive candidate
-no output class-read shortcut
-no projected top-k yet
-no plateau controller yet
+h <- Norm(h + gain_small     * small_refine(h, ctx))
+h <- Norm(h + gain_diag      * diag_delta(h))
+h <- Norm(h + gain_low_rank  * low_rank(h))
+h <- Norm(h + gain_butterfly * butterfly(h))
+h <- Norm(h + gain_blockdiag * blockdiag(h))
+h <- Norm(h + gain_compare   * compare(h, ctx))
+h <- Norm(h + gain_normalize * normalize_delta(h))
 ```
 
-The learnable choice is inside each matrix-family unit:
+The gains are independent sigmoid gates, not a softmax.  Multiple operations can be active together.  Specialization is measured through `gain`, `update_norm`, and `grad_x_gain` per address.
+
+## Previous active line: v3 clean sequential
+
+The previous v3 file remains available:
 
 ```text
-F(x, ctx) = sum_i softmax(gate)_i * Family_i(x, ctx)
-h <- Norm(h + write_gate * F(h, ctx))
+experiments/step_program/run_step_program_v3_clean_sequential.py
 ```
 
-Families:
-
-```text
-small_refine
-diag_delta
-low_rank
-butterfly
-blockdiag
-compare
-normalize
-```
-
-Identity is not a primitive. Identity exists only as the residual skip around the learned update.
+It removed the v2 layer/step/class-read shortcuts, but still had a softmax family gate. The first v3 report showed balanced data but no learning: val stayed at 10%, train stayed near 10%, and the confusion matrix predicted one class for all examples. Therefore v3.1 removes the family softmax and tests a fixed chain.
 
 ## Archived v2 line
 
-The v2/v2.1/v2.2 experiments are now diagnostic/archive only. See:
+The v2/v2.1/v2.2 experiments are diagnostic/archive only. See:
 
 ```text
 archive/v2/README.md
 ```
 
 They remain in the repository so old reports can be reproduced, but they are no longer the main development path.
-
-## Main architecture document
-
-Read and update:
-
-```text
-ARCHITECTURE.md
-```
 
 ## Development log
 
@@ -83,22 +69,29 @@ Short rule: publish report -> analyze -> discuss with Maxim -> then update `DEVE
 
 ## Commands
 
-Smoke test:
+v3.1 smoke test:
 
 ```bash
-bash commands/run_v3_clean_seq_smoke.sh
+bash commands/run_v3_1_no_router_chain_smoke.sh
 ```
 
-SpeechCommands run:
+v3.1 SpeechCommands run:
 
 ```bash
-bash commands/run_v3_clean_seq_speechcommands.sh
+bash commands/run_v3_1_no_router_chain_speechcommands.sh
 ```
 
 If the dataset is somewhere else:
 
 ```bash
-DATA_ROOT=/path/to/speechcommands/root bash commands/run_v3_clean_seq_speechcommands.sh
+DATA_ROOT=/path/to/speechcommands/root bash commands/run_v3_1_no_router_chain_speechcommands.sh
+```
+
+Older v3 softmax-family commands:
+
+```bash
+bash commands/run_v3_clean_seq_smoke.sh
+bash commands/run_v3_clean_seq_speechcommands.sh
 ```
 
 ## Output format
@@ -118,7 +111,7 @@ runs/<run>/last.pt
 Example query:
 
 ```bash
-python tools/query_events.py ./runs/step_program_v3_clean_seq_speechcommands/events_epoch_001.jsonl --top 20 --sort grad_x_gate
+python tools/query_events.py ./runs/step_program_v3_1_no_router_chain_speechcommands/events_epoch_001.jsonl --top 20 --sort grad_x_gain
 ```
 
 ## Auto-analysis
@@ -126,13 +119,13 @@ python tools/query_events.py ./runs/step_program_v3_clean_seq_speechcommands/eve
 Create a compact summary:
 
 ```bash
-python tools/analyze_run.py ./runs/step_program_v3_clean_seq_speechcommands
+python tools/analyze_run.py ./runs/step_program_v3_1_no_router_chain_speechcommands
 ```
 
 Publish lightweight report files to GitHub, without checkpoints:
 
 ```bash
-bash commands/publish_run_report.sh ./runs/step_program_v3_clean_seq_speechcommands step_program_v3_clean_seq_speechcommands "Add v3 clean sequential report"
+bash commands/publish_run_report.sh ./runs/step_program_v3_1_no_router_chain_speechcommands step_program_v3_1_no_router_chain_speechcommands "Add v3.1 no-router chain report"
 ```
 
 Published reports go to:
@@ -143,4 +136,4 @@ reports/<report_name>/
 
 ## Current rule
 
-Do not add attention, projected top-k, growth, or plateau controller until v3 proves whether the clean sequential matrix-family program learns.
+Do not add attention, projected top-k, growth, or plateau controller until v3.1 proves whether the fixed sequential matrix-chain learns.
