@@ -29,10 +29,26 @@ latest_events=$(ls "$RUN_DIR"/events_epoch_*.jsonl 2>/dev/null | sort | tail -n 
 if [ -n "$latest_analysis" ]; then cp "$latest_analysis" "$DEST/latest_analysis.json"; fi
 if [ -n "$latest_events" ]; then cp "$latest_events" "$DEST/latest_events.jsonl"; fi
 
+file_count=$(find "$DEST" -type f | wc -l)
+if [ "$file_count" -eq 0 ]; then
+  echo "ERROR: no report files were copied to $DEST"
+  echo "Check that $RUN_DIR contains metrics.csv, analysis_epoch_*.json, events_epoch_*.jsonl, or AUTO_SUMMARY.md"
+  exit 2
+fi
+
+echo "Report files prepared in $DEST:"
+find "$DEST" -maxdepth 1 -type f -printf '  %p\n' | sort
+
 git pull --rebase origin main
-git add "$DEST" tools/analyze_run.py tools/query_events.py README.md ARCHITECTURE.md commands
+# Force-add only report/source text files.  We never add checkpoints because .gitignore excludes them and this list is explicit.
+git add -f "$DEST"
+git add tools/analyze_run.py tools/query_events.py README.md ARCHITECTURE.md DEVELOPMENT_LOG.md commands || true
+
+echo "Staged files:"
+git diff --cached --name-only
+
 if git diff --cached --quiet; then
-  echo "Nothing to commit. Report copied to $DEST"
+  echo "Nothing to commit. If you expected a report commit, run: git status --ignored --short"
 else
   git commit -m "$MSG"
   git push origin main
