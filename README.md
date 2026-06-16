@@ -50,13 +50,19 @@ Smoke test:
 bash commands/run_v2_smoke.sh
 ```
 
-Stable no-collapse diagnostic run.  Use this before adding new architecture logic:
+Current recommended diagnostic run: stable no-collapse + sequential basis.  This keeps the architecture simple, no new primitives, no attention, no plateau controller:
+
+```bash
+bash commands/run_v2_2_sequential_basis.sh
+```
+
+This command patches v2 locally with delayed regularization, anti-collapse losses, and a strong sequential routing basis, compiles it, and runs the diagnostic.
+
+Older stable no-collapse diagnostic run:
 
 ```bash
 bash commands/run_v2_stable_no_collapse.sh
 ```
-
-This command patches v2 locally with delayed regularization and anti-collapse losses, compiles it, and runs the stable diagnostic.
 
 Fast projected-topk run with gradient analytics.  If this repository is cloned next to the old `architecture_builder` repo, use:
 
@@ -93,7 +99,7 @@ runs/<run>/last.pt
 Example query:
 
 ```bash
-python tools/query_events.py ./runs/step_program_v2_fast_projected_topk_grad/events_epoch_001.jsonl --top 20 --sort grad_x_gate
+python tools/query_events.py ./runs/step_program_v2_2_sequential_basis/events_epoch_001.jsonl --top 20 --sort grad_x_gate
 ```
 
 ## Auto-analysis
@@ -101,7 +107,7 @@ python tools/query_events.py ./runs/step_program_v2_fast_projected_topk_grad/eve
 Create a compact summary for the latest run:
 
 ```bash
-python tools/analyze_run.py ./runs/step_program_v2_stable_no_collapse
+python tools/analyze_run.py ./runs/step_program_v2_2_sequential_basis
 ```
 
 This writes:
@@ -114,7 +120,7 @@ auto_summary.json
 Publish lightweight report files to GitHub, without checkpoints:
 
 ```bash
-bash commands/publish_run_report.sh ./runs/step_program_v2_stable_no_collapse step_program_v2_stable_no_collapse "Add stable no-collapse report"
+bash commands/publish_run_report.sh ./runs/step_program_v2_2_sequential_basis step_program_v2_2_sequential_basis "Add v2.2 sequential-basis report"
 ```
 
 Published reports go to:
