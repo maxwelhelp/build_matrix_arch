@@ -34,16 +34,28 @@ This file is the source of truth: grammar, logging contract, projected top-k des
 python experiments/step_program/run_step_program_v2_projected_topk.py --help
 ```
 
-Fast projected-topk run with gradient analytics:
+Smoke test:
 
 ```bash
-bash commands/run_v2_fast_projected_topk_grad.sh
+bash commands/run_v2_smoke.sh
+```
+
+Fast projected-topk run with gradient analytics.  If this repository is cloned next to the old `architecture_builder` repo, use:
+
+```bash
+bash commands/run_v2_fast_projected_topk_grad_local.sh
+```
+
+Or explicitly set the data path:
+
+```bash
+DATA_ROOT=/path/to/speechcommands/root bash commands/run_v2_fast_projected_topk_grad_local.sh
 ```
 
 Full all-primitives baseline:
 
 ```bash
-bash commands/run_v2_all_baseline.sh
+bash commands/run_v2_all_baseline_local.sh
 ```
 
 ## Output format
@@ -65,6 +77,35 @@ Example query:
 ```bash
 python tools/query_events.py ./runs/step_program_v2_fast_projected_topk_grad/events_epoch_001.jsonl --top 20 --sort grad_x_gate
 ```
+
+## Auto-analysis
+
+Create a compact summary for the latest run:
+
+```bash
+python tools/analyze_run.py ./runs/step_program_v2_fast_projected_topk_grad
+```
+
+This writes:
+
+```text
+AUTO_SUMMARY.md
+auto_summary.json
+```
+
+Publish lightweight report files to GitHub, without checkpoints:
+
+```bash
+bash commands/publish_run_report.sh ./runs/step_program_v2_fast_projected_topk_grad step_program_v2_fast_projected_topk_grad "Add projected-topk report"
+```
+
+Published reports go to:
+
+```text
+reports/<report_name>/
+```
+
+The publish command copies only lightweight analysis files: metrics, latest analysis/events, auto summary, final report if present.
 
 ## Current rule
 
