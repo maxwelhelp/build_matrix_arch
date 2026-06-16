@@ -1,0 +1,3581 @@
+{
+  "epoch": 10,
+  "train": {
+    "loss": 2.3038555215199787,
+    "ce": 2.3038555215199787,
+    "acc": 0.09966666666666667,
+    "n": 12000,
+    "family_temp": 0.9,
+    "family_entropy": 1.0474744901657105,
+    "write_gate_mean": 0.0436786122918129,
+    "update_norm_mean": 0.8066231989860535,
+    "family_entropy_floor_loss": 0.0,
+    "write_activity_loss": 0.0
+  },
+  "val": {
+    "loss": 2.303223608016968,
+    "acc": 0.1,
+    "n": 2000,
+    "confusion": [
+      [
+        0,
+        200,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "best_acc": 0.1,
+  "best_epoch": 1,
+  "classes": [
+    "yes",
+    "no",
+    "up",
+    "down",
+    "left",
+    "right",
+    "on",
+    "off",
+    "stop",
+    "go"
+  ],
+  "train_counts": {
+    "yes": 1200,
+    "no": 1200,
+    "up": 1200,
+    "down": 1200,
+    "left": 1200,
+    "right": 1200,
+    "on": 1200,
+    "off": 1200,
+    "stop": 1200,
+    "go": 1200
+  },
+  "val_counts": {
+    "yes": 200,
+    "no": 200,
+    "up": 200,
+    "down": 200,
+    "left": 200,
+    "right": 200,
+    "on": 200,
+    "off": 200,
+    "stop": 200,
+    "go": 200
+  },
+  "program_report": {
+    "levels": {
+      "family": [
+        {
+          "address": "L0.B0.S0.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.3098736107349396
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.2504536807537079
+            },
+            {
+              "name": "butterfly",
+              "value": 0.18118952214717865
+            },
+            {
+              "name": "small_refine",
+              "value": 0.08213340491056442
+            },
+            {
+              "name": "compare",
+              "value": 0.06813669949769974
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S0.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.7976788878440857
+            },
+            {
+              "name": "butterfly",
+              "value": 0.0989675521850586
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.07177262753248215
+            },
+            {
+              "name": "normalize",
+              "value": 0.01201786007732153
+            },
+            {
+              "name": "compare",
+              "value": 0.009694413281977177
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S1.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.5081181526184082
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.3666992485523224
+            },
+            {
+              "name": "butterfly",
+              "value": 0.06095332279801369
+            },
+            {
+              "name": "normalize",
+              "value": 0.023620394989848137
+            },
+            {
+              "name": "small_refine",
+              "value": 0.017471952363848686
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S1.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.32927247881889343
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.2735101878643036
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.1365259736776352
+            },
+            {
+              "name": "normalize",
+              "value": 0.1006925031542778
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06959032267332077
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S2.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.5356964468955994
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.3112507164478302
+            },
+            {
+              "name": "butterfly",
+              "value": 0.11450278013944626
+            },
+            {
+              "name": "small_refine",
+              "value": 0.01423406507819891
+            },
+            {
+              "name": "low_rank",
+              "value": 0.013675405643880367
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S2.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.40540310740470886
+            },
+            {
+              "name": "butterfly",
+              "value": 0.24445293843746185
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.1379314661026001
+            },
+            {
+              "name": "normalize",
+              "value": 0.07506530731916428
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06551308184862137
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S0.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.31095126271247864
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.24985645711421967
+            },
+            {
+              "name": "butterfly",
+              "value": 0.18164214491844177
+            },
+            {
+              "name": "small_refine",
+              "value": 0.08203761279582977
+            },
+            {
+              "name": "compare",
+              "value": 0.06777536123991013
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S0.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.8015425801277161
+            },
+            {
+              "name": "butterfly",
+              "value": 0.09752345085144043
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.070449598133564
+            },
+            {
+              "name": "normalize",
+              "value": 0.011539960280060768
+            },
+            {
+              "name": "compare",
+              "value": 0.009441659785807133
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S1.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.5096254944801331
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.36563840508461
+            },
+            {
+              "name": "butterfly",
+              "value": 0.06131351366639137
+            },
+            {
+              "name": "normalize",
+              "value": 0.023403039202094078
+            },
+            {
+              "name": "small_refine",
+              "value": 0.017210036516189575
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S1.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.3350191116333008
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.2718372046947479
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.1350298970937729
+            },
+            {
+              "name": "normalize",
+              "value": 0.09874176234006882
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06987004727125168
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S2.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.5407715439796448
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.3093283474445343
+            },
+            {
+              "name": "butterfly",
+              "value": 0.11246979981660843
+            },
+            {
+              "name": "small_refine",
+              "value": 0.01389965508133173
+            },
+            {
+              "name": "low_rank",
+              "value": 0.013192102313041687
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S2.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.40679028630256653
+            },
+            {
+              "name": "butterfly",
+              "value": 0.24528934061527252
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.13679100573062897
+            },
+            {
+              "name": "normalize",
+              "value": 0.07406394928693771
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06576133519411087
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S0.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.309233695268631
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.24811266362667084
+            },
+            {
+              "name": "butterfly",
+              "value": 0.18125726282596588
+            },
+            {
+              "name": "small_refine",
+              "value": 0.08174895495176315
+            },
+            {
+              "name": "compare",
+              "value": 0.0699492022395134
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S0.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.7989424467086792
+            },
+            {
+              "name": "butterfly",
+              "value": 0.09796945005655289
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.07188629359006882
+            },
+            {
+              "name": "normalize",
+              "value": 0.011832932941615582
+            },
+            {
+              "name": "compare",
+              "value": 0.009638912044465542
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S1.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.5079516768455505
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.3665790855884552
+            },
+            {
+              "name": "butterfly",
+              "value": 0.06117183342576027
+            },
+            {
+              "name": "normalize",
+              "value": 0.023537835106253624
+            },
+            {
+              "name": "small_refine",
+              "value": 0.01761181466281414
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S1.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.3319045901298523
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.2698364555835724
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.13728167116641998
+            },
+            {
+              "name": "normalize",
+              "value": 0.10033940523862839
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06995738297700882
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S2.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.5369443297386169
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.3125858008861542
+            },
+            {
+              "name": "butterfly",
+              "value": 0.11276961117982864
+            },
+            {
+              "name": "small_refine",
+              "value": 0.013835013844072819
+            },
+            {
+              "name": "low_rank",
+              "value": 0.013383193872869015
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S2.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.40634581446647644
+            },
+            {
+              "name": "butterfly",
+              "value": 0.2447819858789444
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.13710929453372955
+            },
+            {
+              "name": "normalize",
+              "value": 0.07399202138185501
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06573761254549026
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S0.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.3106503188610077
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.2510814368724823
+            },
+            {
+              "name": "butterfly",
+              "value": 0.17935219407081604
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0815938264131546
+            },
+            {
+              "name": "compare",
+              "value": 0.06870889663696289
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S0.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.7987412810325623
+            },
+            {
+              "name": "butterfly",
+              "value": 0.09900261461734772
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.07123934477567673
+            },
+            {
+              "name": "normalize",
+              "value": 0.011749357916414738
+            },
+            {
+              "name": "compare",
+              "value": 0.009556828998029232
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S1.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.5097466111183167
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.36501172184944153
+            },
+            {
+              "name": "butterfly",
+              "value": 0.06117856130003929
+            },
+            {
+              "name": "normalize",
+              "value": 0.02348874881863594
+            },
+            {
+              "name": "small_refine",
+              "value": 0.017340661957859993
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S1.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.3321392834186554
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.2724110782146454
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.1379164606332779
+            },
+            {
+              "name": "normalize",
+              "value": 0.09820414334535599
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06951082497835159
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S2.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.5396918654441833
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.31052476167678833
+            },
+            {
+              "name": "butterfly",
+              "value": 0.1121356412768364
+            },
+            {
+              "name": "small_refine",
+              "value": 0.013858362101018429
+            },
+            {
+              "name": "low_rank",
+              "value": 0.013379617594182491
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S2.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.40501925349235535
+            },
+            {
+              "name": "butterfly",
+              "value": 0.24469877779483795
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.1373976618051529
+            },
+            {
+              "name": "normalize",
+              "value": 0.0749392956495285
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06625490635633469
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S0.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.3840193450450897
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.1765049397945404
+            },
+            {
+              "name": "low_rank",
+              "value": 0.15410079061985016
+            },
+            {
+              "name": "butterfly",
+              "value": 0.1331028789281845
+            },
+            {
+              "name": "normalize",
+              "value": 0.06601952761411667
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S0.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.36000487208366394
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.339516818523407
+            },
+            {
+              "name": "butterfly",
+              "value": 0.11092687398195267
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06747794896364212
+            },
+            {
+              "name": "compare",
+              "value": 0.05322330817580223
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S1.K0",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.5588535666465759
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.24177239835262299
+            },
+            {
+              "name": "butterfly",
+              "value": 0.06749110668897629
+            },
+            {
+              "name": "normalize",
+              "value": 0.0668107345700264
+            },
+            {
+              "name": "compare",
+              "value": 0.028234245255589485
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S1.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.8432406783103943
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.11820363253355026
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.015234769321978092
+            },
+            {
+              "name": "normalize",
+              "value": 0.011292880401015282
+            },
+            {
+              "name": "small_refine",
+              "value": 0.004779808688908815
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S2.K0",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.35707810521125793
+            },
+            {
+              "name": "butterfly",
+              "value": 0.20919917523860931
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.12659169733524323
+            },
+            {
+              "name": "low_rank",
+              "value": 0.09895297139883041
+            },
+            {
+              "name": "normalize",
+              "value": 0.09084729850292206
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S2.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.516571581363678
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.3348291516304016
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0576050840318203
+            },
+            {
+              "name": "normalize",
+              "value": 0.04884106293320656
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.02485438995063305
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S0.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.3861827254295349
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.176462322473526
+            },
+            {
+              "name": "low_rank",
+              "value": 0.15383802354335785
+            },
+            {
+              "name": "butterfly",
+              "value": 0.13235785067081451
+            },
+            {
+              "name": "normalize",
+              "value": 0.06587480753660202
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S0.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.3647436797618866
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.33898383378982544
+            },
+            {
+              "name": "butterfly",
+              "value": 0.10940898209810257
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06665217131376266
+            },
+            {
+              "name": "compare",
+              "value": 0.05226481333374977
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S1.K0",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.5602226853370667
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.24307586252689362
+            },
+            {
+              "name": "butterfly",
+              "value": 0.06671334058046341
+            },
+            {
+              "name": "normalize",
+              "value": 0.06641269475221634
+            },
+            {
+              "name": "compare",
+              "value": 0.02776956371963024
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S1.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.8458079695701599
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.11649752408266068
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.014941751025617123
+            },
+            {
+              "name": "normalize",
+              "value": 0.01094831433147192
+            },
+            {
+              "name": "small_refine",
+              "value": 0.004685587715357542
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S2.K0",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.35806673765182495
+            },
+            {
+              "name": "butterfly",
+              "value": 0.20988081395626068
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.1265554428100586
+            },
+            {
+              "name": "low_rank",
+              "value": 0.09914199262857437
+            },
+            {
+              "name": "normalize",
+              "value": 0.09035129845142365
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S2.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.5171966552734375
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.33654624223709106
+            },
+            {
+              "name": "small_refine",
+              "value": 0.05653161182999611
+            },
+            {
+              "name": "normalize",
+              "value": 0.0485551543533802
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.024308014661073685
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S0.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.38716429471969604
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.17484983801841736
+            },
+            {
+              "name": "low_rank",
+              "value": 0.1552112102508545
+            },
+            {
+              "name": "butterfly",
+              "value": 0.13127659261226654
+            },
+            {
+              "name": "normalize",
+              "value": 0.06581688672304153
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S0.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.3654375374317169
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.3366568684577942
+            },
+            {
+              "name": "butterfly",
+              "value": 0.10961712151765823
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06657551974058151
+            },
+            {
+              "name": "compare",
+              "value": 0.052787844091653824
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S1.K0",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.5557180047035217
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.24444054067134857
+            },
+            {
+              "name": "butterfly",
+              "value": 0.06761407107114792
+            },
+            {
+              "name": "normalize",
+              "value": 0.06723546236753464
+            },
+            {
+              "name": "compare",
+              "value": 0.028309853747487068
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S1.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.844459593296051
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.11745332926511765
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.015064329840242863
+            },
+            {
+              "name": "normalize",
+              "value": 0.0110853910446167
+            },
+            {
+              "name": "small_refine",
+              "value": 0.004747151862829924
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S2.K0",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.3567989468574524
+            },
+            {
+              "name": "butterfly",
+              "value": 0.20934201776981354
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.12697233259677887
+            },
+            {
+              "name": "low_rank",
+              "value": 0.09913583844900131
+            },
+            {
+              "name": "normalize",
+              "value": 0.09068214148283005
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S2.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.5160413384437561
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.33645108342170715
+            },
+            {
+              "name": "small_refine",
+              "value": 0.057391587644815445
+            },
+            {
+              "name": "normalize",
+              "value": 0.0483994297683239
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.024599602445960045
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S0.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.38592973351478577
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.17703698575496674
+            },
+            {
+              "name": "low_rank",
+              "value": 0.1539626270532608
+            },
+            {
+              "name": "butterfly",
+              "value": 0.13159479200839996
+            },
+            {
+              "name": "normalize",
+              "value": 0.06598449498414993
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S0.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.3635806739330292
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.33856362104415894
+            },
+            {
+              "name": "butterfly",
+              "value": 0.1102379634976387
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06698525696992874
+            },
+            {
+              "name": "compare",
+              "value": 0.05228931084275246
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S1.K0",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.5591660141944885
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.24285437166690826
+            },
+            {
+              "name": "butterfly",
+              "value": 0.06742178648710251
+            },
+            {
+              "name": "normalize",
+              "value": 0.0664089247584343
+            },
+            {
+              "name": "compare",
+              "value": 0.028057577088475227
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S1.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.8450050950050354
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.11707092076539993
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.014993310905992985
+            },
+            {
+              "name": "normalize",
+              "value": 0.011019503697752953
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0047363219782710075
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S2.K0",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.35763072967529297
+            },
+            {
+              "name": "butterfly",
+              "value": 0.2090120166540146
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.12692703306674957
+            },
+            {
+              "name": "low_rank",
+              "value": 0.09916508942842484
+            },
+            {
+              "name": "normalize",
+              "value": 0.0907217264175415
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S2.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.5149979591369629
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.33774393796920776
+            },
+            {
+              "name": "small_refine",
+              "value": 0.05734550952911377
+            },
+            {
+              "name": "normalize",
+              "value": 0.04845510050654411
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.024370701983571053
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S0.K0",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.6273812651634216
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.2344353049993515
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.07999659329652786
+            },
+            {
+              "name": "normalize",
+              "value": 0.032023075968027115
+            },
+            {
+              "name": "low_rank",
+              "value": 0.009610378183424473
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S0.K1",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.999265730381012
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.000398857519030571
+            },
+            {
+              "name": "compare",
+              "value": 9.803101420402527e-05
+            },
+            {
+              "name": "butterfly",
+              "value": 8.483878627885133e-05
+            },
+            {
+              "name": "small_refine",
+              "value": 7.256645039888099e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S1.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.7150741815567017
+            },
+            {
+              "name": "butterfly",
+              "value": 0.2740750312805176
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.004173819441348314
+            },
+            {
+              "name": "normalize",
+              "value": 0.0032095683272928
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0016281193820759654
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S1.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.8714466691017151
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.07322906702756882
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.0379907451570034
+            },
+            {
+              "name": "normalize",
+              "value": 0.007173188030719757
+            },
+            {
+              "name": "small_refine",
+              "value": 0.004391309339553118
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S2.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.8249272704124451
+            },
+            {
+              "name": "butterfly",
+              "value": 0.13975690305233002
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.0159000176936388
+            },
+            {
+              "name": "compare",
+              "value": 0.006632969249039888
+            },
+            {
+              "name": "low_rank",
+              "value": 0.006292246747761965
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S2.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.8616427779197693
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.11937595158815384
+            },
+            {
+              "name": "butterfly",
+              "value": 0.009953289292752743
+            },
+            {
+              "name": "low_rank",
+              "value": 0.005726166535168886
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0018996185390278697
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S0.K0",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.6278671622276306
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.23461677134037018
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.07974643260240555
+            },
+            {
+              "name": "normalize",
+              "value": 0.031876202672719955
+            },
+            {
+              "name": "low_rank",
+              "value": 0.009487220086157322
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S0.K1",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.9993009567260742
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.000380234356271103
+            },
+            {
+              "name": "compare",
+              "value": 9.30894966586493e-05
+            },
+            {
+              "name": "butterfly",
+              "value": 8.07197138783522e-05
+            },
+            {
+              "name": "small_refine",
+              "value": 6.904324982315302e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S1.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.7132357954978943
+            },
+            {
+              "name": "butterfly",
+              "value": 0.27605316042900085
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.004134726244956255
+            },
+            {
+              "name": "normalize",
+              "value": 0.003164019202813506
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0016034470172598958
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S1.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.8727064728736877
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.07262224704027176
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.03763916343450546
+            },
+            {
+              "name": "normalize",
+              "value": 0.00704461382701993
+            },
+            {
+              "name": "small_refine",
+              "value": 0.004310495685786009
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S2.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.8268679976463318
+            },
+            {
+              "name": "butterfly",
+              "value": 0.13818345963954926
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.0157806146889925
+            },
+            {
+              "name": "compare",
+              "value": 0.006539106834679842
+            },
+            {
+              "name": "low_rank",
+              "value": 0.006227486301213503
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S2.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.8623799681663513
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.11878012865781784
+            },
+            {
+              "name": "butterfly",
+              "value": 0.009864992462098598
+            },
+            {
+              "name": "low_rank",
+              "value": 0.005723377224057913
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0018699410138651729
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S0.K0",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.627652108669281
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.23407886922359467
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.08003110438585281
+            },
+            {
+              "name": "normalize",
+              "value": 0.03206819295883179
+            },
+            {
+              "name": "low_rank",
+              "value": 0.009577041491866112
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S0.K1",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.9992789626121521
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.00039024188299663365
+            },
+            {
+              "name": "compare",
+              "value": 9.64182399911806e-05
+            },
+            {
+              "name": "butterfly",
+              "value": 8.352457371074706e-05
+            },
+            {
+              "name": "small_refine",
+              "value": 7.179204112617299e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S1.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.7143255472183228
+            },
+            {
+              "name": "butterfly",
+              "value": 0.2748596668243408
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.004143067169934511
+            },
+            {
+              "name": "normalize",
+              "value": 0.003212475450709462
+            },
+            {
+              "name": "small_refine",
+              "value": 0.001626415061764419
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S1.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.8717899918556213
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.0732579156756401
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.03774678334593773
+            },
+            {
+              "name": "normalize",
+              "value": 0.007141060661524534
+            },
+            {
+              "name": "small_refine",
+              "value": 0.004343979526311159
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S2.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.8256158232688904
+            },
+            {
+              "name": "butterfly",
+              "value": 0.13905633985996246
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.015940504148602486
+            },
+            {
+              "name": "compare",
+              "value": 0.00659972382709384
+            },
+            {
+              "name": "low_rank",
+              "value": 0.00632214592769742
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S2.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.8625765442848206
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.11857534199953079
+            },
+            {
+              "name": "butterfly",
+              "value": 0.009881711564958096
+            },
+            {
+              "name": "low_rank",
+              "value": 0.00569401727989316
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0018831974593922496
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S0.K0",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.6270880103111267
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.2352428287267685
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.0796474739909172
+            },
+            {
+              "name": "normalize",
+              "value": 0.03208243474364281
+            },
+            {
+              "name": "low_rank",
+              "value": 0.00951253529638052
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S0.K1",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.9992884993553162
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.0003874921821989119
+            },
+            {
+              "name": "compare",
+              "value": 9.4924311270006e-05
+            },
+            {
+              "name": "butterfly",
+              "value": 8.159048593370244e-05
+            },
+            {
+              "name": "small_refine",
+              "value": 7.019814802333713e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S1.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.7143179178237915
+            },
+            {
+              "name": "butterfly",
+              "value": 0.2748567759990692
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.004161268938332796
+            },
+            {
+              "name": "normalize",
+              "value": 0.0032155809458345175
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0016168950824066997
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S1.K1",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.8725062012672424
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.07274752855300903
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.03763050213456154
+            },
+            {
+              "name": "normalize",
+              "value": 0.007108643185347319
+            },
+            {
+              "name": "small_refine",
+              "value": 0.004317931365221739
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S2.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.8267325758934021
+            },
+            {
+              "name": "butterfly",
+              "value": 0.13816092908382416
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.01586301438510418
+            },
+            {
+              "name": "compare",
+              "value": 0.00657004164531827
+            },
+            {
+              "name": "low_rank",
+              "value": 0.006244736257940531
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S2.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.8622445464134216
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.11899364739656448
+            },
+            {
+              "name": "butterfly",
+              "value": 0.009803429245948792
+            },
+            {
+              "name": "low_rank",
+              "value": 0.0056946054100990295
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0018787981243804097
+            }
+          ]
+        },
+        {
+          "address": "L3.B0.S0.K0",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.9429540038108826
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.0249942559748888
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.016145380213856697
+            },
+            {
+              "name": "low_rank",
+              "value": 0.014458506368100643
+            },
+            {
+              "name": "normalize",
+              "value": 0.0006802072166465223
+            }
+          ]
+        },
+        {
+          "address": "L3.B0.S0.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.984184205532074
+            },
+            {
+              "name": "butterfly",
+              "value": 0.011225411668419838
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.0025622474495321512
+            },
+            {
+              "name": "normalize",
+              "value": 0.0009866292821243405
+            },
+            {
+              "name": "compare",
+              "value": 0.0005822796374559402
+            }
+          ]
+        },
+        {
+          "address": "L3.B0.S1.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.6660007238388062
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.13333867490291595
+            },
+            {
+              "name": "butterfly",
+              "value": 0.09363242238759995
+            },
+            {
+              "name": "small_refine",
+              "value": 0.036568641662597656
+            },
+            {
+              "name": "compare",
+              "value": 0.028154760599136353
+            }
+          ]
+        },
+        {
+          "address": "L3.B0.S1.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.43293383717536926
+            },
+            {
+              "name": "butterfly",
+              "value": 0.3130510151386261
+            },
+            {
+              "name": "normalize",
+              "value": 0.06448353081941605
+            },
+            {
+              "name": "compare",
+              "value": 0.06101453676819801
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.05400312319397926
+            }
+          ]
+        },
+        {
+          "address": "L3.B0.S2.K0",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.5644722580909729
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.2514634430408478
+            },
+            {
+              "name": "compare",
+              "value": 0.04920279234647751
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.03994790092110634
+            },
+            {
+              "name": "normalize",
+              "value": 0.037817295640707016
+            }
+          ]
+        },
+        {
+          "address": "L3.B0.S2.K1",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.7781285643577576
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.1090763732790947
+            },
+            {
+              "name": "butterfly",
+              "value": 0.06865935772657394
+            },
+            {
+              "name": "normalize",
+              "value": 0.024400321766734123
+            },
+            {
+              "name": "small_refine",
+              "value": 0.010051989927887917
+            }
+          ]
+        },
+        {
+          "address": "L3.B1.S0.K0",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.943295419216156
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.02485722489655018
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.016017720103263855
+            },
+            {
+              "name": "low_rank",
+              "value": 0.014407350681722164
+            },
+            {
+              "name": "normalize",
+              "value": 0.0006685968255624175
+            }
+          ]
+        },
+        {
+          "address": "L3.B1.S0.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.9844217896461487
+            },
+            {
+              "name": "butterfly",
+              "value": 0.011086484417319298
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.002507781842723489
+            },
+            {
+              "name": "normalize",
+              "value": 0.000967780186329037
+            },
+            {
+              "name": "compare",
+              "value": 0.0005694846622645855
+            }
+          ]
+        },
+        {
+          "address": "L3.B1.S1.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.6678072214126587
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.1327895075082779
+            },
+            {
+              "name": "butterfly",
+              "value": 0.0935203954577446
+            },
+            {
+              "name": "small_refine",
+              "value": 0.036349181085824966
+            },
+            {
+              "name": "compare",
+              "value": 0.027840999886393547
+            }
+          ]
+        },
+        {
+          "address": "L3.B1.S1.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.43257567286491394
+            },
+            {
+              "name": "butterfly",
+              "value": 0.31370973587036133
+            },
+            {
+              "name": "normalize",
+              "value": 0.06408505886793137
+            },
+            {
+              "name": "compare",
+              "value": 0.06136726960539818
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.05398481711745262
+            }
+          ]
+        },
+        {
+          "address": "L3.B1.S2.K0",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.5648316740989685
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.25186923146247864
+            },
+            {
+              "name": "compare",
+              "value": 0.04890165850520134
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.039768900722265244
+            },
+            {
+              "name": "normalize",
+              "value": 0.03768462315201759
+            }
+          ]
+        },
+        {
+          "address": "L3.B1.S2.K1",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.7781924605369568
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.109085313975811
+            },
+            {
+              "name": "butterfly",
+              "value": 0.0687992051243782
+            },
+            {
+              "name": "normalize",
+              "value": 0.024291982874274254
+            },
+            {
+              "name": "small_refine",
+              "value": 0.009998963214457035
+            }
+          ]
+        },
+        {
+          "address": "L3.B2.S0.K0",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.9431056380271912
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.024864373728632927
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.01610860414803028
+            },
+            {
+              "name": "low_rank",
+              "value": 0.014471427537500858
+            },
+            {
+              "name": "normalize",
+              "value": 0.0006803165888413787
+            }
+          ]
+        },
+        {
+          "address": "L3.B2.S0.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.9841422438621521
+            },
+            {
+              "name": "butterfly",
+              "value": 0.011279880069196224
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.0025552676524966955
+            },
+            {
+              "name": "normalize",
+              "value": 0.00098706956487149
+            },
+            {
+              "name": "compare",
+              "value": 0.0005794186727143824
+            }
+          ]
+        },
+        {
+          "address": "L3.B2.S1.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.6676019430160522
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.1328784078359604
+            },
+            {
+              "name": "butterfly",
+              "value": 0.09335478395223618
+            },
+            {
+              "name": "small_refine",
+              "value": 0.036300335079431534
+            },
+            {
+              "name": "compare",
+              "value": 0.027982322499155998
+            }
+          ]
+        },
+        {
+          "address": "L3.B2.S1.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.4330424964427948
+            },
+            {
+              "name": "butterfly",
+              "value": 0.31343552470207214
+            },
+            {
+              "name": "normalize",
+              "value": 0.06412290781736374
+            },
+            {
+              "name": "compare",
+              "value": 0.061134222894907
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.053819235414266586
+            }
+          ]
+        },
+        {
+          "address": "L3.B2.S2.K0",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.5656151175498962
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.2502560317516327
+            },
+            {
+              "name": "compare",
+              "value": 0.04915213957428932
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.0399506650865078
+            },
+            {
+              "name": "normalize",
+              "value": 0.03788459673523903
+            }
+          ]
+        },
+        {
+          "address": "L3.B2.S2.K1",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.7788218855857849
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.10885416716337204
+            },
+            {
+              "name": "butterfly",
+              "value": 0.0685194805264473
+            },
+            {
+              "name": "normalize",
+              "value": 0.02420281432569027
+            },
+            {
+              "name": "small_refine",
+              "value": 0.009963170625269413
+            }
+          ]
+        },
+        {
+          "address": "L3.B3.S0.K0",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.9429892897605896
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.024934252724051476
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.016145991161465645
+            },
+            {
+              "name": "low_rank",
+              "value": 0.014490856789052486
+            },
+            {
+              "name": "normalize",
+              "value": 0.0006749391322955489
+            }
+          ]
+        },
+        {
+          "address": "L3.B3.S0.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.984474241733551
+            },
+            {
+              "name": "butterfly",
+              "value": 0.011033072136342525
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.002505467738956213
+            },
+            {
+              "name": "normalize",
+              "value": 0.0009687776328064501
+            },
+            {
+              "name": "compare",
+              "value": 0.0005700715119019151
+            }
+          ]
+        },
+        {
+          "address": "L3.B3.S1.K0",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.6685181260108948
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.13202524185180664
+            },
+            {
+              "name": "butterfly",
+              "value": 0.09334603697061539
+            },
+            {
+              "name": "small_refine",
+              "value": 0.03631022945046425
+            },
+            {
+              "name": "compare",
+              "value": 0.0279728751629591
+            }
+          ]
+        },
+        {
+          "address": "L3.B3.S1.K1",
+          "top": [
+            {
+              "name": "diag_delta",
+              "value": 0.4328637421131134
+            },
+            {
+              "name": "butterfly",
+              "value": 0.3130004107952118
+            },
+            {
+              "name": "normalize",
+              "value": 0.06430018693208694
+            },
+            {
+              "name": "compare",
+              "value": 0.061303261667490005
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.05399441346526146
+            }
+          ]
+        },
+        {
+          "address": "L3.B3.S2.K0",
+          "top": [
+            {
+              "name": "butterfly",
+              "value": 0.5658225417137146
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.250837117433548
+            },
+            {
+              "name": "compare",
+              "value": 0.048960547894239426
+            },
+            {
+              "name": "blockdiag",
+              "value": 0.03997018560767174
+            },
+            {
+              "name": "normalize",
+              "value": 0.037534769624471664
+            }
+          ]
+        },
+        {
+          "address": "L3.B3.S2.K1",
+          "top": [
+            {
+              "name": "blockdiag",
+              "value": 0.778531014919281
+            },
+            {
+              "name": "diag_delta",
+              "value": 0.10891974717378616
+            },
+            {
+              "name": "butterfly",
+              "value": 0.06862778216600418
+            },
+            {
+              "name": "normalize",
+              "value": 0.024271424859762192
+            },
+            {
+              "name": "small_refine",
+              "value": 0.010008200071752071
+            }
+          ]
+        }
+      ],
+      "utility": [
+        {
+          "address": "L0.B0.S0",
+          "mean_write_gate": 0.008818626403808594,
+          "mean_update_norm": 0.657967209815979,
+          "family_entropy": 1.2336088418960571,
+          "top_family_mass": 0.5537762641906738
+        },
+        {
+          "address": "L0.B0.S1",
+          "mean_write_gate": 0.004873752593994141,
+          "mean_update_norm": 0.8066244125366211,
+          "family_entropy": 1.4158899784088135,
+          "top_family_mass": 0.418695330619812
+        },
+        {
+          "address": "L0.B0.S2",
+          "mean_write_gate": 0.011949539184570312,
+          "mean_update_norm": 0.9109020233154297,
+          "family_entropy": 1.3556151390075684,
+          "top_family_mass": 0.4705497622489929
+        },
+        {
+          "address": "L0.B1.S0",
+          "mean_write_gate": 0.008604049682617188,
+          "mean_update_norm": 0.6553342938423157,
+          "family_entropy": 1.227510929107666,
+          "top_family_mass": 0.5562469363212585
+        },
+        {
+          "address": "L0.B1.S1",
+          "mean_write_gate": 0.004748344421386719,
+          "mean_update_norm": 0.8013098239898682,
+          "family_entropy": 1.4120543003082275,
+          "top_family_mass": 0.4223223030567169
+        },
+        {
+          "address": "L0.B1.S2",
+          "mean_write_gate": 0.011859893798828125,
+          "mean_update_norm": 0.9081333875656128,
+          "family_entropy": 1.349922776222229,
+          "top_family_mass": 0.47378093004226685
+        },
+        {
+          "address": "L0.B2.S0",
+          "mean_write_gate": 0.008722305297851562,
+          "mean_update_norm": 0.6616730690002441,
+          "family_entropy": 1.23422372341156,
+          "top_family_mass": 0.5540880560874939
+        },
+        {
+          "address": "L0.B2.S1",
+          "mean_write_gate": 0.004945278167724609,
+          "mean_update_norm": 0.8065742254257202,
+          "family_entropy": 1.416503667831421,
+          "top_family_mass": 0.4199281334877014
+        },
+        {
+          "address": "L0.B2.S2",
+          "mean_write_gate": 0.012096405029296875,
+          "mean_update_norm": 0.9116781949996948,
+          "family_entropy": 1.3524187803268433,
+          "top_family_mass": 0.4716450572013855
+        },
+        {
+          "address": "L0.B3.S0",
+          "mean_write_gate": 0.008788108825683594,
+          "mean_update_norm": 0.6584183573722839,
+          "family_entropy": 1.2319648265838623,
+          "top_family_mass": 0.5546957850456238
+        },
+        {
+          "address": "L0.B3.S1",
+          "mean_write_gate": 0.004812717437744141,
+          "mean_update_norm": 0.8027200102806091,
+          "family_entropy": 1.4139454364776611,
+          "top_family_mass": 0.4209429621696472
+        },
+        {
+          "address": "L0.B3.S2",
+          "mean_write_gate": 0.01190185546875,
+          "mean_update_norm": 0.9118988513946533,
+          "family_entropy": 1.3522576093673706,
+          "top_family_mass": 0.47235554456710815
+        },
+        {
+          "address": "L1.B0.S0",
+          "mean_write_gate": 0.002227783203125,
+          "mean_update_norm": 1.143921971321106,
+          "family_entropy": 1.6127787828445435,
+          "top_family_mass": 0.37201210856437683
+        },
+        {
+          "address": "L1.B0.S1",
+          "mean_write_gate": 0.0033359527587890625,
+          "mean_update_norm": 0.8458327054977417,
+          "family_entropy": 0.9272735118865967,
+          "top_family_mass": 0.7010471224784851
+        },
+        {
+          "address": "L1.B0.S2",
+          "mean_write_gate": 0.002415180206298828,
+          "mean_update_norm": 1.154711365699768,
+          "family_entropy": 1.4646589756011963,
+          "top_family_mass": 0.43682485818862915
+        },
+        {
+          "address": "L1.B1.S0",
+          "mean_write_gate": 0.002193450927734375,
+          "mean_update_norm": 1.1382026672363281,
+          "family_entropy": 1.6074659824371338,
+          "top_family_mass": 0.37546318769454956
+        },
+        {
+          "address": "L1.B1.S1",
+          "mean_write_gate": 0.0032911300659179688,
+          "mean_update_norm": 0.8431811928749084,
+          "family_entropy": 0.9205212593078613,
+          "top_family_mass": 0.7030153274536133
+        },
+        {
+          "address": "L1.B1.S2",
+          "mean_write_gate": 0.002368450164794922,
+          "mean_update_norm": 1.1509251594543457,
+          "family_entropy": 1.460524320602417,
+          "top_family_mass": 0.4376316964626312
+        },
+        {
+          "address": "L1.B2.S0",
+          "mean_write_gate": 0.0022268295288085938,
+          "mean_update_norm": 1.1442294120788574,
+          "family_entropy": 1.6088789701461792,
+          "top_family_mass": 0.3763009309768677
+        },
+        {
+          "address": "L1.B2.S1",
+          "mean_write_gate": 0.0033550262451171875,
+          "mean_update_norm": 0.8439250588417053,
+          "family_entropy": 0.927067756652832,
+          "top_family_mass": 0.7000887989997864
+        },
+        {
+          "address": "L1.B2.S2",
+          "mean_write_gate": 0.0024170875549316406,
+          "mean_update_norm": 1.1544625759124756,
+          "family_entropy": 1.4634981155395508,
+          "top_family_mass": 0.43642014265060425
+        },
+        {
+          "address": "L1.B3.S0",
+          "mean_write_gate": 0.0021924972534179688,
+          "mean_update_norm": 1.1415241956710815,
+          "family_entropy": 1.6089046001434326,
+          "top_family_mass": 0.37475520372390747
+        },
+        {
+          "address": "L1.B3.S1",
+          "mean_write_gate": 0.0033216476440429688,
+          "mean_update_norm": 0.8449369072914124,
+          "family_entropy": 0.9232109785079956,
+          "top_family_mass": 0.702085554599762
+        },
+        {
+          "address": "L1.B3.S2",
+          "mean_write_gate": 0.00237274169921875,
+          "mean_update_norm": 1.1546510457992554,
+          "family_entropy": 1.4628418684005737,
+          "top_family_mass": 0.43631434440612793
+        },
+        {
+          "address": "L2.B0.S0",
+          "mean_write_gate": 0.2915363311767578,
+          "mean_update_norm": 1.0349957942962646,
+          "family_entropy": 0.5379267930984497,
+          "top_family_mass": 0.8133234977722168
+        },
+        {
+          "address": "L2.B0.S1",
+          "mean_write_gate": 0.06192779541015625,
+          "mean_update_norm": 0.45129817724227905,
+          "family_entropy": 0.5938669443130493,
+          "top_family_mass": 0.7932604551315308
+        },
+        {
+          "address": "L2.B0.S2",
+          "mean_write_gate": 0.015039443969726562,
+          "mean_update_norm": 0.36979246139526367,
+          "family_entropy": 0.5407320261001587,
+          "top_family_mass": 0.8432850241661072
+        },
+        {
+          "address": "L2.B1.S0",
+          "mean_write_gate": 0.29174041748046875,
+          "mean_update_norm": 1.033982276916504,
+          "family_entropy": 0.5368096828460693,
+          "top_family_mass": 0.8135840892791748
+        },
+        {
+          "address": "L2.B1.S1",
+          "mean_write_gate": 0.06165313720703125,
+          "mean_update_norm": 0.45079469680786133,
+          "family_entropy": 0.5923197269439697,
+          "top_family_mass": 0.792971134185791
+        },
+        {
+          "address": "L2.B1.S2",
+          "mean_write_gate": 0.01490020751953125,
+          "mean_update_norm": 0.3686792850494385,
+          "family_entropy": 0.5375044345855713,
+          "top_family_mass": 0.8446239829063416
+        },
+        {
+          "address": "L2.B2.S0",
+          "mean_write_gate": 0.29152965545654297,
+          "mean_update_norm": 1.0345579385757446,
+          "family_entropy": 0.5378135442733765,
+          "top_family_mass": 0.8134655356407166
+        },
+        {
+          "address": "L2.B2.S1",
+          "mean_write_gate": 0.0619964599609375,
+          "mean_update_norm": 0.4515301585197449,
+          "family_entropy": 0.5934566259384155,
+          "top_family_mass": 0.7930577993392944
+        },
+        {
+          "address": "L2.B2.S2",
+          "mean_write_gate": 0.014947891235351562,
+          "mean_update_norm": 0.3693631887435913,
+          "family_entropy": 0.5389808416366577,
+          "top_family_mass": 0.8440961837768555
+        },
+        {
+          "address": "L2.B3.S0",
+          "mean_write_gate": 0.29152965545654297,
+          "mean_update_norm": 1.035048007965088,
+          "family_entropy": 0.537475049495697,
+          "top_family_mass": 0.8131882548332214
+        },
+        {
+          "address": "L2.B3.S1",
+          "mean_write_gate": 0.0621337890625,
+          "mean_update_norm": 0.4507012963294983,
+          "family_entropy": 0.592425525188446,
+          "top_family_mass": 0.7934120893478394
+        },
+        {
+          "address": "L2.B3.S2",
+          "mean_write_gate": 0.014957427978515625,
+          "mean_update_norm": 0.3690820336341858,
+          "family_entropy": 0.5378807783126831,
+          "top_family_mass": 0.8444885611534119
+        },
+        {
+          "address": "L3.B0.S0",
+          "mean_write_gate": 0.261016845703125,
+          "mean_update_norm": 0.5027742981910706,
+          "family_entropy": 0.19136878848075867,
+          "top_family_mass": 0.9635691046714783
+        },
+        {
+          "address": "L3.B0.S1",
+          "mean_write_gate": 0.0006325244903564453,
+          "mean_update_norm": 0.7390279769897461,
+          "family_entropy": 1.309218406677246,
+          "top_family_mass": 0.5494672656059265
+        },
+        {
+          "address": "L3.B0.S2",
+          "mean_write_gate": 0.001504063606262207,
+          "mean_update_norm": 0.9916750192642212,
+          "family_entropy": 1.0411744117736816,
+          "top_family_mass": 0.6713004112243652
+        },
+        {
+          "address": "L3.B1.S0",
+          "mean_write_gate": 0.261383056640625,
+          "mean_update_norm": 0.5021158456802368,
+          "family_entropy": 0.1900169849395752,
+          "top_family_mass": 0.9638586044311523
+        },
+        {
+          "address": "L3.B1.S1",
+          "mean_write_gate": 0.0006235837936401367,
+          "mean_update_norm": 0.7379786968231201,
+          "family_entropy": 1.3065413236618042,
+          "top_family_mass": 0.5501914620399475
+        },
+        {
+          "address": "L3.B1.S2",
+          "mean_write_gate": 0.0014830827713012695,
+          "mean_update_norm": 0.9899836778640747,
+          "family_entropy": 1.040077805519104,
+          "top_family_mass": 0.6715120673179626
+        },
+        {
+          "address": "L3.B2.S0",
+          "mean_write_gate": 0.261322021484375,
+          "mean_update_norm": 0.5019804239273071,
+          "family_entropy": 0.19117122888565063,
+          "top_family_mass": 0.9636239409446716
+        },
+        {
+          "address": "L3.B2.S1",
+          "mean_write_gate": 0.0006325244903564453,
+          "mean_update_norm": 0.736924409866333,
+          "family_entropy": 1.3067402839660645,
+          "top_family_mass": 0.5503222346305847
+        },
+        {
+          "address": "L3.B2.S2",
+          "mean_write_gate": 0.001504063606262207,
+          "mean_update_norm": 0.9925847053527832,
+          "family_entropy": 1.0397696495056152,
+          "top_family_mass": 0.6722185015678406
+        },
+        {
+          "address": "L3.B3.S0",
+          "mean_write_gate": 0.261749267578125,
+          "mean_update_norm": 0.5033891797065735,
+          "family_entropy": 0.19054283201694489,
+          "top_family_mass": 0.9637317657470703
+        },
+        {
+          "address": "L3.B3.S1",
+          "mean_write_gate": 0.0006276369094848633,
+          "mean_update_norm": 0.7383513450622559,
+          "family_entropy": 1.3065054416656494,
+          "top_family_mass": 0.5506909489631653
+        },
+        {
+          "address": "L3.B3.S2",
+          "mean_write_gate": 0.0014830827713012695,
+          "mean_update_norm": 0.9904643893241882,
+          "family_entropy": 1.0393245220184326,
+          "top_family_mass": 0.6721767783164978
+        }
+      ],
+      "layer": [
+        {
+          "address": "L0",
+          "input_skip_gate": 0.04764225333929062,
+          "mean_skip_gate": 0.03014419600367546
+        },
+        {
+          "address": "L1",
+          "input_skip_gate": 0.047452766448259354,
+          "mean_skip_gate": 0.030055250972509384
+        },
+        {
+          "address": "L2",
+          "input_skip_gate": 0.047342538833618164,
+          "mean_skip_gate": 0.03086559846997261
+        },
+        {
+          "address": "L3",
+          "input_skip_gate": 0.04724971577525139,
+          "mean_skip_gate": 0.030751796439290047
+        }
+      ]
+    },
+    "summary": {
+      "family_entropy_mean": 1.0169414281845093,
+      "write_gate_mean": 0.055451929569244385,
+      "update_norm_mean": 0.8000169396400452,
+      "top_family_mass_mean": 0.6330501437187195,
+      "input_skip_mean": 0.04742182046175003,
+      "mean_skip_mean": 0.030454210937023163
+    },
+    "grad_report": {
+      "definition": "grad_x_gate=mean(abs(dloss/dgate)*gate), divided by GradScaler scale",
+      "top": [
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K0.family.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K0.family.diag_delta",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K0.family.low_rank",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K0.family.butterfly",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K0.family.blockdiag",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K0.family.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K0.family.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K1.family.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K1.family.diag_delta",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K1.family.low_rank",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K1.family.butterfly",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K1.family.blockdiag",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K1.family.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S0.K1.family.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K0.family.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K0.family.diag_delta",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K0.family.low_rank",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K0.family.butterfly",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K0.family.blockdiag",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K0.family.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K0.family.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K1.family.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K1.family.diag_delta",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K1.family.low_rank",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K1.family.butterfly",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K1.family.blockdiag",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K1.family.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S1.K1.family.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K0.family.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K0.family.diag_delta",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K0.family.low_rank",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K0.family.butterfly",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K0.family.blockdiag",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K0.family.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K0.family.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K1.family.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K1.family.diag_delta",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K1.family.low_rank",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K1.family.butterfly",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K1.family.blockdiag",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K1.family.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B0.S2.K1.family.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K0.family.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K0.family.diag_delta",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K0.family.low_rank",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K0.family.butterfly",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K0.family.blockdiag",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K0.family.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K0.family.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K1.family.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K1.family.diag_delta",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K1.family.low_rank",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K1.family.butterfly",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K1.family.blockdiag",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K1.family.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S0.K1.family.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K0.family.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K0.family.diag_delta",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K0.family.low_rank",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K0.family.butterfly",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K0.family.blockdiag",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K0.family.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K0.family.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K1.family.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K1.family.diag_delta",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K1.family.low_rank",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K1.family.butterfly",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K1.family.blockdiag",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K1.family.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S1.K1.family.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S2.K0.family.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S2.K0.family.diag_delta",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S2.K0.family.low_rank",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S2.K0.family.butterfly",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S2.K0.family.blockdiag",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S2.K0.family.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S2.K0.family.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S2.K1.family.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S2.K1.family.diag_delta",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "family",
+          "address": "L0.B1.S2.K1.family.low_rank",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B0.S0.K0.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B0.S0.K1.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B0.S1.K0.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B0.S1.K1.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B0.S2.K0.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B0.S2.K1.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B1.S0.K0.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B1.S0.K1.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B1.S1.K0.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B1.S1.K1.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B1.S2.K0.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B1.S2.K1.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B2.S0.K0.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B2.S0.K1.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B2.S1.K0.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B2.S1.K1.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B2.S2.K0.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B2.S2.K1.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B3.S0.K0.write_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "write_gate",
+          "address": "L0.B3.S0.K1.write_gate",
+          "grad_x_gate": 0.0
+        }
+      ],
+      "by_address": {
+        "L0.B0.S0.K0.family.small_refine": 0.0,
+        "L0.B0.S0.K0.family.diag_delta": 0.0,
+        "L0.B0.S0.K0.family.low_rank": 0.0,
+        "L0.B0.S0.K0.family.butterfly": 0.0,
+        "L0.B0.S0.K0.family.blockdiag": 0.0,
+        "L0.B0.S0.K0.family.compare": 0.0,
+        "L0.B0.S0.K0.family.normalize": 0.0,
+        "L0.B0.S0.K1.family.small_refine": 0.0,
+        "L0.B0.S0.K1.family.diag_delta": 0.0,
+        "L0.B0.S0.K1.family.low_rank": 0.0,
+        "L0.B0.S0.K1.family.butterfly": 0.0,
+        "L0.B0.S0.K1.family.blockdiag": 0.0,
+        "L0.B0.S0.K1.family.compare": 0.0,
+        "L0.B0.S0.K1.family.normalize": 0.0,
+        "L0.B0.S1.K0.family.small_refine": 0.0,
+        "L0.B0.S1.K0.family.diag_delta": 0.0,
+        "L0.B0.S1.K0.family.low_rank": 0.0,
+        "L0.B0.S1.K0.family.butterfly": 0.0,
+        "L0.B0.S1.K0.family.blockdiag": 0.0,
+        "L0.B0.S1.K0.family.compare": 0.0,
+        "L0.B0.S1.K0.family.normalize": 0.0,
+        "L0.B0.S1.K1.family.small_refine": 0.0,
+        "L0.B0.S1.K1.family.diag_delta": 0.0,
+        "L0.B0.S1.K1.family.low_rank": 0.0,
+        "L0.B0.S1.K1.family.butterfly": 0.0,
+        "L0.B0.S1.K1.family.blockdiag": 0.0,
+        "L0.B0.S1.K1.family.compare": 0.0,
+        "L0.B0.S1.K1.family.normalize": 0.0,
+        "L0.B0.S2.K0.family.small_refine": 0.0,
+        "L0.B0.S2.K0.family.diag_delta": 0.0,
+        "L0.B0.S2.K0.family.low_rank": 0.0,
+        "L0.B0.S2.K0.family.butterfly": 0.0,
+        "L0.B0.S2.K0.family.blockdiag": 0.0,
+        "L0.B0.S2.K0.family.compare": 0.0,
+        "L0.B0.S2.K0.family.normalize": 0.0,
+        "L0.B0.S2.K1.family.small_refine": 0.0,
+        "L0.B0.S2.K1.family.diag_delta": 0.0,
+        "L0.B0.S2.K1.family.low_rank": 0.0,
+        "L0.B0.S2.K1.family.butterfly": 0.0,
+        "L0.B0.S2.K1.family.blockdiag": 0.0,
+        "L0.B0.S2.K1.family.compare": 0.0,
+        "L0.B0.S2.K1.family.normalize": 0.0,
+        "L0.B1.S0.K0.family.small_refine": 0.0,
+        "L0.B1.S0.K0.family.diag_delta": 0.0,
+        "L0.B1.S0.K0.family.low_rank": 0.0,
+        "L0.B1.S0.K0.family.butterfly": 0.0,
+        "L0.B1.S0.K0.family.blockdiag": 0.0,
+        "L0.B1.S0.K0.family.compare": 0.0,
+        "L0.B1.S0.K0.family.normalize": 0.0,
+        "L0.B1.S0.K1.family.small_refine": 0.0,
+        "L0.B1.S0.K1.family.diag_delta": 0.0,
+        "L0.B1.S0.K1.family.low_rank": 0.0,
+        "L0.B1.S0.K1.family.butterfly": 0.0,
+        "L0.B1.S0.K1.family.blockdiag": 0.0,
+        "L0.B1.S0.K1.family.compare": 0.0,
+        "L0.B1.S0.K1.family.normalize": 0.0,
+        "L0.B1.S1.K0.family.small_refine": 0.0,
+        "L0.B1.S1.K0.family.diag_delta": 0.0,
+        "L0.B1.S1.K0.family.low_rank": 0.0,
+        "L0.B1.S1.K0.family.butterfly": 0.0,
+        "L0.B1.S1.K0.family.blockdiag": 0.0,
+        "L0.B1.S1.K0.family.compare": 0.0,
+        "L0.B1.S1.K0.family.normalize": 0.0,
+        "L0.B1.S1.K1.family.small_refine": 0.0,
+        "L0.B1.S1.K1.family.diag_delta": 0.0,
+        "L0.B1.S1.K1.family.low_rank": 0.0,
+        "L0.B1.S1.K1.family.butterfly": 0.0,
+        "L0.B1.S1.K1.family.blockdiag": 0.0,
+        "L0.B1.S1.K1.family.compare": 0.0,
+        "L0.B1.S1.K1.family.normalize": 0.0,
+        "L0.B1.S2.K0.family.small_refine": 0.0,
+        "L0.B1.S2.K0.family.diag_delta": 0.0,
+        "L0.B1.S2.K0.family.low_rank": 0.0,
+        "L0.B1.S2.K0.family.butterfly": 0.0,
+        "L0.B1.S2.K0.family.blockdiag": 0.0,
+        "L0.B1.S2.K0.family.compare": 0.0,
+        "L0.B1.S2.K0.family.normalize": 0.0,
+        "L0.B1.S2.K1.family.small_refine": 0.0,
+        "L0.B1.S2.K1.family.diag_delta": 0.0,
+        "L0.B1.S2.K1.family.low_rank": 0.0,
+        "L0.B0.S0.K0.write_gate": 0.0,
+        "L0.B0.S0.K1.write_gate": 0.0,
+        "L0.B0.S1.K0.write_gate": 0.0,
+        "L0.B0.S1.K1.write_gate": 0.0,
+        "L0.B0.S2.K0.write_gate": 0.0,
+        "L0.B0.S2.K1.write_gate": 0.0,
+        "L0.B1.S0.K0.write_gate": 0.0,
+        "L0.B1.S0.K1.write_gate": 0.0,
+        "L0.B1.S1.K0.write_gate": 0.0,
+        "L0.B1.S1.K1.write_gate": 0.0,
+        "L0.B1.S2.K0.write_gate": 0.0,
+        "L0.B1.S2.K1.write_gate": 0.0,
+        "L0.B2.S0.K0.write_gate": 0.0,
+        "L0.B2.S0.K1.write_gate": 0.0,
+        "L0.B2.S1.K0.write_gate": 0.0,
+        "L0.B2.S1.K1.write_gate": 0.0,
+        "L0.B2.S2.K0.write_gate": 0.0,
+        "L0.B2.S2.K1.write_gate": 0.0,
+        "L0.B3.S0.K0.write_gate": 0.0,
+        "L0.B3.S0.K1.write_gate": 0.0,
+        "L0.B3.S1.K0.write_gate": 0.0,
+        "L0.B3.S1.K1.write_gate": 0.0,
+        "L0.B3.S2.K0.write_gate": 0.0,
+        "L0.B3.S2.K1.write_gate": 0.0,
+        "L1.B0.S0.K0.write_gate": 0.0,
+        "L1.B0.S0.K1.write_gate": 0.0,
+        "L1.B0.S1.K0.write_gate": 0.0,
+        "L1.B0.S1.K1.write_gate": 0.0,
+        "L1.B0.S2.K0.write_gate": 0.0,
+        "L1.B0.S2.K1.write_gate": 0.0,
+        "L1.B1.S0.K0.write_gate": 0.0,
+        "L1.B1.S0.K1.write_gate": 0.0,
+        "L1.B1.S1.K0.write_gate": 0.0,
+        "L1.B1.S1.K1.write_gate": 0.0,
+        "L1.B1.S2.K0.write_gate": 0.0,
+        "L1.B1.S2.K1.write_gate": 0.0,
+        "L1.B2.S0.K0.write_gate": 0.0,
+        "L1.B2.S0.K1.write_gate": 0.0,
+        "L1.B2.S1.K0.write_gate": 0.0,
+        "L1.B2.S1.K1.write_gate": 0.0
+      }
+    }
+  }
+}
