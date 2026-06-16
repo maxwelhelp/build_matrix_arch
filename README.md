@@ -2,21 +2,66 @@
 
 Clean repository for the differentiable matrix-program architecture builder.
 
-The current active experiment is a clean StepProgram core for SpeechCommands.  It is not a continuation of the old huge v13 script.  The goal is to test the heart of the idea:
+## Active direction: v3 clean sequential
+
+The current active experiment is:
 
 ```text
-Input/Evidence -> Layer -> Block -> Step -> Primitive slots -> Output read -> Loss
+experiments/step_program/run_step_program_v3_clean_sequential.py
 ```
 
-The model logs what every important address is doing:
+Core idea:
 
 ```text
-L{layer}.B{block}.S{step}.P{primitive_slot}
-L{layer}.B{block}.S{step}.P{k}->P{k+1}
-L{layer}.B{block}.S{step}.read
-L{layer}.B{block}.route
-class.<name>.read.<slot>
+Input/Evidence
+  -> L0 -> L1 -> L2 -> L3
+  -> inside each layer: S0 -> S1 -> S2
+  -> inside each step: K MatrixFamilyUnit substeps
+  -> final-layer output head
+  -> loss
 ```
+
+v3 intentionally removes the main v2 shortcuts:
+
+```text
+no layer-route soup
+no free step-read router
+no identity primitive candidate
+no output class-read shortcut
+no projected top-k yet
+no plateau controller yet
+```
+
+The learnable choice is inside each matrix-family unit:
+
+```text
+F(x, ctx) = sum_i softmax(gate)_i * Family_i(x, ctx)
+h <- Norm(h + write_gate * F(h, ctx))
+```
+
+Families:
+
+```text
+small_refine
+diag_delta
+low_rank
+butterfly
+blockdiag
+compare
+normalize
+```
+
+Identity is not a primitive. Identity exists only as the residual skip around the learned update.
+
+## Archived v2 line
+
+The v2/v2.1/v2.2 experiments are now diagnostic/archive only. See:
+
+```text
+archive/v2/README.md
+```
+
+They remain in the repository so old reports can be reproduced, but they are no longer the main development path.
 
 ## Main architecture document
 
@@ -26,8 +71,6 @@ Read and update:
 ARCHITECTURE.md
 ```
 
-This file is the source of truth: grammar, logging contract, projected top-k design, metrics, what is active, and what is rejected/inactive.
-
 ## Development log
 
 Read and update after every meaningful run analysis, before writing a new version:
@@ -36,50 +79,26 @@ Read and update after every meaningful run analysis, before writing a new versio
 DEVELOPMENT_LOG.md
 ```
 
-It contains a Markdown table with version, changes, metrics, anomalies, diagnosis, and next action.
+Short rule: publish report -> analyze -> discuss with Maxim -> then update `DEVELOPMENT_LOG.md` briefly.
 
-## Main experiment
-
-```bash
-python experiments/step_program/run_step_program_v2_projected_topk.py --help
-```
+## Commands
 
 Smoke test:
 
 ```bash
-bash commands/run_v2_smoke.sh
+bash commands/run_v3_clean_seq_smoke.sh
 ```
 
-Current recommended diagnostic run: stable no-collapse + sequential basis.  This keeps the architecture simple, no new primitives, no attention, no plateau controller:
+SpeechCommands run:
 
 ```bash
-bash commands/run_v2_2_sequential_basis.sh
+bash commands/run_v3_clean_seq_speechcommands.sh
 ```
 
-This command patches v2 locally with delayed regularization, anti-collapse losses, and a strong sequential routing basis, compiles it, and runs the diagnostic.
-
-Older stable no-collapse diagnostic run:
+If the dataset is somewhere else:
 
 ```bash
-bash commands/run_v2_stable_no_collapse.sh
-```
-
-Fast projected-topk run with gradient analytics.  If this repository is cloned next to the old `architecture_builder` repo, use:
-
-```bash
-bash commands/run_v2_fast_projected_topk_grad_local.sh
-```
-
-Or explicitly set the data path:
-
-```bash
-DATA_ROOT=/path/to/speechcommands/root bash commands/run_v2_fast_projected_topk_grad_local.sh
-```
-
-Full all-primitives baseline:
-
-```bash
-bash commands/run_v2_all_baseline_local.sh
+DATA_ROOT=/path/to/speechcommands/root bash commands/run_v3_clean_seq_speechcommands.sh
 ```
 
 ## Output format
@@ -94,33 +113,26 @@ runs/<run>/best.pt
 runs/<run>/last.pt
 ```
 
-`analysis_epoch_XXX.json` is human readable.  `events_epoch_XXX.jsonl` is flat and queryable: one JSON object per address/event, designed for automatic analysis.
+`analysis_epoch_XXX.json` is human readable. `events_epoch_XXX.jsonl` is flat and queryable: one JSON object per address/event, designed for automatic analysis.
 
 Example query:
 
 ```bash
-python tools/query_events.py ./runs/step_program_v2_2_sequential_basis/events_epoch_001.jsonl --top 20 --sort grad_x_gate
+python tools/query_events.py ./runs/step_program_v3_clean_seq_speechcommands/events_epoch_001.jsonl --top 20 --sort grad_x_gate
 ```
 
 ## Auto-analysis
 
-Create a compact summary for the latest run:
+Create a compact summary:
 
 ```bash
-python tools/analyze_run.py ./runs/step_program_v2_2_sequential_basis
-```
-
-This writes:
-
-```text
-AUTO_SUMMARY.md
-auto_summary.json
+python tools/analyze_run.py ./runs/step_program_v3_clean_seq_speechcommands
 ```
 
 Publish lightweight report files to GitHub, without checkpoints:
 
 ```bash
-bash commands/publish_run_report.sh ./runs/step_program_v2_2_sequential_basis step_program_v2_2_sequential_basis "Add v2.2 sequential-basis report"
+bash commands/publish_run_report.sh ./runs/step_program_v3_clean_seq_speechcommands step_program_v3_clean_seq_speechcommands "Add v3 clean sequential report"
 ```
 
 Published reports go to:
@@ -129,8 +141,6 @@ Published reports go to:
 reports/<report_name>/
 ```
 
-The publish command copies only lightweight analysis files: metrics, latest analysis/events, auto summary, final report if present.
-
 ## Current rule
 
-Do not add new primitives until the current reports prove what is failing.  First optimize execution, log gradients, analyze competition/utility, then decide what to add or remove.
+Do not add attention, projected top-k, growth, or plateau controller until v3 proves whether the clean sequential matrix-family program learns.
