@@ -1,6 +1,8 @@
 DATA_ROOT=${DATA_ROOT:-../architecture_builder/data/speechcommands}
 
+python tools/patch_v3_block_input_concat_head.py
 python -m py_compile experiments/step_program/run_step_program_v3_clean_sequential.py
+python -m py_compile experiments/step_program/run_step_program_v3_1_no_router_matrix_chain.py
 
 python experiments/step_program/run_step_program_v3_clean_sequential.py \
   --data-root "$DATA_ROOT" \
@@ -28,4 +30,4 @@ python experiments/step_program/run_step_program_v3_clean_sequential.py \
   --epochs 10 \
   --log-every 50 \
   --grad-analytics-every 50 \
-  --out-dir ./runs/step_program_v3_clean_seq_speechcommands
+  --out-dir ./runs/step_program_v3_clean_seq_fixed_input
