@@ -42,7 +42,7 @@ find "$DEST" -maxdepth 1 -type f -printf '  %p\n' | sort
 git pull --rebase origin main
 # Force-add only report/source text files.  We never add checkpoints because .gitignore excludes them and this list is explicit.
 git add -f "$DEST"
-git add tools/analyze_run.py tools/query_events.py README.md ARCHITECTURE.md DEVELOPMENT_LOG.md commands || true
+git add tools README.md ARCHITECTURE.md DEVELOPMENT_LOG.md commands experiments || true
 
 echo "Staged files:"
 git diff --cached --name-only
