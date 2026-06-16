@@ -28,6 +28,16 @@ ARCHITECTURE.md
 
 This file is the source of truth: grammar, logging contract, projected top-k design, metrics, what is active, and what is rejected/inactive.
 
+## Development log
+
+Read and update after every meaningful run analysis, before writing a new version:
+
+```text
+DEVELOPMENT_LOG.md
+```
+
+It contains a Markdown table with version, changes, metrics, anomalies, diagnosis, and next action.
+
 ## Main experiment
 
 ```bash
