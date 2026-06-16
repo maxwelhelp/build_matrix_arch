@@ -1,0 +1,11 @@
+runs/
+data/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+__pycache__/
+*.pyc
+.env
+.venv/
