@@ -1,0 +1,5182 @@
+{
+  "epoch": 6,
+  "train": {
+    "loss": 1.3868964827855428,
+    "ce": 1.3868959487279255,
+    "acc": 0.2575,
+    "n": 12000,
+    "primitive_temp": 1.4111111111111112,
+    "read_temp": 1.277777777777778,
+    "write_floor": 0.005714285714285713,
+    "cost_loss": 0.07728722709417343,
+    "primitive_entropy": 0.5447244464556377,
+    "transition_entropy": 0.35182623386383055,
+    "read_entropy": 0.4793597490787506,
+    "write_l1": 0.3898653738498688,
+    "nontrivial_mass": 0.14021298309167227,
+    "safe_mass": 0.85978915198644,
+    "write_activity_loss": 0.0,
+    "nontrivial_activity_loss": 6.651511865129578e-06,
+    "primitive_entropy_floor_loss": 0.0,
+    "read_entropy_floor_loss": 3.877222297887784e-09,
+    "transition_entropy_floor_loss": 9.962408900416145e-07,
+    "lambda_cost_eff": 0.0,
+    "lambda_primitive_entropy_eff": 0.0,
+    "lambda_transition_entropy_eff": 0.0,
+    "lambda_read_entropy_eff": 0.0,
+    "lambda_write_l1_eff": 0.0,
+    "lambda_write_activity_eff": 0.07999999821186066,
+    "lambda_nontrivial_activity_eff": 0.07999999821186066,
+    "lambda_primitive_entropy_floor_eff": 0.019999999552965164,
+    "lambda_read_entropy_floor_eff": 0.009999999776482582,
+    "lambda_transition_entropy_floor_eff": 0.004999999888241291,
+    "reg_w": 0.0,
+    "anti_w": 1.0,
+    "sharpen": 0.5555555820465088
+  },
+  "val": {
+    "loss": 6.258572685241699,
+    "acc": 0.0,
+    "n": 2000
+  },
+  "best_acc": 0.186,
+  "best_epoch": 1,
+  "program_report": {
+    "levels": {
+      "primitive": [
+        {
+          "address": "L0.B0.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9306640625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.053558349609375
+            },
+            {
+              "name": "global_read",
+              "value": 0.007534027099609375
+            },
+            {
+              "name": "mlp",
+              "value": 0.002956390380859375
+            },
+            {
+              "name": "suppress",
+              "value": 0.001506805419921875
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9111328125
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06658935546875
+            },
+            {
+              "name": "global_read",
+              "value": 0.010162353515625
+            },
+            {
+              "name": "mlp",
+              "value": 0.003971099853515625
+            },
+            {
+              "name": "suppress",
+              "value": 0.0023670196533203125
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9541015625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.043670654296875
+            },
+            {
+              "name": "global_read",
+              "value": 0.0012483596801757812
+            },
+            {
+              "name": "mlp",
+              "value": 0.00031185150146484375
+            },
+            {
+              "name": "suppress",
+              "value": 0.00014972686767578125
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.94287109375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.05340576171875
+            },
+            {
+              "name": "global_read",
+              "value": 0.0021686553955078125
+            },
+            {
+              "name": "mlp",
+              "value": 0.0005755424499511719
+            },
+            {
+              "name": "suppress",
+              "value": 0.00032067298889160156
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.94677734375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.050567626953125
+            },
+            {
+              "name": "global_read",
+              "value": 0.0014553070068359375
+            },
+            {
+              "name": "mlp",
+              "value": 0.00036025047302246094
+            },
+            {
+              "name": "suppress",
+              "value": 0.0001952648162841797
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.93408203125
+            },
+            {
+              "name": "small_refine",
+              "value": 0.061248779296875
+            },
+            {
+              "name": "global_read",
+              "value": 0.0025310516357421875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0006690025329589844
+            },
+            {
+              "name": "suppress",
+              "value": 0.0004127025604248047
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9296875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.05389404296875
+            },
+            {
+              "name": "global_read",
+              "value": 0.00786590576171875
+            },
+            {
+              "name": "mlp",
+              "value": 0.003116607666015625
+            },
+            {
+              "name": "suppress",
+              "value": 0.0016107559204101562
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.90966796875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06689453125
+            },
+            {
+              "name": "global_read",
+              "value": 0.01055908203125
+            },
+            {
+              "name": "mlp",
+              "value": 0.00417327880859375
+            },
+            {
+              "name": "suppress",
+              "value": 0.002506256103515625
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9541015625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.043670654296875
+            },
+            {
+              "name": "global_read",
+              "value": 0.0012884140014648438
+            },
+            {
+              "name": "mlp",
+              "value": 0.000324249267578125
+            },
+            {
+              "name": "suppress",
+              "value": 0.00015628337860107422
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9423828125
+            },
+            {
+              "name": "small_refine",
+              "value": 0.053680419921875
+            },
+            {
+              "name": "global_read",
+              "value": 0.00225067138671875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0006017684936523438
+            },
+            {
+              "name": "suppress",
+              "value": 0.0003337860107421875
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.94677734375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.05084228515625
+            },
+            {
+              "name": "global_read",
+              "value": 0.0015077590942382812
+            },
+            {
+              "name": "mlp",
+              "value": 0.00037670135498046875
+            },
+            {
+              "name": "suppress",
+              "value": 0.00020384788513183594
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.93310546875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.061798095703125
+            },
+            {
+              "name": "global_read",
+              "value": 0.0026340484619140625
+            },
+            {
+              "name": "mlp",
+              "value": 0.0007028579711914062
+            },
+            {
+              "name": "suppress",
+              "value": 0.00043129920959472656
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9326171875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.052154541015625
+            },
+            {
+              "name": "global_read",
+              "value": 0.007274627685546875
+            },
+            {
+              "name": "mlp",
+              "value": 0.002838134765625
+            },
+            {
+              "name": "suppress",
+              "value": 0.0014553070068359375
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9140625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0645751953125
+            },
+            {
+              "name": "global_read",
+              "value": 0.0098114013671875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0038204193115234375
+            },
+            {
+              "name": "suppress",
+              "value": 0.0022792816162109375
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.95556640625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.042633056640625
+            },
+            {
+              "name": "global_read",
+              "value": 0.0012073516845703125
+            },
+            {
+              "name": "mlp",
+              "value": 0.00029921531677246094
+            },
+            {
+              "name": "suppress",
+              "value": 0.00014472007751464844
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.94384765625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.052337646484375
+            },
+            {
+              "name": "global_read",
+              "value": 0.0021152496337890625
+            },
+            {
+              "name": "mlp",
+              "value": 0.0005583763122558594
+            },
+            {
+              "name": "suppress",
+              "value": 0.00030994415283203125
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.94775390625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.04974365234375
+            },
+            {
+              "name": "global_read",
+              "value": 0.0014219284057617188
+            },
+            {
+              "name": "mlp",
+              "value": 0.0003495216369628906
+            },
+            {
+              "name": "suppress",
+              "value": 0.00018990039825439453
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.93505859375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06024169921875
+            },
+            {
+              "name": "global_read",
+              "value": 0.00247955322265625
+            },
+            {
+              "name": "mlp",
+              "value": 0.0006537437438964844
+            },
+            {
+              "name": "suppress",
+              "value": 0.0004012584686279297
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.93212890625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0528564453125
+            },
+            {
+              "name": "global_read",
+              "value": 0.00719451904296875
+            },
+            {
+              "name": "mlp",
+              "value": 0.002758026123046875
+            },
+            {
+              "name": "suppress",
+              "value": 0.0014276504516601562
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.91259765625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06591796875
+            },
+            {
+              "name": "global_read",
+              "value": 0.00986480712890625
+            },
+            {
+              "name": "mlp",
+              "value": 0.003803253173828125
+            },
+            {
+              "name": "suppress",
+              "value": 0.00228118896484375
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.95458984375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.043365478515625
+            },
+            {
+              "name": "global_read",
+              "value": 0.0012140274047851562
+            },
+            {
+              "name": "mlp",
+              "value": 0.00029730796813964844
+            },
+            {
+              "name": "suppress",
+              "value": 0.00014519691467285156
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.94287109375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.05328369140625
+            },
+            {
+              "name": "global_read",
+              "value": 0.00214385986328125
+            },
+            {
+              "name": "mlp",
+              "value": 0.0005612373352050781
+            },
+            {
+              "name": "suppress",
+              "value": 0.00031375885009765625
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.94677734375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.050567626953125
+            },
+            {
+              "name": "global_read",
+              "value": 0.0014371871948242188
+            },
+            {
+              "name": "mlp",
+              "value": 0.00034999847412109375
+            },
+            {
+              "name": "suppress",
+              "value": 0.00019156932830810547
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.93359375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06158447265625
+            },
+            {
+              "name": "global_read",
+              "value": 0.0025348663330078125
+            },
+            {
+              "name": "mlp",
+              "value": 0.0006642341613769531
+            },
+            {
+              "name": "suppress",
+              "value": 0.00041103363037109375
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9326171875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0638427734375
+            },
+            {
+              "name": "global_read",
+              "value": 0.0018062591552734375
+            },
+            {
+              "name": "mlp",
+              "value": 0.00044226646423339844
+            },
+            {
+              "name": "suppress",
+              "value": 0.00028705596923828125
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.91796875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.075927734375
+            },
+            {
+              "name": "global_read",
+              "value": 0.0031032562255859375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0008168220520019531
+            },
+            {
+              "name": "suppress",
+              "value": 0.0005879402160644531
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.92529296875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.07080078125
+            },
+            {
+              "name": "global_read",
+              "value": 0.0020694732666015625
+            },
+            {
+              "name": "mlp",
+              "value": 0.0005078315734863281
+            },
+            {
+              "name": "suppress",
+              "value": 0.0003578662872314453
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9091796875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0836181640625
+            },
+            {
+              "name": "global_read",
+              "value": 0.0035152435302734375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0009312629699707031
+            },
+            {
+              "name": "suppress",
+              "value": 0.0007176399230957031
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.91796875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.07757568359375
+            },
+            {
+              "name": "global_read",
+              "value": 0.0023403167724609375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0005774497985839844
+            },
+            {
+              "name": "suppress",
+              "value": 0.00043582916259765625
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.90087890625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.09112548828125
+            },
+            {
+              "name": "global_read",
+              "value": 0.003940582275390625
+            },
+            {
+              "name": "mlp",
+              "value": 0.0010528564453125
+            },
+            {
+              "name": "suppress",
+              "value": 0.0008573532104492188
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.93212890625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.064453125
+            },
+            {
+              "name": "global_read",
+              "value": 0.0018987655639648438
+            },
+            {
+              "name": "mlp",
+              "value": 0.0004703998565673828
+            },
+            {
+              "name": "suppress",
+              "value": 0.00030541419982910156
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.91650390625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.076904296875
+            },
+            {
+              "name": "global_read",
+              "value": 0.0032634735107421875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0008702278137207031
+            },
+            {
+              "name": "suppress",
+              "value": 0.0006222724914550781
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.92431640625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.071533203125
+            },
+            {
+              "name": "global_read",
+              "value": 0.0021724700927734375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0005397796630859375
+            },
+            {
+              "name": "suppress",
+              "value": 0.0003800392150878906
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.90771484375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0845947265625
+            },
+            {
+              "name": "global_read",
+              "value": 0.0036945343017578125
+            },
+            {
+              "name": "mlp",
+              "value": 0.0009908676147460938
+            },
+            {
+              "name": "suppress",
+              "value": 0.0007581710815429688
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.91650390625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.07867431640625
+            },
+            {
+              "name": "global_read",
+              "value": 0.00246429443359375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0006160736083984375
+            },
+            {
+              "name": "suppress",
+              "value": 0.0004642009735107422
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.8984375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.09271240234375
+            },
+            {
+              "name": "global_read",
+              "value": 0.004150390625
+            },
+            {
+              "name": "mlp",
+              "value": 0.00112152099609375
+            },
+            {
+              "name": "suppress",
+              "value": 0.0009069442749023438
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9345703125
+            },
+            {
+              "name": "small_refine",
+              "value": 0.062469482421875
+            },
+            {
+              "name": "global_read",
+              "value": 0.0017499923706054688
+            },
+            {
+              "name": "mlp",
+              "value": 0.000423431396484375
+            },
+            {
+              "name": "suppress",
+              "value": 0.0002770423889160156
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.919921875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.07421875
+            },
+            {
+              "name": "global_read",
+              "value": 0.0030155181884765625
+            },
+            {
+              "name": "mlp",
+              "value": 0.0007886886596679688
+            },
+            {
+              "name": "suppress",
+              "value": 0.0005664825439453125
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9267578125
+            },
+            {
+              "name": "small_refine",
+              "value": 0.06964111328125
+            },
+            {
+              "name": "global_read",
+              "value": 0.0020236968994140625
+            },
+            {
+              "name": "mlp",
+              "value": 0.000492095947265625
+            },
+            {
+              "name": "suppress",
+              "value": 0.00034809112548828125
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.91064453125
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0823974609375
+            },
+            {
+              "name": "global_read",
+              "value": 0.0034580230712890625
+            },
+            {
+              "name": "mlp",
+              "value": 0.0009112358093261719
+            },
+            {
+              "name": "suppress",
+              "value": 0.0007004737854003906
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.91845703125
+            },
+            {
+              "name": "small_refine",
+              "value": 0.076904296875
+            },
+            {
+              "name": "global_read",
+              "value": 0.002315521240234375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0005679130554199219
+            },
+            {
+              "name": "suppress",
+              "value": 0.0004296302795410156
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.90185546875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.09002685546875
+            },
+            {
+              "name": "global_read",
+              "value": 0.00389862060546875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0010356903076171875
+            },
+            {
+              "name": "suppress",
+              "value": 0.0008420944213867188
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9326171875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0640869140625
+            },
+            {
+              "name": "global_read",
+              "value": 0.0017862319946289062
+            },
+            {
+              "name": "mlp",
+              "value": 0.0004277229309082031
+            },
+            {
+              "name": "suppress",
+              "value": 0.00028324127197265625
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.91796875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.07623291015625
+            },
+            {
+              "name": "global_read",
+              "value": 0.0030918121337890625
+            },
+            {
+              "name": "mlp",
+              "value": 0.000804901123046875
+            },
+            {
+              "name": "suppress",
+              "value": 0.0005831718444824219
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9248046875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0712890625
+            },
+            {
+              "name": "global_read",
+              "value": 0.00206756591796875
+            },
+            {
+              "name": "mlp",
+              "value": 0.000499725341796875
+            },
+            {
+              "name": "suppress",
+              "value": 0.0003571510314941406
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.90869140625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.08404541015625
+            },
+            {
+              "name": "global_read",
+              "value": 0.003536224365234375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0009288787841796875
+            },
+            {
+              "name": "suppress",
+              "value": 0.0007185935974121094
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.9169921875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.07830810546875
+            },
+            {
+              "name": "global_read",
+              "value": 0.002361297607421875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0005769729614257812
+            },
+            {
+              "name": "suppress",
+              "value": 0.00043892860412597656
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.89990234375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0919189453125
+            },
+            {
+              "name": "global_read",
+              "value": 0.0039825439453125
+            },
+            {
+              "name": "mlp",
+              "value": 0.0010576248168945312
+            },
+            {
+              "name": "suppress",
+              "value": 0.0008630752563476562
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.904296875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.090087890625
+            },
+            {
+              "name": "global_read",
+              "value": 0.002780914306640625
+            },
+            {
+              "name": "mlp",
+              "value": 0.0006823539733886719
+            },
+            {
+              "name": "keep_state",
+              "value": 0.0005860328674316406
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.88623046875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.10400390625
+            },
+            {
+              "name": "global_read",
+              "value": 0.004547119140625
+            },
+            {
+              "name": "mlp",
+              "value": 0.0012063980102539062
+            },
+            {
+              "name": "suppress",
+              "value": 0.0010709762573242188
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.89794921875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.095947265625
+            },
+            {
+              "name": "global_read",
+              "value": 0.0030612945556640625
+            },
+            {
+              "name": "mlp",
+              "value": 0.0007615089416503906
+            },
+            {
+              "name": "keep_state",
+              "value": 0.000682830810546875
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.87890625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.11004638671875
+            },
+            {
+              "name": "global_read",
+              "value": 0.004947662353515625
+            },
+            {
+              "name": "mlp",
+              "value": 0.0013284683227539062
+            },
+            {
+              "name": "suppress",
+              "value": 0.0012197494506835938
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.8916015625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.10137939453125
+            },
+            {
+              "name": "global_read",
+              "value": 0.003337860107421875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0008401870727539062
+            },
+            {
+              "name": "keep_state",
+              "value": 0.0007786750793457031
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.87158203125
+            },
+            {
+              "name": "small_refine",
+              "value": 0.11614990234375
+            },
+            {
+              "name": "global_read",
+              "value": 0.005340576171875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0014505386352539062
+            },
+            {
+              "name": "suppress",
+              "value": 0.0013751983642578125
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.90283203125
+            },
+            {
+              "name": "small_refine",
+              "value": 0.09130859375
+            },
+            {
+              "name": "global_read",
+              "value": 0.002956390380859375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0007376670837402344
+            },
+            {
+              "name": "suppress",
+              "value": 0.0006151199340820312
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.8837890625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.10577392578125
+            },
+            {
+              "name": "global_read",
+              "value": 0.004833221435546875
+            },
+            {
+              "name": "mlp",
+              "value": 0.00130462646484375
+            },
+            {
+              "name": "suppress",
+              "value": 0.0011501312255859375
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.8955078125
+            },
+            {
+              "name": "small_refine",
+              "value": 0.09759521484375
+            },
+            {
+              "name": "global_read",
+              "value": 0.0032520294189453125
+            },
+            {
+              "name": "mlp",
+              "value": 0.0008215904235839844
+            },
+            {
+              "name": "suppress",
+              "value": 0.0007166862487792969
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.8759765625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.11224365234375
+            },
+            {
+              "name": "global_read",
+              "value": 0.0052490234375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0014324188232421875
+            },
+            {
+              "name": "suppress",
+              "value": 0.001308441162109375
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.88916015625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.1031494140625
+            },
+            {
+              "name": "global_read",
+              "value": 0.0035419464111328125
+            },
+            {
+              "name": "mlp",
+              "value": 0.0009064674377441406
+            },
+            {
+              "name": "suppress",
+              "value": 0.0008187294006347656
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.86865234375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.11846923828125
+            },
+            {
+              "name": "global_read",
+              "value": 0.005657196044921875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0015583038330078125
+            },
+            {
+              "name": "suppress",
+              "value": 0.0014667510986328125
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.90576171875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.08880615234375
+            },
+            {
+              "name": "global_read",
+              "value": 0.0027313232421875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0006623268127441406
+            },
+            {
+              "name": "suppress",
+              "value": 0.0005588531494140625
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.88818359375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.1024169921875
+            },
+            {
+              "name": "global_read",
+              "value": 0.00447845458984375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0011796951293945312
+            },
+            {
+              "name": "suppress",
+              "value": 0.0010480880737304688
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.8994140625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0946044921875
+            },
+            {
+              "name": "global_read",
+              "value": 0.003025054931640625
+            },
+            {
+              "name": "mlp",
+              "value": 0.0007452964782714844
+            },
+            {
+              "name": "suppress",
+              "value": 0.0006537437438964844
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.88037109375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.10888671875
+            },
+            {
+              "name": "global_read",
+              "value": 0.004909515380859375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0013093948364257812
+            },
+            {
+              "name": "suppress",
+              "value": 0.0012054443359375
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.892578125
+            },
+            {
+              "name": "small_refine",
+              "value": 0.10052490234375
+            },
+            {
+              "name": "global_read",
+              "value": 0.003326416015625
+            },
+            {
+              "name": "mlp",
+              "value": 0.00083160400390625
+            },
+            {
+              "name": "suppress",
+              "value": 0.0007572174072265625
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.873046875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.114990234375
+            },
+            {
+              "name": "global_read",
+              "value": 0.00530242919921875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0014333724975585938
+            },
+            {
+              "name": "suppress",
+              "value": 0.0013570785522460938
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.90380859375
+            },
+            {
+              "name": "small_refine",
+              "value": 0.0906982421875
+            },
+            {
+              "name": "global_read",
+              "value": 0.002788543701171875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0006737709045410156
+            },
+            {
+              "name": "keep_state",
+              "value": 0.0005865097045898438
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.88525390625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.104736328125
+            },
+            {
+              "name": "global_read",
+              "value": 0.00458526611328125
+            },
+            {
+              "name": "mlp",
+              "value": 0.0012063980102539062
+            },
+            {
+              "name": "suppress",
+              "value": 0.0010805130004882812
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.89697265625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.09661865234375
+            },
+            {
+              "name": "global_read",
+              "value": 0.0030879974365234375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0007596015930175781
+            },
+            {
+              "name": "keep_state",
+              "value": 0.0006847381591796875
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.87744140625
+            },
+            {
+              "name": "small_refine",
+              "value": 0.111328125
+            },
+            {
+              "name": "global_read",
+              "value": 0.00502777099609375
+            },
+            {
+              "name": "mlp",
+              "value": 0.0013437271118164062
+            },
+            {
+              "name": "suppress",
+              "value": 0.0012407302856445312
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.89013671875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.10247802734375
+            },
+            {
+              "name": "global_read",
+              "value": 0.003398895263671875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0008492469787597656
+            },
+            {
+              "name": "keep_state",
+              "value": 0.0007886886596679688
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 0.87060546875
+            },
+            {
+              "name": "small_refine",
+              "value": 0.11712646484375
+            },
+            {
+              "name": "global_read",
+              "value": 0.0054168701171875
+            },
+            {
+              "name": "mlp",
+              "value": 0.0014657974243164062
+            },
+            {
+              "name": "suppress",
+              "value": 0.001392364501953125
+            }
+          ]
+        }
+      ],
+      "transition": [
+        {
+          "address": "L0.B0.S0.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9543495774269104
+            },
+            {
+              "name": "product_gate",
+              "value": 0.04028547182679176
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.0032239293213933706
+            },
+            {
+              "name": "keep",
+              "value": 0.0010894136503338814
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S1.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9485569596290588
+            },
+            {
+              "name": "product_gate",
+              "value": 0.04484377056360245
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.0038201657589524984
+            },
+            {
+              "name": "keep",
+              "value": 0.001409483957104385
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S2.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9414691925048828
+            },
+            {
+              "name": "product_gate",
+              "value": 0.05023830756545067
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.004641055595129728
+            },
+            {
+              "name": "keep",
+              "value": 0.0018388869939371943
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S0.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9530430436134338
+            },
+            {
+              "name": "product_gate",
+              "value": 0.041385944932699203
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.0032862203661352396
+            },
+            {
+              "name": "keep",
+              "value": 0.0011513213394209743
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S1.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9469004273414612
+            },
+            {
+              "name": "product_gate",
+              "value": 0.04623156413435936
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.0039153811521828175
+            },
+            {
+              "name": "keep",
+              "value": 0.0014832114102318883
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S2.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9395704865455627
+            },
+            {
+              "name": "product_gate",
+              "value": 0.05177903547883034
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.0047787209041416645
+            },
+            {
+              "name": "keep",
+              "value": 0.00193455268163234
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S0.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.953615128993988
+            },
+            {
+              "name": "product_gate",
+              "value": 0.04104841127991676
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.003131493693217635
+            },
+            {
+              "name": "keep",
+              "value": 0.0011078790994361043
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S1.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9475556015968323
+            },
+            {
+              "name": "product_gate",
+              "value": 0.04585873708128929
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.0037386680487543344
+            },
+            {
+              "name": "keep",
+              "value": 0.0014301686314865947
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S2.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9403420090675354
+            },
+            {
+              "name": "product_gate",
+              "value": 0.051368098706007004
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.004568089731037617
+            },
+            {
+              "name": "keep",
+              "value": 0.0018619688926264644
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S0.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9537678360939026
+            },
+            {
+              "name": "product_gate",
+              "value": 0.04093489423394203
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.003135055536404252
+            },
+            {
+              "name": "keep",
+              "value": 0.0011189307551831007
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S1.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9475812315940857
+            },
+            {
+              "name": "product_gate",
+              "value": 0.04581517353653908
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.003771774237975478
+            },
+            {
+              "name": "keep",
+              "value": 0.00145556905772537
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S2.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9403133988380432
+            },
+            {
+              "name": "product_gate",
+              "value": 0.051316384226083755
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.004630833864212036
+            },
+            {
+              "name": "keep",
+              "value": 0.001902347314171493
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S0.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9292420744895935
+            },
+            {
+              "name": "product_gate",
+              "value": 0.05934649333357811
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.006134086288511753
+            },
+            {
+              "name": "keep",
+              "value": 0.0026589299086481333
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S1.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9197778105735779
+            },
+            {
+              "name": "product_gate",
+              "value": 0.06591654568910599
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.007490120828151703
+            },
+            {
+              "name": "keep",
+              "value": 0.0033826616127043962
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S2.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9095383286476135
+            },
+            {
+              "name": "product_gate",
+              "value": 0.07275212556123734
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.009057222865521908
+            },
+            {
+              "name": "keep",
+              "value": 0.004228483885526657
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S0.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9257937073707581
+            },
+            {
+              "name": "product_gate",
+              "value": 0.062024351209402084
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.006429680157452822
+            },
+            {
+              "name": "keep",
+              "value": 0.002864320995286107
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S1.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9159870743751526
+            },
+            {
+              "name": "product_gate",
+              "value": 0.06872809678316116
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.00788623932749033
+            },
+            {
+              "name": "keep",
+              "value": 0.0036353503819555044
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S2.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9052343964576721
+            },
+            {
+              "name": "product_gate",
+              "value": 0.0757717415690422
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.009586372412741184
+            },
+            {
+              "name": "keep",
+              "value": 0.004554893355816603
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S0.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9274473190307617
+            },
+            {
+              "name": "product_gate",
+              "value": 0.06111204996705055
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.006015562452375889
+            },
+            {
+              "name": "keep",
+              "value": 0.002708780113607645
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S1.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9178925156593323
+            },
+            {
+              "name": "product_gate",
+              "value": 0.06773721426725388
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.007387690246105194
+            },
+            {
+              "name": "keep",
+              "value": 0.0034423109609633684
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S2.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9075470566749573
+            },
+            {
+              "name": "product_gate",
+              "value": 0.07456880807876587
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.00901095476001501
+            },
+            {
+              "name": "keep",
+              "value": 0.004315067548304796
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S0.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9273014664649963
+            },
+            {
+              "name": "product_gate",
+              "value": 0.06104284152388573
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.006157249677926302
+            },
+            {
+              "name": "keep",
+              "value": 0.00280800461769104
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S1.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9174222350120544
+            },
+            {
+              "name": "product_gate",
+              "value": 0.06783480197191238
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.007610857021063566
+            },
+            {
+              "name": "keep",
+              "value": 0.003577601397410035
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S2.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.9068564772605896
+            },
+            {
+              "name": "product_gate",
+              "value": 0.07476712018251419
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.00928991287946701
+            },
+            {
+              "name": "keep",
+              "value": 0.004474795889109373
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S0.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.8931770920753479
+            },
+            {
+              "name": "product_gate",
+              "value": 0.08348508179187775
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.011691330932080746
+            },
+            {
+              "name": "keep",
+              "value": 0.005675685591995716
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S1.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.8820952773094177
+            },
+            {
+              "name": "product_gate",
+              "value": 0.09002374857664108
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.013698155991733074
+            },
+            {
+              "name": "keep",
+              "value": 0.006794333923608065
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S2.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.8709096312522888
+            },
+            {
+              "name": "product_gate",
+              "value": 0.09624540060758591
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.015850333496928215
+            },
+            {
+              "name": "keep",
+              "value": 0.008005148731172085
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S0.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.8867585062980652
+            },
+            {
+              "name": "product_gate",
+              "value": 0.0877152606844902
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.01255048904567957
+            },
+            {
+              "name": "keep",
+              "value": 0.006243355572223663
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S1.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.8755883574485779
+            },
+            {
+              "name": "product_gate",
+              "value": 0.09401464462280273
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.014694795943796635
+            },
+            {
+              "name": "keep",
+              "value": 0.0074288020841777325
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S2.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.8640699982643127
+            },
+            {
+              "name": "product_gate",
+              "value": 0.10021889954805374
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.016987113282084465
+            },
+            {
+              "name": "keep",
+              "value": 0.00871437881141901
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S0.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.8898687958717346
+            },
+            {
+              "name": "product_gate",
+              "value": 0.08636260777711868
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.011659408919513226
+            },
+            {
+              "name": "keep",
+              "value": 0.0058627198450267315
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S1.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.8789425492286682
+            },
+            {
+              "name": "product_gate",
+              "value": 0.09263987839221954
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.013716007582843304
+            },
+            {
+              "name": "keep",
+              "value": 0.0069986130110919476
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S2.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.8674687743186951
+            },
+            {
+              "name": "product_gate",
+              "value": 0.09895657002925873
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.015973808243870735
+            },
+            {
+              "name": "keep",
+              "value": 0.008242711424827576
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S0.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.8892516493797302
+            },
+            {
+              "name": "product_gate",
+              "value": 0.08626054972410202
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.012056439183652401
+            },
+            {
+              "name": "keep",
+              "value": 0.006133818067610264
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S1.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.8780725002288818
+            },
+            {
+              "name": "product_gate",
+              "value": 0.09263858199119568
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.014178868383169174
+            },
+            {
+              "name": "keep",
+              "value": 0.007298655342310667
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S2.P0->P1",
+          "top": [
+            {
+              "name": "residual",
+              "value": 0.8664300441741943
+            },
+            {
+              "name": "product_gate",
+              "value": 0.09898294508457184
+            },
+            {
+              "name": "norm_residual",
+              "value": 0.016485270112752914
+            },
+            {
+              "name": "keep",
+              "value": 0.008569165132939816
+            }
+          ]
+        }
+      ],
+      "step_read": [
+        {
+          "address": "L0.B0.S0.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.999702513217926
+            },
+            {
+              "name": "task",
+              "value": 8.347840775968507e-05
+            },
+            {
+              "name": "input",
+              "value": 8.075219375314191e-05
+            },
+            {
+              "name": "layer_route",
+              "value": 7.424725481541827e-05
+            },
+            {
+              "name": "global",
+              "value": 5.295859227771871e-05
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S1.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.6456932425498962
+            },
+            {
+              "name": "prev_step",
+              "value": 0.35381075739860535
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.00044450073619373143
+            },
+            {
+              "name": "layer_route",
+              "value": 1.6094387319753878e-05
+            },
+            {
+              "name": "task",
+              "value": 1.5844867448322475e-05
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S2.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.6593309640884399
+            },
+            {
+              "name": "prev_step",
+              "value": 0.33939453959465027
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0011887073051184416
+            },
+            {
+              "name": "global",
+              "value": 3.696303247124888e-05
+            },
+            {
+              "name": "task",
+              "value": 2.29060860874597e-05
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S0.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.9996891021728516
+            },
+            {
+              "name": "input",
+              "value": 8.595909457653761e-05
+            },
+            {
+              "name": "task",
+              "value": 8.495761721860617e-05
+            },
+            {
+              "name": "layer_route",
+              "value": 7.8113931522239e-05
+            },
+            {
+              "name": "global",
+              "value": 5.5825508752604946e-05
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S1.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.6403165459632874
+            },
+            {
+              "name": "prev_step",
+              "value": 0.35918503999710083
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.00044566902215592563
+            },
+            {
+              "name": "layer_route",
+              "value": 1.6596155546722002e-05
+            },
+            {
+              "name": "task",
+              "value": 1.5960367818479426e-05
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S2.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.65317302942276
+            },
+            {
+              "name": "prev_step",
+              "value": 0.3455452620983124
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0011938157258555293
+            },
+            {
+              "name": "global",
+              "value": 3.815095260506496e-05
+            },
+            {
+              "name": "task",
+              "value": 2.3094562493497506e-05
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S0.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.9997015595436096
+            },
+            {
+              "name": "input",
+              "value": 8.25057941256091e-05
+            },
+            {
+              "name": "task",
+              "value": 8.17039908724837e-05
+            },
+            {
+              "name": "layer_route",
+              "value": 7.512238516937941e-05
+            },
+            {
+              "name": "global",
+              "value": 5.3269734053174034e-05
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S1.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.6412219405174255
+            },
+            {
+              "name": "prev_step",
+              "value": 0.3582906424999237
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0004362268082331866
+            },
+            {
+              "name": "layer_route",
+              "value": 1.613977838132996e-05
+            },
+            {
+              "name": "task",
+              "value": 1.5551822798443027e-05
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S2.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.6549564003944397
+            },
+            {
+              "name": "prev_step",
+              "value": 0.3437921404838562
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.001166493515484035
+            },
+            {
+              "name": "global",
+              "value": 3.678957364172675e-05
+            },
+            {
+              "name": "task",
+              "value": 2.244513416371774e-05
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S0.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.9997023940086365
+            },
+            {
+              "name": "task",
+              "value": 8.234485721914098e-05
+            },
+            {
+              "name": "input",
+              "value": 8.138549310388044e-05
+            },
+            {
+              "name": "layer_route",
+              "value": 7.46835648897104e-05
+            },
+            {
+              "name": "global",
+              "value": 5.347828482626937e-05
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S1.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.6430119872093201
+            },
+            {
+              "name": "prev_step",
+              "value": 0.3564947247505188
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.00044206107850186527
+            },
+            {
+              "name": "layer_route",
+              "value": 1.609028367965948e-05
+            },
+            {
+              "name": "task",
+              "value": 1.5595231161569245e-05
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S2.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.657582700252533
+            },
+            {
+              "name": "prev_step",
+              "value": 0.34114935994148254
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0011826641857624054
+            },
+            {
+              "name": "global",
+              "value": 3.700930756167509e-05
+            },
+            {
+              "name": "task",
+              "value": 2.2579190044780262e-05
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S0.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.9999313950538635
+            },
+            {
+              "name": "task",
+              "value": 2.152787237719167e-05
+            },
+            {
+              "name": "layer_route",
+              "value": 1.8667242329684086e-05
+            },
+            {
+              "name": "input",
+              "value": 1.5355255527538247e-05
+            },
+            {
+              "name": "global",
+              "value": 1.1912065929209348e-05
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S1.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.5903258323669434
+            },
+            {
+              "name": "prev_step",
+              "value": 0.4089069068431854
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0006770872860215604
+            },
+            {
+              "name": "layer_route",
+              "value": 2.9262910175020806e-05
+            },
+            {
+              "name": "task",
+              "value": 2.7922857043449767e-05
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S2.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.6064863801002502
+            },
+            {
+              "name": "prev_step",
+              "value": 0.39157721400260925
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0017904862761497498
+            },
+            {
+              "name": "global",
+              "value": 6.002339432598092e-05
+            },
+            {
+              "name": "task",
+              "value": 3.9518377889180556e-05
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S0.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.9999285340309143
+            },
+            {
+              "name": "task",
+              "value": 2.1995325369061902e-05
+            },
+            {
+              "name": "layer_route",
+              "value": 1.956304367922712e-05
+            },
+            {
+              "name": "input",
+              "value": 1.6218340533669107e-05
+            },
+            {
+              "name": "global",
+              "value": 1.255706501979148e-05
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S1.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.5837015509605408
+            },
+            {
+              "name": "prev_step",
+              "value": 0.4155263602733612
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0006795342778787017
+            },
+            {
+              "name": "layer_route",
+              "value": 3.0204913855413906e-05
+            },
+            {
+              "name": "task",
+              "value": 2.815405787259806e-05
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S2.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.6018224954605103
+            },
+            {
+              "name": "prev_step",
+              "value": 0.39622971415519714
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0017976610688492656
+            },
+            {
+              "name": "global",
+              "value": 6.217689951881766e-05
+            },
+            {
+              "name": "task",
+              "value": 4.006608287454583e-05
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S0.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.9999322295188904
+            },
+            {
+              "name": "task",
+              "value": 2.1029187337262556e-05
+            },
+            {
+              "name": "layer_route",
+              "value": 1.8667253243620507e-05
+            },
+            {
+              "name": "input",
+              "value": 1.544549195386935e-05
+            },
+            {
+              "name": "global",
+              "value": 1.1912067748198751e-05
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S1.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.5856097936630249
+            },
+            {
+              "name": "prev_step",
+              "value": 0.4136405289173126
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0006606191163882613
+            },
+            {
+              "name": "layer_route",
+              "value": 2.9029119104961865e-05
+            },
+            {
+              "name": "task",
+              "value": 2.721711825870443e-05
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S2.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.6018534302711487
+            },
+            {
+              "name": "prev_step",
+              "value": 0.3962501883506775
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0017518253298476338
+            },
+            {
+              "name": "global",
+              "value": 5.979801426292397e-05
+            },
+            {
+              "name": "task",
+              "value": 3.868399289785884e-05
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S0.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.999931275844574
+            },
+            {
+              "name": "task",
+              "value": 2.1527859644265845e-05
+            },
+            {
+              "name": "layer_route",
+              "value": 1.89611928362865e-05
+            },
+            {
+              "name": "input",
+              "value": 1.559705015097279e-05
+            },
+            {
+              "name": "global",
+              "value": 1.2146997505624313e-05
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S1.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.5874930024147034
+            },
+            {
+              "name": "prev_step",
+              "value": 0.411741703748703
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.000674826034810394
+            },
+            {
+              "name": "layer_route",
+              "value": 2.9465767511283047e-05
+            },
+            {
+              "name": "task",
+              "value": 2.7626518203760497e-05
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S2.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.6036919951438904
+            },
+            {
+              "name": "prev_step",
+              "value": 0.3943672478199005
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0017935839714482427
+            },
+            {
+              "name": "global",
+              "value": 6.092520561651327e-05
+            },
+            {
+              "name": "task",
+              "value": 3.9490234485128894e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S0.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.9998874068260193
+            },
+            {
+              "name": "task",
+              "value": 3.528452725731768e-05
+            },
+            {
+              "name": "layer_route",
+              "value": 3.1017083529150113e-05
+            },
+            {
+              "name": "input",
+              "value": 2.5966410248656757e-05
+            },
+            {
+              "name": "global",
+              "value": 1.899743620015215e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S1.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.5509981513023376
+            },
+            {
+              "name": "prev_step",
+              "value": 0.44795843958854675
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0009079799638129771
+            },
+            {
+              "name": "layer_route",
+              "value": 4.45075384050142e-05
+            },
+            {
+              "name": "task",
+              "value": 4.189269748167135e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S2.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.5674195885658264
+            },
+            {
+              "name": "prev_step",
+              "value": 0.4299874007701874
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.00237738573923707
+            },
+            {
+              "name": "global",
+              "value": 8.663860353408381e-05
+            },
+            {
+              "name": "task",
+              "value": 5.8737230574479327e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S0.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.9998816847801208
+            },
+            {
+              "name": "task",
+              "value": 3.640437716967426e-05
+            },
+            {
+              "name": "layer_route",
+              "value": 3.282443867647089e-05
+            },
+            {
+              "name": "input",
+              "value": 2.7640953703667037e-05
+            },
+            {
+              "name": "global",
+              "value": 2.0026025595143437e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S1.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.5442271828651428
+            },
+            {
+              "name": "prev_step",
+              "value": 0.45471903681755066
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0009135623113252223
+            },
+            {
+              "name": "layer_route",
+              "value": 4.6160399506334215e-05
+            },
+            {
+              "name": "task",
+              "value": 4.269138298695907e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S2.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.5626206994056702
+            },
+            {
+              "name": "prev_step",
+              "value": 0.43475961685180664
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0023967402521520853
+            },
+            {
+              "name": "global",
+              "value": 9.020453580887988e-05
+            },
+            {
+              "name": "task",
+              "value": 5.985493407933973e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S0.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.9998875260353088
+            },
+            {
+              "name": "task",
+              "value": 3.466973066679202e-05
+            },
+            {
+              "name": "layer_route",
+              "value": 3.1138504709815606e-05
+            },
+            {
+              "name": "input",
+              "value": 2.611902709759306e-05
+            },
+            {
+              "name": "global",
+              "value": 1.899743983813096e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S1.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.5452147126197815
+            },
+            {
+              "name": "prev_step",
+              "value": 0.4537678062915802
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0008833874599076807
+            },
+            {
+              "name": "layer_route",
+              "value": 4.4126474676886573e-05
+            },
+            {
+              "name": "task",
+              "value": 4.089012145414017e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S2.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.5636228919029236
+            },
+            {
+              "name": "prev_step",
+              "value": 0.4338360130786896
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.002327138325199485
+            },
+            {
+              "name": "global",
+              "value": 8.639565930934623e-05
+            },
+            {
+              "name": "task",
+              "value": 5.766446338384412e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S0.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.9998846650123596
+            },
+            {
+              "name": "task",
+              "value": 3.563071004464291e-05
+            },
+            {
+              "name": "layer_route",
+              "value": 3.187684342265129e-05
+            },
+            {
+              "name": "input",
+              "value": 2.6582130885799415e-05
+            },
+            {
+              "name": "global",
+              "value": 1.9447905287961476e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S1.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.5471333861351013
+            },
+            {
+              "name": "prev_step",
+              "value": 0.45182088017463684
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0009084054618142545
+            },
+            {
+              "name": "layer_route",
+              "value": 4.515512046054937e-05
+            },
+            {
+              "name": "task",
+              "value": 4.200707553536631e-05
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S2.read",
+          "top": [
+            {
+              "name": "state",
+              "value": 0.5655030608177185
+            },
+            {
+              "name": "prev_step",
+              "value": 0.4318957030773163
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 0.0023832786828279495
+            },
+            {
+              "name": "global",
+              "value": 8.80489096743986e-05
+            },
+            {
+              "name": "task",
+              "value": 5.888280793442391e-05
+            }
+          ]
+        }
+      ],
+      "layer_route": [
+        {
+          "address": "L0.B0.route",
+          "top": [
+            {
+              "name": "prev_same_block",
+              "value": 0.9590348601341248
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.030143411830067635
+            },
+            {
+              "name": "input_skip",
+              "value": 0.010821690782904625
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.route",
+          "top": [
+            {
+              "name": "prev_same_block",
+              "value": 0.9595823884010315
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.029461951926350594
+            },
+            {
+              "name": "input_skip",
+              "value": 0.010955506935715675
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.route",
+          "top": [
+            {
+              "name": "prev_same_block",
+              "value": 0.9573048949241638
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.03144079074263573
+            },
+            {
+              "name": "input_skip",
+              "value": 0.011254435405135155
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.route",
+          "top": [
+            {
+              "name": "prev_same_block",
+              "value": 0.9566611647605896
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.03241700306534767
+            },
+            {
+              "name": "input_skip",
+              "value": 0.010922148823738098
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.route",
+          "top": [
+            {
+              "name": "prev_same_block",
+              "value": 0.9527844786643982
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.0429389514029026
+            },
+            {
+              "name": "input_skip",
+              "value": 0.004276517312973738
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.route",
+          "top": [
+            {
+              "name": "prev_same_block",
+              "value": 0.9527758955955505
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.042854782193899155
+            },
+            {
+              "name": "input_skip",
+              "value": 0.004369348753243685
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.route",
+          "top": [
+            {
+              "name": "prev_same_block",
+              "value": 0.9514856934547424
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.04413371905684471
+            },
+            {
+              "name": "input_skip",
+              "value": 0.004380509722977877
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.route",
+          "top": [
+            {
+              "name": "prev_same_block",
+              "value": 0.9513406157493591
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.04436460882425308
+            },
+            {
+              "name": "input_skip",
+              "value": 0.00429512606933713
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.route",
+          "top": [
+            {
+              "name": "prev_same_block",
+              "value": 0.9497213959693909
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.045605842024087906
+            },
+            {
+              "name": "input_skip",
+              "value": 0.004672601353377104
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.route",
+          "top": [
+            {
+              "name": "prev_same_block",
+              "value": 0.9495686888694763
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.04562078043818474
+            },
+            {
+              "name": "input_skip",
+              "value": 0.0048107425682246685
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.route",
+          "top": [
+            {
+              "name": "prev_same_block",
+              "value": 0.9484738707542419
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.04673998802900314
+            },
+            {
+              "name": "input_skip",
+              "value": 0.004786461126059294
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.route",
+          "top": [
+            {
+              "name": "prev_same_block",
+              "value": 0.9483615159988403
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.0469173826277256
+            },
+            {
+              "name": "input_skip",
+              "value": 0.004720910452306271
+            }
+          ]
+        }
+      ],
+      "utility": [
+        {
+          "address": "L0.B0.S0",
+          "write_gate": 0.3570482134819031,
+          "class_read_mass": 0.026478514075279236,
+          "safe_mass": 0.3075152635574341,
+          "nontrivial_mass": 0.017384111881256104,
+          "expensive_mass": 0.00623852014541626,
+          "global_write_gate": 0.000335693359375,
+          "memory_write_gate": 0.0022735595703125,
+          "utility_proxy": 0.009454105980694294
+        },
+        {
+          "address": "L0.B0.S1",
+          "write_gate": 0.3385448157787323,
+          "class_read_mass": 0.026833966374397278,
+          "safe_mass": 0.3162452280521393,
+          "nontrivial_mass": 0.0027253925800323486,
+          "expensive_mass": 0.0007367432117462158,
+          "global_write_gate": 0.0003249645233154297,
+          "memory_write_gate": 0.0020771026611328125,
+          "utility_proxy": 0.00908450037240982
+        },
+        {
+          "address": "L0.B0.S2",
+          "write_gate": 0.34339743852615356,
+          "class_read_mass": 0.027078788727521896,
+          "safe_mass": 0.31359151005744934,
+          "nontrivial_mass": 0.0032429099082946777,
+          "expensive_mass": 0.0008928477764129639,
+          "global_write_gate": 0.00037407875061035156,
+          "memory_write_gate": 0.0020427703857421875,
+          "utility_proxy": 0.009298786520957947
+        },
+        {
+          "address": "L0.B1.S0",
+          "write_gate": 0.3577272295951843,
+          "class_read_mass": 0.026176411658525467,
+          "safe_mass": 0.30710795521736145,
+          "nontrivial_mass": 0.018255949020385742,
+          "expensive_mass": 0.006612062454223633,
+          "global_write_gate": 0.000339508056640625,
+          "memory_write_gate": 0.0023136138916015625,
+          "utility_proxy": 0.00936401542276144
+        },
+        {
+          "address": "L0.B1.S1",
+          "write_gate": 0.3385448157787323,
+          "class_read_mass": 0.026566509157419205,
+          "safe_mass": 0.3161638081073761,
+          "nontrivial_mass": 0.002832859754562378,
+          "expensive_mass": 0.0007697939872741699,
+          "global_write_gate": 0.0003273487091064453,
+          "memory_write_gate": 0.0021038055419921875,
+          "utility_proxy": 0.00899395439773798
+        },
+        {
+          "address": "L0.B1.S2",
+          "write_gate": 0.34373360872268677,
+          "class_read_mass": 0.026837442070245743,
+          "safe_mass": 0.31342968344688416,
+          "nontrivial_mass": 0.0033836066722869873,
+          "expensive_mass": 0.0009368062019348145,
+          "global_write_gate": 0.0003781318664550781,
+          "memory_write_gate": 0.0020656585693359375,
+          "utility_proxy": 0.00922493077814579
+        },
+        {
+          "address": "L0.B2.S0",
+          "write_gate": 0.3554392158985138,
+          "class_read_mass": 0.026273122057318687,
+          "safe_mass": 0.30828773975372314,
+          "nontrivial_mass": 0.01672816276550293,
+          "expensive_mass": 0.005994319915771484,
+          "global_write_gate": 0.0003170967102050781,
+          "memory_write_gate": 0.002338409423828125,
+          "utility_proxy": 0.00933849811553955
+        },
+        {
+          "address": "L0.B2.S1",
+          "write_gate": 0.3377019762992859,
+          "class_read_mass": 0.026653841137886047,
+          "safe_mass": 0.3166472017765045,
+          "nontrivial_mass": 0.0026425421237945557,
+          "expensive_mass": 0.0007117390632629395,
+          "global_write_gate": 0.00031113624572753906,
+          "memory_write_gate": 0.002132415771484375,
+          "utility_proxy": 0.009001054801046848
+        },
+        {
+          "address": "L0.B2.S2",
+          "write_gate": 0.34273356199264526,
+          "class_read_mass": 0.026917438954114914,
+          "safe_mass": 0.31391116976737976,
+          "nontrivial_mass": 0.0031663179397583008,
+          "expensive_mass": 0.0008691251277923584,
+          "global_write_gate": 0.0003612041473388672,
+          "memory_write_gate": 0.0020885467529296875,
+          "utility_proxy": 0.009225510060787201
+        },
+        {
+          "address": "L0.B3.S0",
+          "write_gate": 0.3560841679573059,
+          "class_read_mass": 0.02651539072394371,
+          "safe_mass": 0.30797824263572693,
+          "nontrivial_mass": 0.016621768474578857,
+          "expensive_mass": 0.0059143900871276855,
+          "global_write_gate": 0.0003333091735839844,
+          "memory_write_gate": 0.0023021697998046875,
+          "utility_proxy": 0.009441711008548737
+        },
+        {
+          "address": "L0.B3.S1",
+          "write_gate": 0.3382108807563782,
+          "class_read_mass": 0.026840606704354286,
+          "safe_mass": 0.316324383020401,
+          "nontrivial_mass": 0.0026661455631256104,
+          "expensive_mass": 0.0007144808769226074,
+          "global_write_gate": 0.00032639503479003906,
+          "memory_write_gate": 0.0021038055419921875,
+          "utility_proxy": 0.009077785536646843
+        },
+        {
+          "address": "L0.B3.S2",
+          "write_gate": 0.3434005081653595,
+          "class_read_mass": 0.02704884484410286,
+          "safe_mass": 0.31350862979888916,
+          "nontrivial_mass": 0.003220975399017334,
+          "expensive_mass": 0.0008814036846160889,
+          "global_write_gate": 0.00037741661071777344,
+          "memory_write_gate": 0.00206756591796875,
+          "utility_proxy": 0.009288586676120758
+        },
+        {
+          "address": "L1.B0.S0",
+          "write_gate": 0.35235926508903503,
+          "class_read_mass": 0.027537595480680466,
+          "safe_mass": 0.30861809849739075,
+          "nontrivial_mass": 0.004124253988265991,
+          "expensive_mass": 0.0011717677116394043,
+          "global_write_gate": 0.0004532337188720703,
+          "memory_write_gate": 0.001995086669921875,
+          "utility_proxy": 0.009703126735985279
+        },
+        {
+          "address": "L1.B0.S1",
+          "write_gate": 0.3567653000354767,
+          "class_read_mass": 0.02754860557615757,
+          "safe_mass": 0.30598217248916626,
+          "nontrivial_mass": 0.004781603813171387,
+          "expensive_mass": 0.0013867020606994629,
+          "global_write_gate": 0.0005087852478027344,
+          "memory_write_gate": 0.001987457275390625,
+          "utility_proxy": 0.009828386828303337
+        },
+        {
+          "address": "L1.B0.S2",
+          "write_gate": 0.3607867360115051,
+          "class_read_mass": 0.027522355318069458,
+          "safe_mass": 0.30343303084373474,
+          "nontrivial_mass": 0.0054784417152404785,
+          "expensive_mass": 0.0016187429428100586,
+          "global_write_gate": 0.0005669593811035156,
+          "memory_write_gate": 0.0019855499267578125,
+          "utility_proxy": 0.009929700754582882
+        },
+        {
+          "address": "L1.B1.S0",
+          "write_gate": 0.3530275225639343,
+          "class_read_mass": 0.027214398607611656,
+          "safe_mass": 0.30829504132270813,
+          "nontrivial_mass": 0.004363358020782471,
+          "expensive_mass": 0.001248478889465332,
+          "global_write_gate": 0.0004611015319824219,
+          "memory_write_gate": 0.00202178955078125,
+          "utility_proxy": 0.00960743147879839
+        },
+        {
+          "address": "L1.B1.S1",
+          "write_gate": 0.3574264645576477,
+          "class_read_mass": 0.027257215231657028,
+          "safe_mass": 0.30557993054389954,
+          "nontrivial_mass": 0.005056053400039673,
+          "expensive_mass": 0.0014752447605133057,
+          "global_write_gate": 0.0005197525024414062,
+          "memory_write_gate": 0.0020122528076171875,
+          "utility_proxy": 0.009742449969053268
+        },
+        {
+          "address": "L1.B1.S2",
+          "write_gate": 0.3621070981025696,
+          "class_read_mass": 0.027258966118097305,
+          "safe_mass": 0.30279025435447693,
+          "nontrivial_mass": 0.005803823471069336,
+          "expensive_mass": 0.001725524663925171,
+          "global_write_gate": 0.000579833984375,
+          "memory_write_gate": 0.00200653076171875,
+          "utility_proxy": 0.009870665147900581
+        },
+        {
+          "address": "L1.B2.S0",
+          "write_gate": 0.35120707750320435,
+          "class_read_mass": 0.027340088039636612,
+          "safe_mass": 0.30925747752189636,
+          "nontrivial_mass": 0.003989607095718384,
+          "expensive_mass": 0.0011281967163085938,
+          "global_write_gate": 0.00043392181396484375,
+          "memory_write_gate": 0.002048492431640625,
+          "utility_proxy": 0.009602032601833344
+        },
+        {
+          "address": "L1.B2.S1",
+          "write_gate": 0.35579222440719604,
+          "class_read_mass": 0.027375832200050354,
+          "safe_mass": 0.3064592182636261,
+          "nontrivial_mass": 0.004680454730987549,
+          "expensive_mass": 0.001351475715637207,
+          "global_write_gate": 0.000492095947265625,
+          "memory_write_gate": 0.0020294189453125,
+          "utility_proxy": 0.009740108624100685
+        },
+        {
+          "address": "L1.B2.S2",
+          "write_gate": 0.3603155016899109,
+          "class_read_mass": 0.027364680543541908,
+          "safe_mass": 0.3036665618419647,
+          "nontrivial_mass": 0.00540691614151001,
+          "expensive_mass": 0.0015921592712402344,
+          "global_write_gate": 0.0005521774291992188,
+          "memory_write_gate": 0.002017974853515625,
+          "utility_proxy": 0.009859918616712093
+        },
+        {
+          "address": "L1.B3.S0",
+          "write_gate": 0.35219332575798035,
+          "class_read_mass": 0.027507737278938293,
+          "safe_mass": 0.30861571431159973,
+          "nontrivial_mass": 0.00408327579498291,
+          "expensive_mass": 0.0011520981788635254,
+          "global_write_gate": 0.0004596710205078125,
+          "memory_write_gate": 0.00202178955078125,
+          "utility_proxy": 0.009688041172921658
+        },
+        {
+          "address": "L1.B3.S1",
+          "write_gate": 0.35659343004226685,
+          "class_read_mass": 0.02749408408999443,
+          "safe_mass": 0.30581846833229065,
+          "nontrivial_mass": 0.0047872066497802734,
+          "expensive_mass": 0.0013810694217681885,
+          "global_write_gate": 0.0005183219909667969,
+          "memory_write_gate": 0.00201416015625,
+          "utility_proxy": 0.00980420969426632
+        },
+        {
+          "address": "L1.B3.S2",
+          "write_gate": 0.36127644777297974,
+          "class_read_mass": 0.027444565668702126,
+          "safe_mass": 0.30310869216918945,
+          "nontrivial_mass": 0.005525767803192139,
+          "expensive_mass": 0.0016270279884338379,
+          "global_write_gate": 0.0005784034729003906,
+          "memory_write_gate": 0.0020084381103515625,
+          "utility_proxy": 0.00991507526487112
+        },
+        {
+          "address": "L2.B0.S0",
+          "write_gate": 0.3672279715538025,
+          "class_read_mass": 0.027629520744085312,
+          "safe_mass": 0.298814982175827,
+          "nontrivial_mass": 0.006531029939651489,
+          "expensive_mass": 0.001966238021850586,
+          "global_write_gate": 0.0006742477416992188,
+          "memory_write_gate": 0.0019683837890625,
+          "utility_proxy": 0.010146332904696465
+        },
+        {
+          "address": "L2.B0.S1",
+          "write_gate": 0.36973318457603455,
+          "class_read_mass": 0.027523085474967957,
+          "safe_mass": 0.2965991497039795,
+          "nontrivial_mass": 0.00725102424621582,
+          "expensive_mass": 0.0022206902503967285,
+          "global_write_gate": 0.0007271766662597656,
+          "memory_write_gate": 0.0019779205322265625,
+          "utility_proxy": 0.010176197625696659
+        },
+        {
+          "address": "L2.B0.S2",
+          "write_gate": 0.3721855580806732,
+          "class_read_mass": 0.027406547218561172,
+          "safe_mass": 0.29438474774360657,
+          "nontrivial_mass": 0.007976889610290527,
+          "expensive_mass": 0.0024819374084472656,
+          "global_write_gate": 0.0007791519165039062,
+          "memory_write_gate": 0.0019855499267578125,
+          "utility_proxy": 0.01020032074302435
+        },
+        {
+          "address": "L2.B1.S0",
+          "write_gate": 0.3685302138328552,
+          "class_read_mass": 0.0272873155772686,
+          "safe_mass": 0.29817649722099304,
+          "nontrivial_mass": 0.007004380226135254,
+          "expensive_mass": 0.0021272599697113037,
+          "global_write_gate": 0.0006928443908691406,
+          "memory_write_gate": 0.0019969940185546875,
+          "utility_proxy": 0.010056200437247753
+        },
+        {
+          "address": "L2.B1.S1",
+          "write_gate": 0.3716801106929779,
+          "class_read_mass": 0.027214443311095238,
+          "safe_mass": 0.2957203686237335,
+          "nontrivial_mass": 0.007764667272567749,
+          "expensive_mass": 0.0023982226848602295,
+          "global_write_gate": 0.0007476806640625,
+          "memory_write_gate": 0.002002716064453125,
+          "utility_proxy": 0.010115067474544048
+        },
+        {
+          "address": "L2.B1.S2",
+          "write_gate": 0.3739266097545624,
+          "class_read_mass": 0.027135545387864113,
+          "safe_mass": 0.2935103476047516,
+          "nontrivial_mass": 0.008519172668457031,
+          "expensive_mass": 0.002669692039489746,
+          "global_write_gate": 0.00080108642578125,
+          "memory_write_gate": 0.00200653076171875,
+          "utility_proxy": 0.010146702639758587
+        },
+        {
+          "address": "L2.B2.S0",
+          "write_gate": 0.36662963032722473,
+          "class_read_mass": 0.02743510529398918,
+          "safe_mass": 0.29936671257019043,
+          "nontrivial_mass": 0.00640597939491272,
+          "expensive_mass": 0.001921147108078003,
+          "global_write_gate": 0.0006537437438964844,
+          "memory_write_gate": 0.00201416015625,
+          "utility_proxy": 0.01005852222442627
+        },
+        {
+          "address": "L2.B2.S1",
+          "write_gate": 0.36965277791023254,
+          "class_read_mass": 0.027345651760697365,
+          "safe_mass": 0.2970717251300812,
+          "nontrivial_mass": 0.007166028022766113,
+          "expensive_mass": 0.0021874606609344482,
+          "global_write_gate": 0.00070953369140625,
+          "memory_write_gate": 0.0020122528076171875,
+          "utility_proxy": 0.010108396410942078
+        },
+        {
+          "address": "L2.B2.S2",
+          "write_gate": 0.3721123933792114,
+          "class_read_mass": 0.0272538959980011,
+          "safe_mass": 0.294777512550354,
+          "nontrivial_mass": 0.00791102647781372,
+          "expensive_mass": 0.002454519271850586,
+          "global_write_gate": 0.0007648468017578125,
+          "memory_write_gate": 0.00201416015625,
+          "utility_proxy": 0.010141512379050255
+        },
+        {
+          "address": "L2.B3.S0",
+          "write_gate": 0.3673459589481354,
+          "class_read_mass": 0.027552688494324684,
+          "safe_mass": 0.2985720932483673,
+          "nontrivial_mass": 0.006561100482940674,
+          "expensive_mass": 0.0019682645797729492,
+          "global_write_gate": 0.0006909370422363281,
+          "memory_write_gate": 0.001995086669921875,
+          "utility_proxy": 0.010121368803083897
+        },
+        {
+          "address": "L2.B3.S1",
+          "write_gate": 0.3701638877391815,
+          "class_read_mass": 0.02743542194366455,
+          "safe_mass": 0.2961966097354889,
+          "nontrivial_mass": 0.007347315549850464,
+          "expensive_mass": 0.0022451579570770264,
+          "global_write_gate": 0.0007448196411132812,
+          "memory_write_gate": 0.002002716064453125,
+          "utility_proxy": 0.010155602358281612
+        },
+        {
+          "address": "L2.B3.S2",
+          "write_gate": 0.3726016581058502,
+          "class_read_mass": 0.027311494573950768,
+          "safe_mass": 0.2939833700656891,
+          "nontrivial_mass": 0.008099883794784546,
+          "expensive_mass": 0.0025149285793304443,
+          "global_write_gate": 0.0007982254028320312,
+          "memory_write_gate": 0.00200653076171875,
+          "utility_proxy": 0.010176308453083038
+        }
+      ],
+      "class_read": [
+        {
+          "class": "yes",
+          "top": [
+            {
+              "name": "L1.B0.S0",
+              "value": 0.02792579121887684
+            },
+            {
+              "name": "L1.B3.S0",
+              "value": 0.027912169694900513
+            },
+            {
+              "name": "L1.B0.S1",
+              "value": 0.027789773419499397
+            },
+            {
+              "name": "L1.B3.S1",
+              "value": 0.027722002938389778
+            },
+            {
+              "name": "L1.B0.S2",
+              "value": 0.027600465342402458
+            },
+            {
+              "name": "L1.B2.S0",
+              "value": 0.02758699469268322
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.027533145621418953
+            },
+            {
+              "name": "L0.B0.S2",
+              "value": 0.027533145621418953
+            }
+          ]
+        },
+        {
+          "class": "no",
+          "top": [
+            {
+              "name": "L2.B2.S2",
+              "value": 0.027492346242070198
+            },
+            {
+              "name": "L2.B0.S2",
+              "value": 0.027491511777043343
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.027478933334350586
+            },
+            {
+              "name": "L2.B2.S1",
+              "value": 0.027468862012028694
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.02746468596160412
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.02745378203690052
+            },
+            {
+              "name": "L2.B1.S2",
+              "value": 0.027445407584309578
+            },
+            {
+              "name": "L2.B2.S0",
+              "value": 0.027438702061772346
+            }
+          ]
+        },
+        {
+          "class": "up",
+          "top": [
+            {
+              "name": "L2.B0.S0",
+              "value": 0.027961520478129387
+            },
+            {
+              "name": "L1.B0.S0",
+              "value": 0.027906952425837517
+            },
+            {
+              "name": "L1.B0.S1",
+              "value": 0.02789333276450634
+            },
+            {
+              "name": "L1.B0.S2",
+              "value": 0.02781173400580883
+            },
+            {
+              "name": "L1.B3.S0",
+              "value": 0.02777102403342724
+            },
+            {
+              "name": "L2.B3.S0",
+              "value": 0.027757463976740837
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.027757463976740837
+            },
+            {
+              "name": "L1.B3.S1",
+              "value": 0.027730373665690422
+            }
+          ]
+        },
+        {
+          "class": "down",
+          "top": [
+            {
+              "name": "L2.B0.S2",
+              "value": 0.02754703350365162
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.02753358893096447
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.0275151114910841
+            },
+            {
+              "name": "L2.B2.S2",
+              "value": 0.02750336192548275
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.027500838041305542
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.027473988011479378
+            },
+            {
+              "name": "L2.B2.S1",
+              "value": 0.027460576966404915
+            },
+            {
+              "name": "L2.B3.S0",
+              "value": 0.027460576966404915
+            }
+          ]
+        },
+        {
+          "class": "left",
+          "top": [
+            {
+              "name": "L2.B0.S2",
+              "value": 0.027626605704426765
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.027623655274510384
+            },
+            {
+              "name": "L2.B1.S2",
+              "value": 0.027585746720433235
+            },
+            {
+              "name": "L2.B2.S2",
+              "value": 0.02757144160568714
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.02756449766457081
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.02756240777671337
+            },
+            {
+              "name": "L2.B1.S1",
+              "value": 0.02751198224723339
+            },
+            {
+              "name": "L2.B2.S1",
+              "value": 0.027499588206410408
+            }
+          ]
+        },
+        {
+          "class": "right",
+          "top": [
+            {
+              "name": "L1.B3.S0",
+              "value": 0.027812153100967407
+            },
+            {
+              "name": "L1.B0.S0",
+              "value": 0.027798565104603767
+            },
+            {
+              "name": "L1.B0.S1",
+              "value": 0.027757884934544563
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.027757884934544563
+            },
+            {
+              "name": "L1.B3.S1",
+              "value": 0.02773079089820385
+            },
+            {
+              "name": "L2.B3.S0",
+              "value": 0.027703730389475822
+            },
+            {
+              "name": "L1.B0.S2",
+              "value": 0.02769020013511181
+            },
+            {
+              "name": "L1.B3.S2",
+              "value": 0.027609197422862053
+            }
+          ]
+        },
+        {
+          "class": "on",
+          "top": [
+            {
+              "name": "L2.B0.S0",
+              "value": 0.027926476672291756
+            },
+            {
+              "name": "L1.B0.S1",
+              "value": 0.027817605063319206
+            },
+            {
+              "name": "L2.B3.S0",
+              "value": 0.027817605063319206
+            },
+            {
+              "name": "L1.B0.S0",
+              "value": 0.027804018929600716
+            },
+            {
+              "name": "L1.B3.S0",
+              "value": 0.027763335034251213
+            },
+            {
+              "name": "L1.B0.S2",
+              "value": 0.027763335034251213
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.027763335034251213
+            },
+            {
+              "name": "L1.B3.S1",
+              "value": 0.02773621864616871
+            }
+          ]
+        },
+        {
+          "class": "off",
+          "top": [
+            {
+              "name": "L1.B0.S0",
+              "value": 0.027895690873265266
+            },
+            {
+              "name": "L1.B3.S0",
+              "value": 0.027827680110931396
+            },
+            {
+              "name": "L1.B0.S1",
+              "value": 0.027827680110931396
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.027759822085499763
+            },
+            {
+              "name": "L1.B3.S1",
+              "value": 0.027705667540431023
+            },
+            {
+              "name": "L1.B0.S2",
+              "value": 0.02769213728606701
+            },
+            {
+              "name": "L1.B2.S0",
+              "value": 0.027611134573817253
+            },
+            {
+              "name": "L2.B3.S0",
+              "value": 0.027597637847065926
+            }
+          ]
+        },
+        {
+          "class": "stop",
+          "top": [
+            {
+              "name": "L1.B0.S0",
+              "value": 0.027799995616078377
+            },
+            {
+              "name": "L1.B3.S0",
+              "value": 0.027772871777415276
+            },
+            {
+              "name": "L1.B0.S1",
+              "value": 0.02774575538933277
+            },
+            {
+              "name": "L1.B3.S1",
+              "value": 0.027691630646586418
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.027678100392222404
+            },
+            {
+              "name": "L1.B0.S2",
+              "value": 0.02766459994018078
+            },
+            {
+              "name": "L2.B3.S0",
+              "value": 0.027570189908146858
+            },
+            {
+              "name": "L1.B3.S2",
+              "value": 0.02755674533545971
+            }
+          ]
+        },
+        {
+          "class": "go",
+          "top": [
+            {
+              "name": "L2.B2.S2",
+              "value": 0.027410604059696198
+            },
+            {
+              "name": "L2.B2.S1",
+              "value": 0.027379265055060387
+            },
+            {
+              "name": "L2.B0.S2",
+              "value": 0.027364222332835197
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.027361301705241203
+            },
+            {
+              "name": "L2.B1.S2",
+              "value": 0.027358172461390495
+            },
+            {
+              "name": "L2.B2.S0",
+              "value": 0.027342109009623528
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.027324793860316277
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.02732124924659729
+            }
+          ]
+        }
+      ],
+      "suspicious": []
+    },
+    "exec_stats": {
+      "computed_ops": 792.0,
+      "all_ops": 792.0,
+      "estimated_speedup": 1.0
+    },
+    "sequential_metrics": {
+      "sequential_route_mass": 0.9530913233757019,
+      "input_skip_mass": 0.006688833236694336,
+      "prev_layer_mean_mass": 0.04021993651986122,
+      "step_input_mass": 0.7333816885948181,
+      "step_prev_mass": 0.2665019631385803,
+      "step_layer_route_mass": 3.6092224036110565e-05,
+      "step_register_mass": 4.176459333393723e-05,
+      "identity_mass": 0.9140217900276184,
+      "safe_mass": 0.914959192276001,
+      "nontrivial_mass": 0.08501020073890686,
+      "mean_write_gate": 0.3576168715953827
+    },
+    "grad_report": {
+      "definition": "grad_x_gate=mean(abs(dloss/dgate)*gate), divided by GradScaler scale",
+      "top": [
+        {
+          "type": "class_read",
+          "address": "class.down.read.L1.B3.S0",
+          "grad_x_gate": 9.353300265502185e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L0.B3.S1",
+          "grad_x_gate": 9.323474660050124e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L0.B3.S0",
+          "grad_x_gate": 9.281216625822708e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L0.B3.S2",
+          "grad_x_gate": 9.271791350329295e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L1.B2.S0",
+          "grad_x_gate": 9.256259363610297e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L0.B2.S1",
+          "grad_x_gate": 9.202712681144476e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L0.B2.S2",
+          "grad_x_gate": 9.190636774292216e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L1.B0.S0",
+          "grad_x_gate": 9.167628013528883e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L1.B3.S1",
+          "grad_x_gate": 9.13670810405165e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L0.B0.S2",
+          "grad_x_gate": 9.125984797719866e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L0.B0.S1",
+          "grad_x_gate": 9.11917450139299e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L0.B2.S0",
+          "grad_x_gate": 9.111568215303123e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L0.B3.S1",
+          "grad_x_gate": 9.073844557860866e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L1.B2.S1",
+          "grad_x_gate": 9.073731780517846e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L0.B3.S0",
+          "grad_x_gate": 9.06802888493985e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L1.B3.S0",
+          "grad_x_gate": 9.034210233949125e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L1.B0.S1",
+          "grad_x_gate": 9.010036592371762e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L0.B0.S0",
+          "grad_x_gate": 9.008505730889738e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L0.B3.S2",
+          "grad_x_gate": 8.995792450150475e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L0.B2.S1",
+          "grad_x_gate": 8.982409053714946e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L1.B2.S0",
+          "grad_x_gate": 8.968215843196958e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L0.B0.S1",
+          "grad_x_gate": 8.951763447839767e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L0.B1.S2",
+          "grad_x_gate": 8.942100976128131e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L0.B2.S2",
+          "grad_x_gate": 8.940026600612327e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L1.B0.S0",
+          "grad_x_gate": 8.937233360484242e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L0.B2.S0",
+          "grad_x_gate": 8.932006312534213e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L0.B1.S1",
+          "grad_x_gate": 8.925836300477386e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L0.B0.S2",
+          "grad_x_gate": 8.920422260416672e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L1.B1.S0",
+          "grad_x_gate": 8.91781528480351e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L1.B3.S2",
+          "grad_x_gate": 8.897989755496383e-05
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P0.noop",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P0.identity",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P0.keep_state",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P0.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P0.mlp",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P0.matrix_mlp",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P0.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P0.memory_read",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P0.global_read",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P0.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P0.suppress",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P1.noop",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P1.identity",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P1.keep_state",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P1.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P1.mlp",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P1.matrix_mlp",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P1.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P1.memory_read",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P1.global_read",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P1.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S0.P1.suppress",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P0.noop",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P0.identity",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P0.keep_state",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P0.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P0.mlp",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P0.matrix_mlp",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P0.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P0.memory_read",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P0.global_read",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P0.normalize",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P0.suppress",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P1.noop",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P1.identity",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P1.keep_state",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P1.small_refine",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P1.mlp",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P1.matrix_mlp",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "primitive",
+          "address": "L0.B0.S1.P1.compare",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S0.P0->P1.keep",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S0.P0->P1.replace",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S0.P0->P1.residual",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S0.P0->P1.norm_residual",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S0.P0->P1.product_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S0.P0->P1.compare_mix",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S1.P0->P1.keep",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S1.P0->P1.replace",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S1.P0->P1.residual",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S1.P0->P1.norm_residual",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S1.P0->P1.product_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S1.P0->P1.compare_mix",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S2.P0->P1.keep",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S2.P0->P1.replace",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S2.P0->P1.residual",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S2.P0->P1.norm_residual",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S2.P0->P1.product_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S2.P0->P1.compare_mix",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S0.P0->P1.keep",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S0.P0->P1.replace",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S0.P0->P1.residual",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S0.P0->P1.norm_residual",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S0.P0->P1.product_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S0.P0->P1.compare_mix",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S1.P0->P1.keep",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S1.P0->P1.replace",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S1.P0->P1.residual",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S1.P0->P1.norm_residual",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S1.P0->P1.product_gate",
+          "grad_x_gate": 0.0
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S1.P0->P1.compare_mix",
+          "grad_x_gate": 0.0
+        }
+      ],
+      "by_address": {
+        "L0.B0.S0.P0.noop": 0.0,
+        "L0.B0.S0.P0.identity": 0.0,
+        "L0.B0.S0.P0.keep_state": 0.0,
+        "L0.B0.S0.P0.small_refine": 0.0,
+        "L0.B0.S0.P0.mlp": 0.0,
+        "L0.B0.S0.P0.matrix_mlp": 0.0,
+        "L0.B0.S0.P0.compare": 0.0,
+        "L0.B0.S0.P0.memory_read": 0.0,
+        "L0.B0.S0.P0.global_read": 0.0,
+        "L0.B0.S0.P0.normalize": 0.0,
+        "L0.B0.S0.P0.suppress": 0.0,
+        "L0.B0.S0.P1.noop": 0.0,
+        "L0.B0.S0.P1.identity": 0.0,
+        "L0.B0.S0.P1.keep_state": 0.0,
+        "L0.B0.S0.P1.small_refine": 0.0,
+        "L0.B0.S0.P1.mlp": 0.0,
+        "L0.B0.S0.P1.matrix_mlp": 0.0,
+        "L0.B0.S0.P1.compare": 0.0,
+        "L0.B0.S0.P1.memory_read": 0.0,
+        "L0.B0.S0.P1.global_read": 0.0,
+        "L0.B0.S0.P1.normalize": 0.0,
+        "L0.B0.S0.P1.suppress": 0.0,
+        "L0.B0.S1.P0.noop": 0.0,
+        "L0.B0.S1.P0.identity": 0.0,
+        "L0.B0.S1.P0.keep_state": 0.0,
+        "L0.B0.S1.P0.small_refine": 0.0,
+        "L0.B0.S1.P0.mlp": 0.0,
+        "L0.B0.S1.P0.matrix_mlp": 0.0,
+        "L0.B0.S1.P0.compare": 0.0,
+        "L0.B0.S1.P0.memory_read": 0.0,
+        "L0.B0.S1.P0.global_read": 0.0,
+        "L0.B0.S1.P0.normalize": 0.0,
+        "L0.B0.S1.P0.suppress": 0.0,
+        "L0.B0.S1.P1.noop": 0.0,
+        "L0.B0.S1.P1.identity": 0.0,
+        "L0.B0.S1.P1.keep_state": 0.0,
+        "L0.B0.S1.P1.small_refine": 0.0,
+        "L0.B0.S1.P1.mlp": 0.0,
+        "L0.B0.S1.P1.matrix_mlp": 0.0,
+        "L0.B0.S1.P1.compare": 0.0,
+        "L0.B0.S0.P0->P1.keep": 0.0,
+        "L0.B0.S0.P0->P1.replace": 0.0,
+        "L0.B0.S0.P0->P1.residual": 0.0,
+        "L0.B0.S0.P0->P1.norm_residual": 0.0,
+        "L0.B0.S0.P0->P1.product_gate": 0.0,
+        "L0.B0.S0.P0->P1.compare_mix": 0.0,
+        "L0.B0.S1.P0->P1.keep": 0.0,
+        "L0.B0.S1.P0->P1.replace": 0.0,
+        "L0.B0.S1.P0->P1.residual": 0.0,
+        "L0.B0.S1.P0->P1.norm_residual": 0.0,
+        "L0.B0.S1.P0->P1.product_gate": 0.0,
+        "L0.B0.S1.P0->P1.compare_mix": 0.0,
+        "L0.B0.S2.P0->P1.keep": 0.0,
+        "L0.B0.S2.P0->P1.replace": 0.0,
+        "L0.B0.S2.P0->P1.residual": 0.0,
+        "L0.B0.S2.P0->P1.norm_residual": 0.0,
+        "L0.B0.S2.P0->P1.product_gate": 0.0,
+        "L0.B0.S2.P0->P1.compare_mix": 0.0,
+        "L0.B1.S0.P0->P1.keep": 0.0,
+        "L0.B1.S0.P0->P1.replace": 0.0,
+        "L0.B1.S0.P0->P1.residual": 0.0,
+        "L0.B1.S0.P0->P1.norm_residual": 0.0,
+        "L0.B1.S0.P0->P1.product_gate": 0.0,
+        "L0.B1.S0.P0->P1.compare_mix": 0.0,
+        "L0.B1.S1.P0->P1.keep": 0.0,
+        "L0.B1.S1.P0->P1.replace": 0.0,
+        "L0.B1.S1.P0->P1.residual": 0.0,
+        "L0.B1.S1.P0->P1.norm_residual": 0.0,
+        "L0.B1.S1.P0->P1.product_gate": 0.0,
+        "L0.B1.S1.P0->P1.compare_mix": 0.0,
+        "L0.B1.S2.P0->P1.keep": 0.0,
+        "L0.B1.S2.P0->P1.replace": 0.0,
+        "L0.B1.S2.P0->P1.residual": 0.0,
+        "L0.B1.S2.P0->P1.norm_residual": 0.0,
+        "L0.B1.S2.P0->P1.product_gate": 0.0,
+        "L0.B1.S2.P0->P1.compare_mix": 0.0,
+        "L0.B2.S0.P0->P1.keep": 0.0,
+        "L0.B2.S0.P0->P1.replace": 0.0,
+        "L0.B2.S0.P0->P1.residual": 0.0,
+        "L0.B2.S0.P0->P1.norm_residual": 0.0,
+        "L0.B0.S0.read.state": 0.0,
+        "L0.B0.S0.read.input": 0.0,
+        "L0.B0.S0.read.prev_step": 0.0,
+        "L0.B0.S0.read.all_prev_steps": 0.0,
+        "L0.B0.S0.read.layer_route": 0.0,
+        "L0.B0.S0.read.global": 0.0,
+        "L0.B0.S0.read.memory": 0.0,
+        "L0.B0.S0.read.task": 0.0,
+        "L0.B0.S1.read.state": 0.0,
+        "L0.B0.S1.read.input": 0.0,
+        "L0.B0.S1.read.prev_step": 0.0,
+        "L0.B0.S1.read.all_prev_steps": 0.0,
+        "L0.B0.S1.read.layer_route": 0.0,
+        "L0.B0.S1.read.global": 0.0,
+        "L0.B0.S1.read.memory": 0.0,
+        "L0.B0.S1.read.task": 0.0,
+        "L0.B0.S2.read.state": 0.0,
+        "L0.B0.S2.read.input": 0.0,
+        "L0.B0.S2.read.prev_step": 0.0,
+        "L0.B0.S2.read.all_prev_steps": 0.0,
+        "L0.B0.S2.read.layer_route": 0.0,
+        "L0.B0.S2.read.global": 0.0,
+        "L0.B0.S2.read.memory": 0.0,
+        "L0.B0.S2.read.task": 0.0,
+        "L0.B1.S0.read.state": 0.0,
+        "L0.B1.S0.read.input": 0.0,
+        "L0.B1.S0.read.prev_step": 0.0,
+        "L0.B1.S0.read.all_prev_steps": 0.0,
+        "L0.B1.S0.read.layer_route": 0.0,
+        "L0.B1.S0.read.global": 0.0,
+        "L0.B1.S0.read.memory": 0.0,
+        "L0.B1.S0.read.task": 0.0,
+        "L0.B1.S1.read.state": 0.0,
+        "L0.B1.S1.read.input": 0.0,
+        "L0.B1.S1.read.prev_step": 0.0,
+        "L0.B1.S1.read.all_prev_steps": 0.0,
+        "L0.B1.S1.read.layer_route": 0.0,
+        "L0.B1.S1.read.global": 0.0,
+        "L0.B1.S1.read.memory": 0.0,
+        "L0.B1.S1.read.task": 0.0,
+        "L1.B2.S1.write_gate": 0.0,
+        "L1.B2.S0.write_gate": 0.0,
+        "L1.B1.S1.write_gate": 0.0,
+        "L1.B1.S2.write_gate": 0.0,
+        "L0.B0.S1.write_gate": 0.0,
+        "L0.B0.S0.write_gate": 0.0,
+        "L0.B0.S2.write_gate": 0.0,
+        "L0.B1.S0.write_gate": 0.0,
+        "L0.B3.S2.write_gate": 0.0,
+        "L0.B3.S1.write_gate": 0.0,
+        "L0.B2.S2.write_gate": 0.0,
+        "L0.B3.S0.write_gate": 0.0,
+        "L1.B0.S1.write_gate": 0.0,
+        "L1.B0.S0.write_gate": 0.0,
+        "L1.B0.S2.write_gate": 0.0,
+        "L1.B1.S0.write_gate": 0.0,
+        "L0.B2.S1.write_gate": 0.0,
+        "L0.B2.S0.write_gate": 0.0,
+        "L0.B1.S1.write_gate": 0.0,
+        "L0.B1.S2.write_gate": 0.0,
+        "class.down.read.L1.B3.S0": 9.353300265502185e-05,
+        "class.down.read.L0.B3.S1": 9.323474660050124e-05,
+        "class.down.read.L0.B3.S0": 9.281216625822708e-05,
+        "class.down.read.L0.B3.S2": 9.271791350329295e-05,
+        "class.down.read.L1.B2.S0": 9.256259363610297e-05,
+        "class.down.read.L0.B2.S1": 9.202712681144476e-05,
+        "class.down.read.L0.B2.S2": 9.190636774292216e-05,
+        "class.down.read.L1.B0.S0": 9.167628013528883e-05,
+        "class.down.read.L1.B3.S1": 9.13670810405165e-05,
+        "class.down.read.L0.B0.S2": 9.125984797719866e-05,
+        "class.down.read.L0.B0.S1": 9.11917450139299e-05,
+        "class.down.read.L0.B2.S0": 9.111568215303123e-05,
+        "class.left.read.L0.B3.S1": 9.073844557860866e-05,
+        "class.down.read.L1.B2.S1": 9.073731780517846e-05,
+        "class.left.read.L0.B3.S0": 9.06802888493985e-05,
+        "class.left.read.L1.B3.S0": 9.034210233949125e-05,
+        "class.down.read.L1.B0.S1": 9.010036592371762e-05,
+        "class.down.read.L0.B0.S0": 9.008505730889738e-05,
+        "class.left.read.L0.B3.S2": 8.995792450150475e-05,
+        "class.left.read.L0.B2.S1": 8.982409053714946e-05,
+        "class.left.read.L1.B2.S0": 8.968215843196958e-05,
+        "class.left.read.L0.B0.S1": 8.951763447839767e-05,
+        "class.down.read.L0.B1.S2": 8.942100976128131e-05,
+        "class.left.read.L0.B2.S2": 8.940026600612327e-05,
+        "class.left.read.L1.B0.S0": 8.937233360484242e-05,
+        "class.left.read.L0.B2.S0": 8.932006312534213e-05,
+        "class.down.read.L0.B1.S1": 8.925836300477386e-05,
+        "class.left.read.L0.B0.S2": 8.920422260416672e-05,
+        "class.down.read.L1.B1.S0": 8.91781528480351e-05,
+        "class.down.read.L1.B3.S2": 8.897989755496383e-05
+      }
+    }
+  }
+}

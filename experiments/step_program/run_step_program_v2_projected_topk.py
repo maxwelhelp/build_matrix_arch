@@ -245,7 +245,7 @@ class StepProgramNet(nn.Module):
     HEAVY = {4, 5, 6, 10}
     TRANSITIONS = ["keep", "replace", "residual", "norm_residual", "product_gate", "compare_mix"]
     READS = ["state", "input", "prev_step", "all_prev_steps", "layer_route", "global", "memory", "task"]
-    ROUTES = ["input", "prev_same_block", "prev_layer_mean", "global_mean", "memory_mean"]
+    ROUTES = ["input_skip", "prev_same_block", "prev_layer_mean"]
 
     def __init__(self, num_classes: int, dim: int, evidence_cells: int, layers: int, blocks: int, steps: int, primitive_slots: int, global_cells: int, memory_cells: int, sample_rate: int, n_mels: int, hop_length: int, dropout: float):
         super().__init__()
@@ -366,7 +366,7 @@ class StepProgramNet(nn.Module):
         stats = {"computed_ops": float(computed_count), "all_ops": float(full_count), "estimated_speedup": float(full_count / max(1, computed_count))}
         return out, weights, logits, selected, computed, stats
 
-    def forward(self, wav: torch.Tensor, epoch: int = 1, primitive_temp: float = 1.0, read_temp: float = 1.0, primitive_exec_mode: str = "all", topk_primitives: int = 3, topk_warmup_epochs: int = 3, shadow_prob: float = 0.0, return_aux: bool = True):
+    def forward(self, wav: torch.Tensor, epoch: int = 1, primitive_temp: float = 1.0, read_temp: float = 1.0, primitive_exec_mode: str = "all", topk_primitives: int = 3, topk_warmup_epochs: int = 3, shadow_prob: float = 0.0, write_floor: float = 0.0, return_aux: bool = True):
         B, device, dtype, D = wav.shape[0], wav.device, wav.dtype, self.D
         evidence = self.evidence(wav)
         base = self.base_proj(evidence.mean(dim=1))
@@ -385,8 +385,12 @@ class StepProgramNet(nn.Module):
             mem_mean = memory_cells.mean(dim=1).unsqueeze(1).expand(-1,self.N,-1)
             prev_mean = prev_layer.mean(dim=1).unsqueeze(1).expand(-1,self.N,-1)
             route_logits = self.route_net(torch.cat([state, prev_layer, glob_mean, mem_mean], dim=-1))
-            route_gates = torch.softmax(route_logits.float(), dim=-1).to(dtype)
-            route_src = torch.stack([base[:,None,:].expand(-1,self.N,-1), prev_layer, prev_mean, glob_mean, mem_mean], dim=2)
+            # Sequential basis prior.  The route is still differentiable, but
+            # the default program is L(l-1).same_block -> L(l).same_block.
+            # Order matches ROUTES: input_skip, prev_same_block, prev_layer_mean.
+            route_prior = torch.tensor([-0.5, 2.0, -1.0], device=device, dtype=route_logits.dtype).view(1, 1, self.LR)
+            route_gates = torch.softmax((route_logits + route_prior).float(), dim=-1).to(dtype)
+            route_src = torch.stack([base[:,None,:].expand(-1,self.N,-1), prev_layer, prev_mean], dim=2)
             route_ctx = torch.einsum("bnr,bnrd->bnd", route_gates, route_src)
             lr_all.append(route_gates)
             prev_steps=[]
@@ -398,6 +402,15 @@ class StepProgramNet(nn.Module):
                 prev_step = prev_steps[-1] if prev_steps else torch.zeros_like(state)
                 all_prev = torch.stack(prev_steps, dim=2).mean(dim=2) if prev_steps else torch.zeros_like(state)
                 read_logits = self.read_net(torch.cat([state, in_ctx, route_ctx, glob_ctx, mem_ctx], dim=-1))
+                # Phase priors for step specialization.
+                # READS = state, input, prev_step, all_prev_steps, layer_route, global, memory, task
+                if s == 0:
+                    phase_prior = torch.tensor([1.0, 1.5, -1.0e4, -1.0e4, -0.2, -1.0, -1.0, 0.0], device=device, dtype=read_logits.dtype)
+                elif s == 1:
+                    phase_prior = torch.tensor([0.2, 0.3, 1.5, -0.2, 0.0, -0.5, -0.5, 0.0], device=device, dtype=read_logits.dtype)
+                else:
+                    phase_prior = torch.tensor([0.0, 0.0, 1.2, 0.6, -0.1, 0.2, 0.2, 0.1], device=device, dtype=read_logits.dtype)
+                read_logits = read_logits + phase_prior.view(1, 1, self.R)
                 if s == 0:
                     read_logits = read_logits.clone(); read_logits[...,2] = -1e4; read_logits[...,3] = -1e4
                 read_gates = torch.softmax((read_logits / max(1e-4, read_temp)).float(), dim=-1).to(dtype)
@@ -425,6 +438,12 @@ class StepProgramNet(nn.Module):
                 safe_mass = pg_step_t[..., :3].mean(dim=2).sum(dim=-1).clamp(0,1)
                 write_gate = torch.sigmoid(self.write_net(torch.cat([state, x, read, task], dim=-1))).squeeze(-1)
                 write_gate = write_gate * (1.0 - 0.70 * safe_mass).clamp(0.05, 1.0)
+                # Temporary anti-collapse write floor.  This is differentiable:
+                # even when the learned write_gate is tiny, gradients still flow
+                # through it because we use floor + (1-floor)*gate, not clamp.
+                if write_floor > 0.0:
+                    wf = float(max(0.0, min(0.25, write_floor)))
+                    write_gate = wf + (1.0 - wf) * write_gate
                 state = self.state_norm(state + write_gate.unsqueeze(-1) * x)
 
                 gw_in = torch.cat([state, x, read], dim=-1); mw_in = torch.cat([state, x, mem_ctx], dim=-1)
@@ -474,23 +493,73 @@ class StepProgramNet(nn.Module):
 
 def aux_losses(model: StepProgramNet, aux: Aux, epoch: int, epochs: int, args):
     prog = min(1.0, max(0.0, (epoch - 1) / max(1, epochs - 1)))
-    sharpen = min(1.0, max(0.0, (prog - 0.30) / 0.55))
+
+    # Delayed regularization: cost/write/entropy penalties were the cause of
+    # the v2 identity/no-write collapse.  They should not dominate before the
+    # program has nonzero writes and nontrivial primitive mass.
+    reg_start = max(1, int(getattr(args, "reg_warmup_epochs", 5)))
+    if epoch <= reg_start:
+        reg_w = 0.0
+    else:
+        reg_w = min(1.0, (epoch - reg_start) / max(1, epochs - reg_start))
+
+    # Anti-collapse support.  Keep some activity/exploration alive while the
+    # program learns to use its steps.  After the early phase, keep a small tail
+    # so the system does not instantly harden back to identity.
+    anti_epochs = max(1, int(getattr(args, "anti_collapse_epochs", 6)))
+    anti_tail = float(getattr(args, "anti_collapse_tail", 0.25))
+    anti_w = 1.0 if epoch <= anti_epochs else anti_tail
+
     pg = aux.primitive_gates.float()
+    prim_entropy = entropy(pg, -1).mean()
+    trans_entropy = entropy(aux.primitive_transition_gates.float(), -1).mean() if aux.primitive_transition_gates.numel() else torch.zeros((), device=pg.device)
+    read_entropy = entropy(aux.step_read_gates.float(), -1).mean()
+    write_mean = aux.step_write_gates.float().mean()
     cost = (pg * model.cost.to(pg.device).view(1,1,1,1,1,-1)).sum(dim=-1).mean()
+
+    # Nontrivial means: not noop, not identity, not keep_state.
+    nontrivial_mass = pg[..., 3:].sum(dim=-1).mean()
+    safe_mass = pg[..., :3].sum(dim=-1).mean()
+
+    min_write_target = torch.tensor(float(getattr(args, "min_write_target", 0.02)), device=pg.device)
+    min_nontrivial = torch.tensor(float(getattr(args, "min_nontrivial_mass", 0.10)), device=pg.device)
+    prim_ent_floor = torch.tensor(float(getattr(args, "primitive_entropy_floor", 0.35)), device=pg.device)
+    read_ent_floor = torch.tensor(float(getattr(args, "read_entropy_floor", 0.35)), device=pg.device)
+    trans_ent_floor = torch.tensor(float(getattr(args, "transition_entropy_floor", 0.25)), device=pg.device)
+
+    write_activity_loss = F.relu(min_write_target - write_mean).pow(2)
+    nontrivial_activity_loss = F.relu(min_nontrivial - nontrivial_mass).pow(2)
+    primitive_entropy_floor_loss = F.relu(prim_ent_floor - prim_entropy).pow(2)
+    read_entropy_floor_loss = F.relu(read_ent_floor - read_entropy).pow(2)
+    transition_entropy_floor_loss = F.relu(trans_ent_floor - trans_entropy).pow(2)
+
     return {
         "cost_loss": cost,
-        "primitive_entropy": entropy(pg, -1).mean(),
-        "transition_entropy": entropy(aux.primitive_transition_gates.float(), -1).mean() if aux.primitive_transition_gates.numel() else torch.zeros((),device=pg.device),
-        "read_entropy": entropy(aux.step_read_gates.float(), -1).mean(),
-        "write_l1": aux.step_write_gates.float().mean(),
-        "lambda_cost_eff": torch.tensor(args.lambda_cost * (0.2 + 0.8 * sharpen), device=pg.device),
-        "lambda_primitive_entropy_eff": torch.tensor(args.lambda_primitive_entropy * sharpen, device=pg.device),
-        "lambda_transition_entropy_eff": torch.tensor(args.lambda_transition_entropy * sharpen, device=pg.device),
-        "lambda_read_entropy_eff": torch.tensor(args.lambda_read_entropy * sharpen, device=pg.device),
-        "lambda_write_l1_eff": torch.tensor(args.lambda_write_l1 * (0.25 + 0.75 * sharpen), device=pg.device),
-        "sharpen": torch.tensor(sharpen, device=pg.device),
+        "primitive_entropy": prim_entropy,
+        "transition_entropy": trans_entropy,
+        "read_entropy": read_entropy,
+        "write_l1": write_mean,
+        "nontrivial_mass": nontrivial_mass,
+        "safe_mass": safe_mass,
+        "write_activity_loss": write_activity_loss,
+        "nontrivial_activity_loss": nontrivial_activity_loss,
+        "primitive_entropy_floor_loss": primitive_entropy_floor_loss,
+        "read_entropy_floor_loss": read_entropy_floor_loss,
+        "transition_entropy_floor_loss": transition_entropy_floor_loss,
+        "lambda_cost_eff": torch.tensor(float(args.lambda_cost) * reg_w, device=pg.device),
+        "lambda_primitive_entropy_eff": torch.tensor(float(args.lambda_primitive_entropy) * reg_w, device=pg.device),
+        "lambda_transition_entropy_eff": torch.tensor(float(args.lambda_transition_entropy) * reg_w, device=pg.device),
+        "lambda_read_entropy_eff": torch.tensor(float(args.lambda_read_entropy) * reg_w, device=pg.device),
+        "lambda_write_l1_eff": torch.tensor(float(args.lambda_write_l1) * reg_w, device=pg.device),
+        "lambda_write_activity_eff": torch.tensor(float(getattr(args, "lambda_write_activity", 0.05)) * anti_w, device=pg.device),
+        "lambda_nontrivial_activity_eff": torch.tensor(float(getattr(args, "lambda_nontrivial_activity", 0.05)) * anti_w, device=pg.device),
+        "lambda_primitive_entropy_floor_eff": torch.tensor(float(getattr(args, "lambda_primitive_entropy_floor", 0.02)) * anti_w, device=pg.device),
+        "lambda_read_entropy_floor_eff": torch.tensor(float(getattr(args, "lambda_read_entropy_floor", 0.01)) * anti_w, device=pg.device),
+        "lambda_transition_entropy_floor_eff": torch.tensor(float(getattr(args, "lambda_transition_entropy_floor", 0.005)) * anti_w, device=pg.device),
+        "reg_w": torch.tensor(float(reg_w), device=pg.device),
+        "anti_w": torch.tensor(float(anti_w), device=pg.device),
+        "sharpen": torch.tensor(prog, device=pg.device),
     }
-
 
 def retain_aux_grads(aux: Aux):
     for t in (aux.primitive_gates, aux.primitive_transition_gates, aux.step_read_gates, aux.layer_route_gates, aux.step_write_gates, aux.class_read):
@@ -508,6 +577,20 @@ def make_reports(model: StepProgramNet, aux: Aux, classes: Sequence[str], grad_r
     tg=aux.primitive_transition_gates.detach().float().mean(0); rg=aux.step_read_gates.detach().float().mean(0); lr=aux.layer_route_gates.detach().float().mean(0)
     wg=aux.step_write_gates.detach().float().mean(0); gw=aux.global_write_gates.detach().float().mean(0); mw=aux.memory_write_gates.detach().float().mean(0)
     cls=aux.class_read.detach().float().mean(0); slot_use=cls.mean(0)
+    route_name_to_idx = {name: i for i, name in enumerate(model.ROUTES)}
+    seq_metrics = {
+        "sequential_route_mass": float(lr[..., route_name_to_idx.get("prev_same_block", 0)].mean()) if "prev_same_block" in route_name_to_idx else 0.0,
+        "input_skip_mass": float(lr[..., route_name_to_idx.get("input_skip", 0)].mean()) if "input_skip" in route_name_to_idx else 0.0,
+        "prev_layer_mean_mass": float(lr[..., route_name_to_idx.get("prev_layer_mean", 0)].mean()) if "prev_layer_mean" in route_name_to_idx else 0.0,
+        "step_input_mass": float((rg[..., 0] + rg[..., 1]).mean()),
+        "step_prev_mass": float((rg[..., 2] + rg[..., 3]).mean()),
+        "step_layer_route_mass": float(rg[..., 4].mean()),
+        "step_register_mass": float((rg[..., 5] + rg[..., 6]).mean()),
+        "identity_mass": float(pg[..., 1].mean()),
+        "safe_mass": float(pg[..., :3].sum(dim=-1).mean()),
+        "nontrivial_mass": float(pg[..., 3:].sum(dim=-1).mean()),
+        "mean_write_gate": float(wg.mean()),
+    }
     for l in range(model.L):
       for b in range(model.N):
         route_top=top_named(model.ROUTES, lr[l,b], 5); levels["layer_route"].append({"address":f"L{l}.B{b}.route","top":route_top})
@@ -537,7 +620,7 @@ def make_reports(model: StepProgramNet, aux: Aux, classes: Sequence[str], grad_r
       by_addr=grad_report.get("by_address",{})
       for r in rows:
         if r["address"] in by_addr: r["grad_x_gate"] = by_addr[r["address"]]
-    return {"levels":levels,"exec_stats":aux.exec_stats,"grad_report":grad_report}, rows
+    return {"levels":levels,"exec_stats":aux.exec_stats,"sequential_metrics":seq_metrics,"grad_report":grad_report}, rows
 
 
 def build_grad_report(model: StepProgramNet, aux: Aux, classes: Sequence[str], scale: float):
@@ -575,13 +658,20 @@ def train_epoch(model, loader, opt, scaler, device, dtype, epoch, args, classes)
     model.train(); use_amp=device.startswith("cuda") and dtype!=torch.float32
     totals={"loss":0.0,"ce":0.0,"correct":0,"n":0}; sums={}; last_aux=None; grad_rep=None; t0=time.time()
     progress=(epoch-1)/max(1,args.epochs-1); ptemp=args.primitive_temp_start+(args.primitive_temp_end-args.primitive_temp_start)*progress; rtemp=args.read_temp_start+(args.read_temp_end-args.read_temp_start)*progress
+    wf_prog = min(1.0, max(0.0, (epoch - 1) / max(1, int(getattr(args, "write_floor_epochs", 6)) - 1)))
+    write_floor = float(getattr(args, "write_floor_start", 0.02)) + (float(getattr(args, "write_floor_end", 0.0)) - float(getattr(args, "write_floor_start", 0.02))) * wf_prog
     for step,(wav,y) in enumerate(loader,1):
       if args.max_train_batches and step>args.max_train_batches: break
       wav,y=wav.to(device,non_blocking=True),y.to(device,non_blocking=True); opt.zero_grad(set_to_none=True)
       with torch.autocast(device_type=device.split(":")[0], dtype=dtype, enabled=use_amp):
-        logits,aux=model(wav,epoch=epoch,primitive_temp=ptemp,read_temp=rtemp,primitive_exec_mode=args.primitive_exec_mode,topk_primitives=args.topk_primitives,topk_warmup_epochs=args.topk_warmup_epochs,shadow_prob=args.shadow_prob,return_aux=True)
+        logits,aux=model(wav,epoch=epoch,primitive_temp=ptemp,read_temp=rtemp,primitive_exec_mode=args.primitive_exec_mode,topk_primitives=args.topk_primitives,topk_warmup_epochs=args.topk_warmup_epochs,shadow_prob=args.shadow_prob,write_floor=write_floor,return_aux=True)
         ce=F.cross_entropy(logits.float(),y); losses=aux_losses(model,aux,epoch,args.epochs,args)
         loss=ce + losses["lambda_cost_eff"]*losses["cost_loss"] + losses["lambda_primitive_entropy_eff"]*losses["primitive_entropy"] + losses["lambda_transition_entropy_eff"]*losses["transition_entropy"] + losses["lambda_read_entropy_eff"]*losses["read_entropy"] + losses["lambda_write_l1_eff"]*losses["write_l1"]
+        loss = loss + losses["lambda_write_activity_eff"] * losses["write_activity_loss"]
+        loss = loss + losses["lambda_nontrivial_activity_eff"] * losses["nontrivial_activity_loss"]
+        loss = loss + losses["lambda_primitive_entropy_floor_eff"] * losses["primitive_entropy_floor_loss"]
+        loss = loss + losses["lambda_read_entropy_floor_eff"] * losses["read_entropy_floor_loss"]
+        loss = loss + losses["lambda_transition_entropy_floor_eff"] * losses["transition_entropy_floor_loss"]
       do_grad=bool(args.grad_analytics_every and step%args.grad_analytics_every==0)
       if do_grad: retain_aux_grads(aux)
       if not torch.isfinite(loss): print("NONFINITE_LOSS skip", flush=True); continue
@@ -595,7 +685,7 @@ def train_epoch(model, loader, opt, scaler, device, dtype, epoch, args, classes)
       for k,v in losses.items(): sums[k]=sums.get(k,0.0)+float(v.detach().cpu())*bs
       last_aux=Aux(*(getattr(aux,f).detach().cpu() if isinstance(getattr(aux,f),torch.Tensor) else getattr(aux,f) for f in aux.__dataclass_fields__))
       if args.log_every and step%args.log_every==0: print(f"epoch {epoch:03d} step {step:05d} loss={totals['loss']/max(1,totals['n']):.4f} ce={totals['ce']/max(1,totals['n']):.4f} acc={100*totals['correct']/max(1,totals['n']):.2f}% seen={totals['n']} t={time.time()-t0:.1f}s exec_speedup={aux.exec_stats.get('estimated_speedup',1):.2f}", flush=True)
-    out={"loss":totals["loss"]/max(1,totals["n"]),"ce":totals["ce"]/max(1,totals["n"]),"acc":totals["correct"]/max(1,totals["n"]),"n":totals["n"],"last_aux":last_aux,"grad_report":grad_rep,"primitive_temp":ptemp,"read_temp":rtemp}
+    out={"loss":totals["loss"]/max(1,totals["n"]),"ce":totals["ce"]/max(1,totals["n"]),"acc":totals["correct"]/max(1,totals["n"]),"n":totals["n"],"last_aux":last_aux,"grad_report":grad_rep,"primitive_temp":ptemp,"read_temp":rtemp,"write_floor":write_floor}
     for k,v in sums.items(): out[k]=v/max(1,totals["n"])
     return out
 
@@ -606,7 +696,9 @@ def evaluate(model, loader, device, dtype, args, classes, epoch):
     for step,(wav,y) in enumerate(loader,1):
       if args.max_val_batches and step>args.max_val_batches: break
       wav,y=wav.to(device,non_blocking=True),y.to(device,non_blocking=True)
-      with torch.autocast(device_type=device.split(":")[0], dtype=dtype, enabled=use_amp): logits,aux=model(wav,epoch=epoch,primitive_temp=args.primitive_temp_end,read_temp=args.read_temp_end,primitive_exec_mode=args.primitive_exec_mode,topk_primitives=args.topk_primitives,topk_warmup_epochs=args.topk_warmup_epochs,shadow_prob=0.0,return_aux=True); loss=F.cross_entropy(logits.float(),y)
+      wf_prog = min(1.0, max(0.0, (epoch - 1) / max(1, int(getattr(args, "write_floor_epochs", 6)) - 1)))
+      write_floor = float(getattr(args, "write_floor_start", 0.02)) + (float(getattr(args, "write_floor_end", 0.0)) - float(getattr(args, "write_floor_start", 0.02))) * wf_prog
+      with torch.autocast(device_type=device.split(":")[0], dtype=dtype, enabled=use_amp): logits,aux=model(wav,epoch=epoch,primitive_temp=args.primitive_temp_end,read_temp=args.read_temp_end,primitive_exec_mode=args.primitive_exec_mode,topk_primitives=args.topk_primitives,topk_warmup_epochs=args.topk_warmup_epochs,shadow_prob=0.0,write_floor=write_floor,return_aux=True); loss=F.cross_entropy(logits.float(),y)
       pred=logits.argmax(-1); bs=y.numel(); total_loss+=float(loss.cpu())*bs; correct+=int((pred==y).sum().cpu()); n+=bs; conf+=torch.bincount((y.cpu()*len(classes)+pred.cpu()),minlength=len(classes)**2).view(len(classes),len(classes))
       last_aux=Aux(*(getattr(aux,f).detach().cpu() if isinstance(getattr(aux,f),torch.Tensor) else getattr(aux,f) for f in aux.__dataclass_fields__))
     return {"loss":total_loss/max(1,n),"acc":correct/max(1,n),"n":n,"confusion":conf,"last_aux":last_aux}
@@ -620,7 +712,7 @@ def run(args):
     print(f"loaded datasets: train={len(train_loader.dataset)} val={len(val_loader.dataset)} classes={classes}", flush=True)
     print(f"StepProgramV2 params={sum(p.numel() for p in model.parameters())} L={args.layers} B={args.blocks} S={args.steps} K={args.primitive_slots} O={len(model.PRIMITIVES)} mode={args.primitive_exec_mode} device={device} amp={args.amp}", flush=True)
     opt=torch.optim.AdamW(model.parameters(),lr=args.lr,weight_decay=args.weight_decay,betas=(0.9,0.95)); scaler=torch.amp.GradScaler("cuda",enabled=device.startswith("cuda") and dtype==torch.float16)
-    fields=["epoch","train_loss","train_ce","train_acc","val_loss","val_acc","best_acc","cost_loss","primitive_entropy","transition_entropy","read_entropy","write_l1","exec_speedup"]
+    fields=["epoch","train_loss","train_ce","train_acc","val_loss","val_acc","best_acc","cost_loss","primitive_entropy","transition_entropy","read_entropy","write_l1","nontrivial_mass","safe_mass","write_activity_loss","nontrivial_activity_loss","primitive_entropy_floor_loss","read_entropy_floor_loss","transition_entropy_floor_loss","lambda_cost_eff","lambda_write_l1_eff","lambda_write_activity_eff","lambda_nontrivial_activity_eff","lambda_primitive_entropy_floor_eff","lambda_read_entropy_floor_eff","lambda_transition_entropy_floor_eff","reg_w","anti_w","write_floor","exec_speedup"]
     with (out/"metrics.csv").open("w",newline="",encoding="utf-8") as f: csv.DictWriter(f,fieldnames=fields).writeheader()
     best=-1; best_epoch=0
     for epoch in range(1,args.epochs+1):
@@ -648,6 +740,14 @@ def parser():
     p.add_argument("--lr",type=float,default=5e-4); p.add_argument("--weight-decay",type=float,default=0.01); p.add_argument("--grad-clip",type=float,default=0.7); p.add_argument("--amp",choices=["fp16","bf16","fp32","off"],default="fp16"); p.add_argument("--device",default="cuda"); p.add_argument("--seed",type=int,default=42)
     p.add_argument("--primitive-temp-start",type=float,default=1.50); p.add_argument("--primitive-temp-end",type=float,default=0.70); p.add_argument("--read-temp-start",type=float,default=1.25); p.add_argument("--read-temp-end",type=float,default=0.85)
     p.add_argument("--lambda-cost",type=float,default=0.005); p.add_argument("--lambda-primitive-entropy",type=float,default=0.002); p.add_argument("--lambda-transition-entropy",type=float,default=0.001); p.add_argument("--lambda-read-entropy",type=float,default=0.001); p.add_argument("--lambda-write-l1",type=float,default=0.002)
+    p.add_argument("--reg-warmup-epochs",type=int,default=5)
+    p.add_argument("--anti-collapse-epochs",type=int,default=6); p.add_argument("--anti-collapse-tail",type=float,default=0.25)
+    p.add_argument("--lambda-write-activity",type=float,default=0.05); p.add_argument("--min-write-target",type=float,default=0.02)
+    p.add_argument("--lambda-nontrivial-activity",type=float,default=0.05); p.add_argument("--min-nontrivial-mass",type=float,default=0.10)
+    p.add_argument("--lambda-primitive-entropy-floor",type=float,default=0.02); p.add_argument("--primitive-entropy-floor",type=float,default=0.35)
+    p.add_argument("--lambda-read-entropy-floor",type=float,default=0.01); p.add_argument("--read-entropy-floor",type=float,default=0.35)
+    p.add_argument("--lambda-transition-entropy-floor",type=float,default=0.005); p.add_argument("--transition-entropy-floor",type=float,default=0.25)
+    p.add_argument("--write-floor-start",type=float,default=0.02); p.add_argument("--write-floor-end",type=float,default=0.0); p.add_argument("--write-floor-epochs",type=int,default=6)
     p.add_argument("--grad-analytics-every",type=int,default=50); p.add_argument("--max-train-batches",type=int,default=0); p.add_argument("--max-val-batches",type=int,default=0); p.add_argument("--log-every",type=int,default=50); p.add_argument("--out-dir",default="./runs/step_program_v2_projected_topk")
     return p
 
