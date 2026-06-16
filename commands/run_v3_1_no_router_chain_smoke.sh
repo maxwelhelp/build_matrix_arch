@@ -1,3 +1,7 @@
+python tools/patch_v3_block_input_concat_head.py
+python -m py_compile experiments/step_program/run_step_program_v3_clean_sequential.py
+python -m py_compile experiments/step_program/run_step_program_v3_1_no_router_matrix_chain.py
+
 python experiments/step_program/run_step_program_v3_1_no_router_matrix_chain.py \
   --synthetic \
   --device cuda \
@@ -22,4 +26,4 @@ python experiments/step_program/run_step_program_v3_1_no_router_matrix_chain.py 
   --max-val-batches 2 \
   --log-every 1 \
   --grad-analytics-every 1 \
-  --out-dir ./runs/step_program_v3_1_no_router_chain_smoke
+  --out-dir ./runs/step_program_v3_1_no_router_chain_smoke_fixed_input
