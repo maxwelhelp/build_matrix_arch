@@ -1,0 +1,5250 @@
+{
+  "epoch": 10,
+  "train": {
+    "loss": 1.386835989634196,
+    "ce": 1.386586007754008,
+    "acc": 0.26266666666666666,
+    "n": 12000,
+    "primitive_temp": 0.7,
+    "read_temp": 0.85,
+    "cost_loss": 0.05000000645716985,
+    "primitive_entropy": 2.1460386381780455e-06,
+    "transition_entropy": 4.176846664904587e-06,
+    "read_entropy": 2.029917822255811e-06,
+    "write_l1": 3.637553175129445e-07,
+    "lambda_cost_eff": 0.004999999888241291,
+    "lambda_primitive_entropy_eff": 0.0020000000949949026,
+    "lambda_transition_entropy_eff": 0.0010000000474974513,
+    "lambda_read_entropy_eff": 0.0010000000474974513,
+    "lambda_write_l1_eff": 0.0020000000949949026,
+    "sharpen": 1.0
+  },
+  "val": {
+    "loss": 6.4846092834472655,
+    "acc": 0.186,
+    "n": 2000
+  },
+  "best_acc": 0.186,
+  "best_epoch": 1,
+  "program_report": {
+    "levels": {
+      "primitive": [
+        {
+          "address": "L0.B0.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S0.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S0.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S1.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S1.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S2.P0",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S2.P1",
+          "top": [
+            {
+              "name": "identity",
+              "value": 1.0
+            },
+            {
+              "name": "memory_read",
+              "value": 0.0
+            },
+            {
+              "name": "suppress",
+              "value": 0.0
+            },
+            {
+              "name": "global_read",
+              "value": 0.0
+            },
+            {
+              "name": "normalize",
+              "value": 0.0
+            }
+          ]
+        }
+      ],
+      "transition": [
+        {
+          "address": "L0.B0.S0.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 6.435235122559391e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 6.410146857760424e-10
+            },
+            {
+              "name": "norm_residual",
+              "value": 6.286163256596922e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S1.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 5.974914452089308e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 5.859348561898514e-10
+            },
+            {
+              "name": "norm_residual",
+              "value": 5.701302208116488e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S2.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 5.656933255160368e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 5.461515129034922e-10
+            },
+            {
+              "name": "norm_residual",
+              "value": 5.293480653811855e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S0.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 7.235331223043318e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 7.207123231545154e-10
+            },
+            {
+              "name": "norm_residual",
+              "value": 6.796963547550661e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S1.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 6.587841938632266e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 6.460422752319062e-10
+            },
+            {
+              "name": "norm_residual",
+              "value": 6.092757964815121e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S2.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 6.212926839666011e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 5.998299079656988e-10
+            },
+            {
+              "name": "residual",
+              "value": 5.701302208116488e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S0.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "compare_mix",
+              "value": 8.558665443025859e-10
+            },
+            {
+              "name": "keep",
+              "value": 8.458957423407298e-10
+            },
+            {
+              "name": "norm_residual",
+              "value": 8.134897755418535e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S1.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 7.671942525711017e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 7.612239172338775e-10
+            },
+            {
+              "name": "norm_residual",
+              "value": 7.235331223043318e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S2.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 7.095384835231755e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 6.958149056934815e-10
+            },
+            {
+              "name": "norm_residual",
+              "value": 6.587841938632266e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S0.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "compare_mix",
+              "value": 8.103186455166167e-10
+            },
+            {
+              "name": "keep",
+              "value": 7.977556393257146e-10
+            },
+            {
+              "name": "norm_residual",
+              "value": 7.732111062530578e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S1.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "compare_mix",
+              "value": 7.235331223043318e-10
+            },
+            {
+              "name": "keep",
+              "value": 7.235331223043318e-10
+            },
+            {
+              "name": "norm_residual",
+              "value": 6.877085012568784e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S2.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 6.691586174056852e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 6.587841938632266e-10
+            },
+            {
+              "name": "norm_residual",
+              "value": 6.261657303774371e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S0.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.457558488990543e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 4.106493201039285e-10
+            },
+            {
+              "name": "product_gate",
+              "value": 4.0270675683018453e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S1.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.457558488990543e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 4.0745365414984747e-10
+            },
+            {
+              "name": "residual",
+              "value": 4.04282857191518e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S2.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.388449326153676e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 3.9957284703184826e-10
+            },
+            {
+              "name": "residual",
+              "value": 3.9801498208369424e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S0.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 5.011768222651369e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 4.599054748144482e-10
+            },
+            {
+              "name": "residual",
+              "value": 4.5101031243000023e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S1.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.819767362995719e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 4.4056266967906765e-10
+            },
+            {
+              "name": "residual",
+              "value": 4.3713391240096655e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S2.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.726547486733068e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 4.2867928651268983e-10
+            },
+            {
+              "name": "residual",
+              "value": 4.2867928651268983e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S0.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 5.723617135799941e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 5.334997998929225e-10
+            },
+            {
+              "name": "product_gate",
+              "value": 5.150697646172375e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S1.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 5.419011350760172e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 5.011768222651369e-10
+            },
+            {
+              "name": "residual",
+              "value": 4.876583026280912e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S2.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 5.211412967831563e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 4.782259588331783e-10
+            },
+            {
+              "name": "residual",
+              "value": 4.708118894747315e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S0.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 5.397886027047605e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 5.070842079568649e-10
+            },
+            {
+              "name": "product_gate",
+              "value": 4.895669980520267e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S1.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 5.191095886480923e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 4.83863227263015e-10
+            },
+            {
+              "name": "product_gate",
+              "value": 4.6897641325927e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S2.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 5.011768222651369e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 4.617053683819705e-10
+            },
+            {
+              "name": "residual",
+              "value": 4.5101031243000023e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S0.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 3.6523908897301283e-10
+            },
+            {
+              "name": "residual",
+              "value": 3.3516228681307325e-10
+            },
+            {
+              "name": "product_gate",
+              "value": 3.2612182399027745e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S1.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 3.666686121395202e-10
+            },
+            {
+              "name": "residual",
+              "value": 3.377911006463563e-10
+            },
+            {
+              "name": "product_gate",
+              "value": 3.2612182399027745e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S2.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 3.73900493899626e-10
+            },
+            {
+              "name": "residual",
+              "value": 3.4445332697252695e-10
+            },
+            {
+              "name": "product_gate",
+              "value": 3.312575214131641e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S0.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.0270675683018453e-10
+            },
+            {
+              "name": "residual",
+              "value": 3.709908213966884e-10
+            },
+            {
+              "name": "product_gate",
+              "value": 3.5538741394169904e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S1.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.0270675683018453e-10
+            },
+            {
+              "name": "residual",
+              "value": 3.709908213966884e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 3.5400185560696684e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S2.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.04282857191518e-10
+            },
+            {
+              "name": "residual",
+              "value": 3.709908213966884e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 3.526218761429334e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S0.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.599054748144482e-10
+            },
+            {
+              "name": "residual",
+              "value": 4.203876968755793e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 4.0904837850241904e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S1.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.527755670391542e-10
+            },
+            {
+              "name": "residual",
+              "value": 4.138702436318198e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 3.9957284703184826e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S2.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.440178225095792e-10
+            },
+            {
+              "name": "residual",
+              "value": 4.0745365414984747e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 3.918443625128276e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S0.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.3373218905351507e-10
+            },
+            {
+              "name": "residual",
+              "value": 3.949177651563218e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 3.88795107220119e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S1.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.3373218905351507e-10
+            },
+            {
+              "name": "residual",
+              "value": 3.949177651563218e-10
+            },
+            {
+              "name": "compare_mix",
+              "value": 3.872792087022958e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S2.P0->P1",
+          "top": [
+            {
+              "name": "replace",
+              "value": 1.0
+            },
+            {
+              "name": "keep",
+              "value": 4.270077902379654e-10
+            },
+            {
+              "name": "residual",
+              "value": 3.903166956309434e-10
+            },
+            {
+              "name": "product_gate",
+              "value": 3.7978861722187673e-10
+            }
+          ]
+        }
+      ],
+      "step_read": [
+        {
+          "address": "L0.B0.S0.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "task",
+              "value": 1.1768817920199126e-08
+            },
+            {
+              "name": "global",
+              "value": 1.0467402056235642e-08
+            },
+            {
+              "name": "memory",
+              "value": 1.010579886440155e-08
+            },
+            {
+              "name": "state",
+              "value": 1.0027155994407622e-08
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S1.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.6315948026555134e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.2549089262469124e-09
+            },
+            {
+              "name": "memory",
+              "value": 4.1711614717776513e-10
+            },
+            {
+              "name": "global",
+              "value": 4.0113687371778894e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B0.S2.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.1675353451277033e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 1.9629291525546932e-09
+            },
+            {
+              "name": "memory",
+              "value": 3.5677846788040313e-10
+            },
+            {
+              "name": "global",
+              "value": 3.4580158181363174e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S0.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "task",
+              "value": 1.2824927786425633e-08
+            },
+            {
+              "name": "global",
+              "value": 1.1317960790790949e-08
+            },
+            {
+              "name": "memory",
+              "value": 1.105577673854441e-08
+            },
+            {
+              "name": "state",
+              "value": 1.0926977545011596e-08
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S1.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.754199173755524e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.3539110660664164e-09
+            },
+            {
+              "name": "memory",
+              "value": 4.388449326153676e-10
+            },
+            {
+              "name": "global",
+              "value": 4.154898924912942e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.S2.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.2744720268595984e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.0451140780863852e-09
+            },
+            {
+              "name": "memory",
+              "value": 3.753638788683844e-10
+            },
+            {
+              "name": "global",
+              "value": 3.581747953784742e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S0.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "task",
+              "value": 1.4085428823307211e-08
+            },
+            {
+              "name": "global",
+              "value": 1.2333614130000115e-08
+            },
+            {
+              "name": "memory",
+              "value": 1.228552637400071e-08
+            },
+            {
+              "name": "state",
+              "value": 1.223763401725364e-08
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S1.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 4.04343269977403e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.5303150685829223e-09
+            },
+            {
+              "name": "memory",
+              "value": 4.800977948526963e-10
+            },
+            {
+              "name": "global",
+              "value": 4.5101031243000023e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.S2.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.4720673003363345e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.1600710109481724e-09
+            },
+            {
+              "name": "memory",
+              "value": 4.0270675683018453e-10
+            },
+            {
+              "name": "global",
+              "value": 3.812750393183961e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S0.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "task",
+              "value": 1.3652068808767126e-08
+            },
+            {
+              "name": "global",
+              "value": 1.2189928177974707e-08
+            },
+            {
+              "name": "state",
+              "value": 1.1861119197931203e-08
+            },
+            {
+              "name": "memory",
+              "value": 1.1861119197931203e-08
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S1.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.9729779466313175e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.4668780351788655e-09
+            },
+            {
+              "name": "memory",
+              "value": 4.67148042471166e-10
+            },
+            {
+              "name": "global",
+              "value": 4.4401773924285237e-10
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.S2.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.4115681391000408e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.1100328151391068e-09
+            },
+            {
+              "name": "memory",
+              "value": 3.903166956309434e-10
+            },
+            {
+              "name": "global",
+              "value": 3.753638788683844e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S0.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "global",
+              "value": 4.992228297417967e-10
+            },
+            {
+              "name": "memory",
+              "value": 4.876583026280912e-10
+            },
+            {
+              "name": "task",
+              "value": 4.617053683819705e-10
+            },
+            {
+              "name": "state",
+              "value": 3.2612182399027745e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S1.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.805879611462615e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.447680946815467e-09
+            },
+            {
+              "name": "global",
+              "value": 4.388449326153676e-10
+            },
+            {
+              "name": "memory",
+              "value": 4.2534328836829616e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.S2.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.431616102389512e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.2026738211167185e-09
+            },
+            {
+              "name": "global",
+              "value": 3.903166956309434e-10
+            },
+            {
+              "name": "memory",
+              "value": 3.7683320353032457e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S0.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "global",
+              "value": 5.272843828230123e-10
+            },
+            {
+              "name": "memory",
+              "value": 5.211412967831563e-10
+            },
+            {
+              "name": "task",
+              "value": 4.972764422461751e-10
+            },
+            {
+              "name": "state",
+              "value": 3.471548881694986e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S1.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.9963263809283944e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.590319292394838e-09
+            },
+            {
+              "name": "global",
+              "value": 4.617053683819705e-10
+            },
+            {
+              "name": "memory",
+              "value": 4.527755670391542e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.S2.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.5474696513659865e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.2904187435557333e-09
+            },
+            {
+              "name": "global",
+              "value": 4.058651470462138e-10
+            },
+            {
+              "name": "memory",
+              "value": 3.9491784842304867e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S0.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "memory",
+              "value": 5.723617135799941e-10
+            },
+            {
+              "name": "global",
+              "value": 5.723617135799941e-10
+            },
+            {
+              "name": "task",
+              "value": 5.355879073576375e-10
+            },
+            {
+              "name": "state",
+              "value": 3.827674566192485e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S1.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 4.245765961030656e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.735923265717588e-09
+            },
+            {
+              "name": "global",
+              "value": 4.934066488715416e-10
+            },
+            {
+              "name": "memory",
+              "value": 4.895669980520267e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.S2.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.7615390802159254e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.4191637582049452e-09
+            },
+            {
+              "name": "global",
+              "value": 4.3204109734240603e-10
+            },
+            {
+              "name": "memory",
+              "value": 4.236846706806574e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S0.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "global",
+              "value": 5.634879784999214e-10
+            },
+            {
+              "name": "memory",
+              "value": 5.525891411117811e-10
+            },
+            {
+              "name": "task",
+              "value": 5.211412967831563e-10
+            },
+            {
+              "name": "state",
+              "value": 3.7244293760174685e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S1.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 4.171784695472525e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.677770449821537e-09
+            },
+            {
+              "name": "global",
+              "value": 4.857571567207231e-10
+            },
+            {
+              "name": "memory",
+              "value": 4.745044912546348e-10
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.S2.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 3.688785943367634e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 2.3631243628585707e-09
+            },
+            {
+              "name": "global",
+              "value": 4.2534328836829616e-10
+            },
+            {
+              "name": "memory",
+              "value": 4.122564789543759e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S0.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "global",
+              "value": 3.075622256876187e-10
+            },
+            {
+              "name": "memory",
+              "value": 2.923337405480453e-10
+            },
+            {
+              "name": "task",
+              "value": 2.6204635683590993e-10
+            },
+            {
+              "name": "state",
+              "value": 1.887448114468171e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S1.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 2.515533115143853e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 1.6115108136816048e-09
+            },
+            {
+              "name": "global",
+              "value": 2.800386311729852e-10
+            },
+            {
+              "name": "memory",
+              "value": 2.64101601699096e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.S2.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 2.2681603262242334e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 1.450202957720137e-09
+            },
+            {
+              "name": "global",
+              "value": 2.5004623371849277e-10
+            },
+            {
+              "name": "memory",
+              "value": 2.3489676870269705e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S0.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "global",
+              "value": 3.248503965824767e-10
+            },
+            {
+              "name": "memory",
+              "value": 3.1118768673010777e-10
+            },
+            {
+              "name": "task",
+              "value": 2.8223492987144994e-10
+            },
+            {
+              "name": "state",
+              "value": 2.0091793506704647e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S1.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 2.600458293144925e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 1.6822648829517561e-09
+            },
+            {
+              "name": "global",
+              "value": 2.923337405480453e-10
+            },
+            {
+              "name": "memory",
+              "value": 2.7785929113122165e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.S2.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 2.3770108104059773e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 1.5317188628571898e-09
+            },
+            {
+              "name": "global",
+              "value": 2.6513521933502204e-10
+            },
+            {
+              "name": "memory",
+              "value": 2.510249508258511e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S0.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "global",
+              "value": 3.5400185560696684e-10
+            },
+            {
+              "name": "memory",
+              "value": 3.43110428957516e-10
+            },
+            {
+              "name": "task",
+              "value": 3.0516875137998056e-10
+            },
+            {
+              "name": "state",
+              "value": 2.223958656122349e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S1.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 2.757381656337543e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 1.7733583490553428e-09
+            },
+            {
+              "name": "global",
+              "value": 3.09974462764373e-10
+            },
+            {
+              "name": "memory",
+              "value": 2.992661951584097e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.S2.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 2.481374883345211e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 1.5927364982459835e-09
+            },
+            {
+              "name": "global",
+              "value": 2.7677596325936804e-10
+            },
+            {
+              "name": "memory",
+              "value": 2.6513521933502204e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S0.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "global",
+              "value": 3.471548881694986e-10
+            },
+            {
+              "name": "memory",
+              "value": 3.312575214131641e-10
+            },
+            {
+              "name": "task",
+              "value": 2.9693733583080473e-10
+            },
+            {
+              "name": "state",
+              "value": 2.1471312228182882e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S1.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 2.709335200634655e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 1.7356657222578065e-09
+            },
+            {
+              "name": "global",
+              "value": 3.0516875137998056e-10
+            },
+            {
+              "name": "memory",
+              "value": 2.889279648865539e-10
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.S2.read",
+          "top": [
+            {
+              "name": "layer_route",
+              "value": 1.0
+            },
+            {
+              "name": "prev_step",
+              "value": 2.438138357874209e-09
+            },
+            {
+              "name": "all_prev_steps",
+              "value": 1.5619293636248699e-09
+            },
+            {
+              "name": "global",
+              "value": 2.7248497902476743e-10
+            },
+            {
+              "name": "memory",
+              "value": 2.569778001504375e-10
+            }
+          ]
+        }
+      ],
+      "layer_route": [
+        {
+          "address": "L0.B0.route",
+          "top": [
+            {
+              "name": "input",
+              "value": 0.5038112998008728
+            },
+            {
+              "name": "prev_same_block",
+              "value": 0.1811368316411972
+            },
+            {
+              "name": "memory_mean",
+              "value": 0.15272115170955658
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.09077049046754837
+            },
+            {
+              "name": "global_mean",
+              "value": 0.07156037539243698
+            }
+          ]
+        },
+        {
+          "address": "L0.B1.route",
+          "top": [
+            {
+              "name": "input",
+              "value": 0.5041989684104919
+            },
+            {
+              "name": "prev_same_block",
+              "value": 0.18234150111675262
+            },
+            {
+              "name": "memory_mean",
+              "value": 0.15296578407287598
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.08856292068958282
+            },
+            {
+              "name": "global_mean",
+              "value": 0.07193084061145782
+            }
+          ]
+        },
+        {
+          "address": "L0.B2.route",
+          "top": [
+            {
+              "name": "input",
+              "value": 0.5021315217018127
+            },
+            {
+              "name": "prev_same_block",
+              "value": 0.18068720400333405
+            },
+            {
+              "name": "memory_mean",
+              "value": 0.15343262255191803
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.0914449617266655
+            },
+            {
+              "name": "global_mean",
+              "value": 0.07230359315872192
+            }
+          ]
+        },
+        {
+          "address": "L0.B3.route",
+          "top": [
+            {
+              "name": "input",
+              "value": 0.5021219849586487
+            },
+            {
+              "name": "prev_same_block",
+              "value": 0.18094871938228607
+            },
+            {
+              "name": "memory_mean",
+              "value": 0.15199090540409088
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.09189081937074661
+            },
+            {
+              "name": "global_mean",
+              "value": 0.0730474442243576
+            }
+          ]
+        },
+        {
+          "address": "L1.B0.route",
+          "top": [
+            {
+              "name": "input",
+              "value": 0.6908197402954102
+            },
+            {
+              "name": "prev_same_block",
+              "value": 0.11956382542848587
+            },
+            {
+              "name": "memory_mean",
+              "value": 0.09878970682621002
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.05745846405625343
+            },
+            {
+              "name": "global_mean",
+              "value": 0.03336826339364052
+            }
+          ]
+        },
+        {
+          "address": "L1.B1.route",
+          "top": [
+            {
+              "name": "input",
+              "value": 0.6908711791038513
+            },
+            {
+              "name": "prev_same_block",
+              "value": 0.12061358243227005
+            },
+            {
+              "name": "memory_mean",
+              "value": 0.09861934930086136
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.05629629269242287
+            },
+            {
+              "name": "global_mean",
+              "value": 0.033599648624658585
+            }
+          ]
+        },
+        {
+          "address": "L1.B2.route",
+          "top": [
+            {
+              "name": "input",
+              "value": 0.6886397004127502
+            },
+            {
+              "name": "prev_same_block",
+              "value": 0.12037087231874466
+            },
+            {
+              "name": "memory_mean",
+              "value": 0.09913230687379837
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.058037277311086655
+            },
+            {
+              "name": "global_mean",
+              "value": 0.03381979838013649
+            }
+          ]
+        },
+        {
+          "address": "L1.B3.route",
+          "top": [
+            {
+              "name": "input",
+              "value": 0.6899716258049011
+            },
+            {
+              "name": "prev_same_block",
+              "value": 0.12011882662773132
+            },
+            {
+              "name": "memory_mean",
+              "value": 0.09800221025943756
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.05792279541492462
+            },
+            {
+              "name": "global_mean",
+              "value": 0.033984627574682236
+            }
+          ]
+        },
+        {
+          "address": "L2.B0.route",
+          "top": [
+            {
+              "name": "input",
+              "value": 0.7045649886131287
+            },
+            {
+              "name": "prev_same_block",
+              "value": 0.1112133264541626
+            },
+            {
+              "name": "memory_mean",
+              "value": 0.09524200856685638
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.05817407742142677
+            },
+            {
+              "name": "global_mean",
+              "value": 0.030805645510554314
+            }
+          ]
+        },
+        {
+          "address": "L2.B1.route",
+          "top": [
+            {
+              "name": "input",
+              "value": 0.7044369578361511
+            },
+            {
+              "name": "prev_same_block",
+              "value": 0.1123117133975029
+            },
+            {
+              "name": "memory_mean",
+              "value": 0.0950852707028389
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.057094234973192215
+            },
+            {
+              "name": "global_mean",
+              "value": 0.03107193298637867
+            }
+          ]
+        },
+        {
+          "address": "L2.B2.route",
+          "top": [
+            {
+              "name": "input",
+              "value": 0.7020741105079651
+            },
+            {
+              "name": "prev_same_block",
+              "value": 0.11208543181419373
+            },
+            {
+              "name": "memory_mean",
+              "value": 0.09562627226114273
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.05888128653168678
+            },
+            {
+              "name": "global_mean",
+              "value": 0.03133275732398033
+            }
+          ]
+        },
+        {
+          "address": "L2.B3.route",
+          "top": [
+            {
+              "name": "input",
+              "value": 0.703593909740448
+            },
+            {
+              "name": "prev_same_block",
+              "value": 0.1118081733584404
+            },
+            {
+              "name": "memory_mean",
+              "value": 0.09447427839040756
+            },
+            {
+              "name": "prev_layer_mean",
+              "value": 0.05869263783097267
+            },
+            {
+              "name": "global_mean",
+              "value": 0.031431253999471664
+            }
+          ]
+        }
+      ],
+      "utility": [
+        {
+          "address": "L0.B0.S0",
+          "write_gate": 1.2516976255483314e-07,
+          "class_read_mass": 0.02542414329946041,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002912902506068349,
+          "memory_write_gate": 0.0022125244140625,
+          "utility_proxy": 3.182333951912142e-09
+        },
+        {
+          "address": "L0.B0.S1",
+          "write_gate": 1.072883222263954e-07,
+          "class_read_mass": 0.02591441199183464,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.0029449462890625,
+          "memory_write_gate": 0.002279663225635886,
+          "utility_proxy": 2.7803137570003855e-09
+        },
+        {
+          "address": "L0.B0.S2",
+          "write_gate": 1.072883222263954e-07,
+          "class_read_mass": 0.026365553960204124,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002973937662318349,
+          "memory_write_gate": 0.002276610815897584,
+          "utility_proxy": 2.8287161502049685e-09
+        },
+        {
+          "address": "L0.B1.S0",
+          "write_gate": 1.4305113893442467e-07,
+          "class_read_mass": 0.025280993431806564,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002880859887227416,
+          "memory_write_gate": 0.002210998674854636,
+          "utility_proxy": 3.6164748973277483e-09
+        },
+        {
+          "address": "L0.B1.S1",
+          "write_gate": 1.2516976255483314e-07,
+          "class_read_mass": 0.025794560089707375,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.0029144287109375,
+          "memory_write_gate": 0.002279663225635886,
+          "utility_proxy": 3.2286988638219327e-09
+        },
+        {
+          "address": "L0.B1.S2",
+          "write_gate": 1.072883222263954e-07,
+          "class_read_mass": 0.026261378079652786,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002946472493931651,
+          "memory_write_gate": 0.002275085309520364,
+          "utility_proxy": 2.817539090926857e-09
+        },
+        {
+          "address": "L0.B2.S0",
+          "write_gate": 1.6093257215743506e-07,
+          "class_read_mass": 0.025065917521715164,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002873230492696166,
+          "memory_write_gate": 0.002210998674854636,
+          "utility_proxy": 4.033922529345091e-09
+        },
+        {
+          "address": "L0.B2.S1",
+          "write_gate": 1.4305113893442467e-07,
+          "class_read_mass": 0.0256075169891119,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002909850561991334,
+          "memory_write_gate": 0.002279663225635886,
+          "utility_proxy": 3.663184422464383e-09
+        },
+        {
+          "address": "L0.B2.S2",
+          "write_gate": 1.2516976255483314e-07,
+          "class_read_mass": 0.02608705684542656,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.0029449462890625,
+          "memory_write_gate": 0.002275085309520364,
+          "utility_proxy": 3.2653106885049965e-09
+        },
+        {
+          "address": "L0.B3.S0",
+          "write_gate": 1.4305113893442467e-07,
+          "class_read_mass": 0.025139546021819115,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.0028839111328125,
+          "memory_write_gate": 0.002209473168477416,
+          "utility_proxy": 3.596240638614745e-09
+        },
+        {
+          "address": "L0.B3.S1",
+          "write_gate": 1.2516976255483314e-07,
+          "class_read_mass": 0.02566947042942047,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002920531900599599,
+          "memory_write_gate": 0.002278137719258666,
+          "utility_proxy": 3.213041610550249e-09
+        },
+        {
+          "address": "L0.B3.S2",
+          "write_gate": 1.072883222263954e-07,
+          "class_read_mass": 0.026144590228796005,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002951049478724599,
+          "memory_write_gate": 0.002275085309520364,
+          "utility_proxy": 2.8050091138709377e-09
+        },
+        {
+          "address": "L1.B0.S0",
+          "write_gate": 7.152556946721234e-08,
+          "class_read_mass": 0.027237001806497574,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002999878255650401,
+          "memory_write_gate": 0.002215575659647584,
+          "utility_proxy": 1.9481420920897108e-09
+        },
+        {
+          "address": "L1.B0.S1",
+          "write_gate": 7.152556946721234e-08,
+          "class_read_mass": 0.027523601427674294,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003019714029505849,
+          "memory_write_gate": 0.0022125244140625,
+          "utility_proxy": 1.9686412500163897e-09
+        },
+        {
+          "address": "L1.B0.S2",
+          "write_gate": 5.36441611131977e-08,
+          "class_read_mass": 0.027787843719124794,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003034972818568349,
+          "memory_write_gate": 0.002209473168477416,
+          "utility_proxy": 1.4906555989568915e-09
+        },
+        {
+          "address": "L1.B1.S0",
+          "write_gate": 7.152556946721234e-08,
+          "class_read_mass": 0.027068769559264183,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002966308267787099,
+          "memory_write_gate": 0.0022125244140625,
+          "utility_proxy": 1.9361090508596135e-09
+        },
+        {
+          "address": "L1.B1.S1",
+          "write_gate": 7.152556946721234e-08,
+          "class_read_mass": 0.027385234832763672,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002987671410664916,
+          "memory_write_gate": 0.002210998674854636,
+          "utility_proxy": 1.958744499930276e-09
+        },
+        {
+          "address": "L1.B1.S2",
+          "write_gate": 7.152556946721234e-08,
+          "class_read_mass": 0.027659595012664795,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003007507650181651,
+          "memory_write_gate": 0.002206420758739114,
+          "utility_proxy": 1.9783683580243405e-09
+        },
+        {
+          "address": "L1.B2.S0",
+          "write_gate": 8.940696716308594e-08,
+          "class_read_mass": 0.026841599494218826,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002961731282994151,
+          "memory_write_gate": 0.0022125244140625,
+          "utility_proxy": 2.399826115606629e-09
+        },
+        {
+          "address": "L1.B2.S1",
+          "write_gate": 7.152556946721234e-08,
+          "class_read_mass": 0.027193952351808548,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002986144507303834,
+          "memory_write_gate": 0.002207946265116334,
+          "utility_proxy": 1.9450629995532154e-09
+        },
+        {
+          "address": "L1.B2.S2",
+          "write_gate": 7.152556946721234e-08,
+          "class_read_mass": 0.027491707354784012,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.0030059814453125,
+          "memory_write_gate": 0.002206420758739114,
+          "utility_proxy": 1.96635996374539e-09
+        },
+        {
+          "address": "L1.B3.S0",
+          "write_gate": 7.152556946721234e-08,
+          "class_read_mass": 0.02693188562989235,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002973937662318349,
+          "memory_write_gate": 0.0022125244140625,
+          "utility_proxy": 1.926318438094654e-09
+        },
+        {
+          "address": "L1.B3.S1",
+          "write_gate": 7.152556946721234e-08,
+          "class_read_mass": 0.02726658061146736,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.002995300805196166,
+          "memory_write_gate": 0.002209473168477416,
+          "utility_proxy": 1.9502577330854365e-09
+        },
+        {
+          "address": "L1.B3.S2",
+          "write_gate": 7.152556946721234e-08,
+          "class_read_mass": 0.0275568924844265,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003015137044712901,
+          "memory_write_gate": 0.002206420758739114,
+          "utility_proxy": 1.9710224563596057e-09
+        },
+        {
+          "address": "L2.B0.S0",
+          "write_gate": 5.36441611131977e-08,
+          "class_read_mass": 0.028493989259004593,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.00311279296875,
+          "memory_write_gate": 0.002192687476053834,
+          "utility_proxy": 1.528536186512497e-09
+        },
+        {
+          "address": "L2.B0.S1",
+          "write_gate": 5.36441611131977e-08,
+          "class_read_mass": 0.028623804450035095,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003117371117696166,
+          "memory_write_gate": 0.002192687476053834,
+          "utility_proxy": 1.5354999494121557e-09
+        },
+        {
+          "address": "L2.B0.S2",
+          "write_gate": 5.36441611131977e-08,
+          "class_read_mass": 0.028744280338287354,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003125000512227416,
+          "memory_write_gate": 0.002191161969676614,
+          "utility_proxy": 1.5419627796831037e-09
+        },
+        {
+          "address": "L2.B1.S0",
+          "write_gate": 5.36441611131977e-08,
+          "class_read_mass": 0.028313731774687767,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003076172200962901,
+          "memory_write_gate": 0.002191161969676614,
+          "utility_proxy": 1.5188663660126167e-09
+        },
+        {
+          "address": "L2.B1.S1",
+          "write_gate": 5.36441611131977e-08,
+          "class_read_mass": 0.028468186035752296,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003085326636210084,
+          "memory_write_gate": 0.00218963623046875,
+          "utility_proxy": 1.5271519604453943e-09
+        },
+        {
+          "address": "L2.B1.S2",
+          "write_gate": 5.36441611131977e-08,
+          "class_read_mass": 0.028606127947568893,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003096007974818349,
+          "memory_write_gate": 0.002188110491260886,
+          "utility_proxy": 1.5345517079268234e-09
+        },
+        {
+          "address": "L2.B2.S0",
+          "write_gate": 5.36441611131977e-08,
+          "class_read_mass": 0.02808203361928463,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003071594750508666,
+          "memory_write_gate": 0.002188110491260886,
+          "utility_proxy": 1.5064370861850307e-09
+        },
+        {
+          "address": "L2.B2.S1",
+          "write_gate": 5.36441611131977e-08,
+          "class_read_mass": 0.028275128453969955,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003083801595494151,
+          "memory_write_gate": 0.002188110491260886,
+          "utility_proxy": 1.5167955780270859e-09
+        },
+        {
+          "address": "L2.B2.S2",
+          "write_gate": 5.3644171771338733e-08,
+          "class_read_mass": 0.028439048677682877,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003096007974818349,
+          "memory_write_gate": 0.002188110491260886,
+          "utility_proxy": 1.5255892105159319e-09
+        },
+        {
+          "address": "L2.B3.S0",
+          "write_gate": 5.3644171771338733e-08,
+          "class_read_mass": 0.028184672817587852,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003085326636210084,
+          "memory_write_gate": 0.002188110491260886,
+          "utility_proxy": 1.511943459320264e-09
+        },
+        {
+          "address": "L2.B3.S1",
+          "write_gate": 5.3644171771338733e-08,
+          "class_read_mass": 0.02835841104388237,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.003096007974818349,
+          "memory_write_gate": 0.002188110491260886,
+          "utility_proxy": 1.5212634485450849e-09
+        },
+        {
+          "address": "L2.B3.S2",
+          "write_gate": 5.3644171771338733e-08,
+          "class_read_mass": 0.028509894385933876,
+          "safe_mass": 0.3333333432674408,
+          "nontrivial_mass": 0.0,
+          "expensive_mass": 0.0,
+          "global_write_gate": 0.00310516357421875,
+          "memory_write_gate": 0.002188110491260886,
+          "utility_proxy": 1.5293897259738287e-09
+        }
+      ],
+      "class_read": [
+        {
+          "class": "yes",
+          "top": [
+            {
+              "name": "L2.B0.S2",
+              "value": 0.029562443494796753
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.02940410189330578
+            },
+            {
+              "name": "L2.B1.S2",
+              "value": 0.029332397505640984
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.029232295230031013
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.029189525172114372
+            },
+            {
+              "name": "L2.B1.S1",
+              "value": 0.029132546856999397
+            },
+            {
+              "name": "L2.B2.S2",
+              "value": 0.02899065613746643
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.028976501896977425
+            }
+          ]
+        },
+        {
+          "class": "no",
+          "top": [
+            {
+              "name": "L2.B0.S2",
+              "value": 0.027300866320729256
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.027297547087073326
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.027287544682621956
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.027284206822514534
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.027270903810858727
+            },
+            {
+              "name": "L2.B1.S2",
+              "value": 0.0272675734013319
+            },
+            {
+              "name": "L2.B3.S0",
+              "value": 0.027264239266514778
+            },
+            {
+              "name": "L2.B1.S1",
+              "value": 0.027247605845332146
+            }
+          ]
+        },
+        {
+          "class": "up",
+          "top": [
+            {
+              "name": "L2.B0.S2",
+              "value": 0.029684631153941154
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.02949679084122181
+            },
+            {
+              "name": "L2.B1.S2",
+              "value": 0.029482394456863403
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.02929583378136158
+            },
+            {
+              "name": "L2.B1.S1",
+              "value": 0.029281554743647575
+            },
+            {
+              "name": "L2.B2.S2",
+              "value": 0.02926724962890148
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.02926724962890148
+            },
+            {
+              "name": "L2.B1.S0",
+              "value": 0.029039500281214714
+            }
+          ]
+        },
+        {
+          "class": "down",
+          "top": [
+            {
+              "name": "L2.B0.S2",
+              "value": 0.02734670229256153
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.02733064629137516
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.027313143014907837
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.027285246178507805
+            },
+            {
+              "name": "L2.B1.S2",
+              "value": 0.027279822155833244
+            },
+            {
+              "name": "L2.B2.S2",
+              "value": 0.027270255610346794
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.027258602902293205
+            },
+            {
+              "name": "L2.B1.S1",
+              "value": 0.02725359983742237
+            }
+          ]
+        },
+        {
+          "class": "left",
+          "top": [
+            {
+              "name": "L2.B1.S2",
+              "value": 0.02747964672744274
+            },
+            {
+              "name": "L2.B2.S2",
+              "value": 0.027438996359705925
+            },
+            {
+              "name": "L2.B1.S1",
+              "value": 0.027438580989837646
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.027432294562458992
+            },
+            {
+              "name": "L2.B0.S2",
+              "value": 0.027410956099629402
+            },
+            {
+              "name": "L2.B2.S1",
+              "value": 0.02739339880645275
+            },
+            {
+              "name": "L2.B1.S0",
+              "value": 0.027392564341425896
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.02738461084663868
+            }
+          ]
+        },
+        {
+          "class": "right",
+          "top": [
+            {
+              "name": "L2.B0.S2",
+              "value": 0.029606906697154045
+            },
+            {
+              "name": "L2.B1.S2",
+              "value": 0.02944830246269703
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.029419569298624992
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.029290558770298958
+            },
+            {
+              "name": "L2.B1.S1",
+              "value": 0.029233423992991447
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.02921914868056774
+            },
+            {
+              "name": "L2.B2.S2",
+              "value": 0.02913367561995983
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.029062626883387566
+            }
+          ]
+        },
+        {
+          "class": "on",
+          "top": [
+            {
+              "name": "L2.B0.S2",
+              "value": 0.02954619936645031
+            },
+            {
+              "name": "L2.B1.S2",
+              "value": 0.02937358431518078
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.029359223321080208
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.029230503365397453
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.029159218072891235
+            },
+            {
+              "name": "L2.B1.S1",
+              "value": 0.029159218072891235
+            },
+            {
+              "name": "L2.B2.S2",
+              "value": 0.029144974425435066
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.029003022238612175
+            }
+          ]
+        },
+        {
+          "class": "off",
+          "top": [
+            {
+              "name": "L2.B0.S2",
+              "value": 0.029795410111546516
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.029606880620121956
+            },
+            {
+              "name": "L2.B1.S2",
+              "value": 0.029477061703801155
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.029405178502202034
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.02933350019156933
+            },
+            {
+              "name": "L2.B2.S2",
+              "value": 0.02926194854080677
+            },
+            {
+              "name": "L2.B1.S1",
+              "value": 0.029247673228383064
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.02909100241959095
+            }
+          ]
+        },
+        {
+          "class": "stop",
+          "top": [
+            {
+              "name": "L2.B0.S2",
+              "value": 0.02959251217544079
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.029419628903269768
+            },
+            {
+              "name": "L2.B1.S2",
+              "value": 0.029362203553318977
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.029233457520604134
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.029190661385655403
+            },
+            {
+              "name": "L2.B1.S1",
+              "value": 0.029176415875554085
+            },
+            {
+              "name": "L2.B2.S2",
+              "value": 0.029119493439793587
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.028977660462260246
+            }
+          ]
+        },
+        {
+          "class": "go",
+          "top": [
+            {
+              "name": "L2.B0.S2",
+              "value": 0.02759617380797863
+            },
+            {
+              "name": "L2.B3.S2",
+              "value": 0.027581848204135895
+            },
+            {
+              "name": "L2.B1.S2",
+              "value": 0.02755829691886902
+            },
+            {
+              "name": "L2.B0.S1",
+              "value": 0.0275532528758049
+            },
+            {
+              "name": "L2.B3.S1",
+              "value": 0.02753475494682789
+            },
+            {
+              "name": "L2.B2.S2",
+              "value": 0.027532242238521576
+            },
+            {
+              "name": "L2.B1.S1",
+              "value": 0.027511239051818848
+            },
+            {
+              "name": "L2.B0.S0",
+              "value": 0.027506202459335327
+            }
+          ]
+        }
+      ],
+      "suspicious": []
+    },
+    "exec_stats": {
+      "computed_ops": 488.0,
+      "all_ops": 792.0,
+      "estimated_speedup": 1.6229508196721312
+    },
+    "grad_report": {
+      "definition": "grad_x_gate=mean(abs(dloss/dgate)*gate), divided by GradScaler scale",
+      "top": [
+        {
+          "type": "class_read",
+          "address": "class.left.read.L2.B0.S2",
+          "grad_x_gate": 4.287765841581859e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L2.B1.S2",
+          "grad_x_gate": 4.246663593221456e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L2.B0.S1",
+          "grad_x_gate": 4.215343142277561e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L2.B2.S2",
+          "grad_x_gate": 4.214810178382322e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L2.B3.S2",
+          "grad_x_gate": 4.189887113170698e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L2.B1.S1",
+          "grad_x_gate": 4.1612576751504093e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L2.B0.S0",
+          "grad_x_gate": 4.127720603719354e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L2.B2.S1",
+          "grad_x_gate": 4.1276831325376406e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L2.B3.S1",
+          "grad_x_gate": 4.101622471353039e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L2.B0.S2",
+          "grad_x_gate": 4.073132004123181e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L2.B1.S0",
+          "grad_x_gate": 4.067387635586783e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L2.B2.S0",
+          "grad_x_gate": 4.026670285384171e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L2.B3.S0",
+          "grad_x_gate": 4.0023292967816815e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L2.B0.S1",
+          "grad_x_gate": 3.994427606812678e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L2.B1.S2",
+          "grad_x_gate": 3.985781950177625e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L2.B3.S2",
+          "grad_x_gate": 3.951065809815191e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L2.B2.S2",
+          "grad_x_gate": 3.930457751266658e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L2.B0.S0",
+          "grad_x_gate": 3.899747389368713e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L2.B1.S1",
+          "grad_x_gate": 3.8896741898497567e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.go.read.L2.B0.S2",
+          "grad_x_gate": 3.864135214826092e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L2.B3.S1",
+          "grad_x_gate": 3.8550595490960404e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L2.B2.S1",
+          "grad_x_gate": 3.828443004749715e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.go.read.L2.B1.S2",
+          "grad_x_gate": 3.803903382504359e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L2.B1.S0",
+          "grad_x_gate": 3.779839971684851e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.go.read.L2.B0.S1",
+          "grad_x_gate": 3.775119694182649e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.go.read.L2.B3.S2",
+          "grad_x_gate": 3.751823533093557e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.go.read.L2.B2.S2",
+          "grad_x_gate": 3.750939868041314e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L2.B3.S0",
+          "grad_x_gate": 3.7418740248540416e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.left.read.L1.B0.S2",
+          "grad_x_gate": 3.732984623638913e-05
+        },
+        {
+          "type": "class_read",
+          "address": "class.down.read.L2.B2.S0",
+          "grad_x_gate": 3.7102377973496914e-05
+        },
+        {
+          "type": "step_read",
+          "address": "L1.B0.S0.read.layer_route",
+          "grad_x_gate": 2.170138770907215e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L2.B0.S0.read.layer_route",
+          "grad_x_gate": 2.170138770907215e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L2.B1.S0.read.layer_route",
+          "grad_x_gate": 2.170138770907215e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L2.B2.S0.read.layer_route",
+          "grad_x_gate": 2.170138770907215e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L2.B3.S0.read.layer_route",
+          "grad_x_gate": 2.170138770907215e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L1.B1.S0.read.layer_route",
+          "grad_x_gate": 2.1701384866901208e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L1.B2.S0.read.layer_route",
+          "grad_x_gate": 2.1701384866901208e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L1.B3.S0.read.layer_route",
+          "grad_x_gate": 2.1701384866901208e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L0.B0.S1.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L0.B0.S2.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L0.B1.S1.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L0.B1.S2.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L0.B2.S2.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L0.B3.S2.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L1.B0.S1.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L1.B0.S2.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L1.B1.S1.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L1.B1.S2.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L1.B2.S1.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L1.B2.S2.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L1.B3.S1.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L1.B3.S2.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L2.B0.S1.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L2.B0.S2.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L2.B1.S1.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L2.B1.S2.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L2.B2.S1.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L2.B2.S2.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L2.B3.S1.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L2.B3.S2.read.layer_route",
+          "grad_x_gate": 2.1701382024730265e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L0.B2.S1.read.layer_route",
+          "grad_x_gate": 2.1701374919302907e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L0.B3.S1.read.layer_route",
+          "grad_x_gate": 2.1701374919302907e-07
+        },
+        {
+          "type": "transition",
+          "address": "L2.B0.S0.P0->P1.replace",
+          "grad_x_gate": 2.1701372077131964e-07
+        },
+        {
+          "type": "transition",
+          "address": "L2.B0.S1.P0->P1.replace",
+          "grad_x_gate": 2.1701372077131964e-07
+        },
+        {
+          "type": "transition",
+          "address": "L2.B0.S2.P0->P1.replace",
+          "grad_x_gate": 2.1701372077131964e-07
+        },
+        {
+          "type": "transition",
+          "address": "L2.B1.S1.P0->P1.replace",
+          "grad_x_gate": 2.1701372077131964e-07
+        },
+        {
+          "type": "transition",
+          "address": "L2.B1.S2.P0->P1.replace",
+          "grad_x_gate": 2.1701372077131964e-07
+        },
+        {
+          "type": "transition",
+          "address": "L2.B3.S2.P0->P1.replace",
+          "grad_x_gate": 2.1701372077131964e-07
+        },
+        {
+          "type": "transition",
+          "address": "L1.B0.S2.P0->P1.replace",
+          "grad_x_gate": 2.1701363550619135e-07
+        },
+        {
+          "type": "transition",
+          "address": "L2.B1.S0.P0->P1.replace",
+          "grad_x_gate": 2.1701363550619135e-07
+        },
+        {
+          "type": "transition",
+          "address": "L2.B2.S0.P0->P1.replace",
+          "grad_x_gate": 2.1701363550619135e-07
+        },
+        {
+          "type": "transition",
+          "address": "L2.B2.S1.P0->P1.replace",
+          "grad_x_gate": 2.1701363550619135e-07
+        },
+        {
+          "type": "transition",
+          "address": "L2.B2.S2.P0->P1.replace",
+          "grad_x_gate": 2.1701363550619135e-07
+        },
+        {
+          "type": "transition",
+          "address": "L2.B3.S0.P0->P1.replace",
+          "grad_x_gate": 2.1701363550619135e-07
+        },
+        {
+          "type": "transition",
+          "address": "L2.B3.S1.P0->P1.replace",
+          "grad_x_gate": 2.1701363550619135e-07
+        },
+        {
+          "type": "transition",
+          "address": "L1.B0.S1.P0->P1.replace",
+          "grad_x_gate": 2.1701360708448192e-07
+        },
+        {
+          "type": "transition",
+          "address": "L1.B1.S2.P0->P1.replace",
+          "grad_x_gate": 2.1701360708448192e-07
+        },
+        {
+          "type": "transition",
+          "address": "L1.B0.S0.P0->P1.replace",
+          "grad_x_gate": 2.1701352181935363e-07
+        },
+        {
+          "type": "transition",
+          "address": "L1.B1.S1.P0->P1.replace",
+          "grad_x_gate": 2.1701352181935363e-07
+        },
+        {
+          "type": "transition",
+          "address": "L1.B2.S2.P0->P1.replace",
+          "grad_x_gate": 2.1701352181935363e-07
+        },
+        {
+          "type": "transition",
+          "address": "L1.B3.S1.P0->P1.replace",
+          "grad_x_gate": 2.1701352181935363e-07
+        },
+        {
+          "type": "transition",
+          "address": "L1.B3.S2.P0->P1.replace",
+          "grad_x_gate": 2.1701352181935363e-07
+        },
+        {
+          "type": "transition",
+          "address": "L1.B1.S0.P0->P1.replace",
+          "grad_x_gate": 2.170134933976442e-07
+        },
+        {
+          "type": "transition",
+          "address": "L1.B2.S0.P0->P1.replace",
+          "grad_x_gate": 2.170134933976442e-07
+        },
+        {
+          "type": "transition",
+          "address": "L1.B2.S1.P0->P1.replace",
+          "grad_x_gate": 2.170134933976442e-07
+        },
+        {
+          "type": "transition",
+          "address": "L1.B3.S0.P0->P1.replace",
+          "grad_x_gate": 2.170134933976442e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L0.B0.S0.read.layer_route",
+          "grad_x_gate": 2.1701342234337062e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L0.B1.S0.read.layer_route",
+          "grad_x_gate": 2.1701342234337062e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L0.B2.S0.read.layer_route",
+          "grad_x_gate": 2.1701342234337062e-07
+        },
+        {
+          "type": "step_read",
+          "address": "L0.B3.S0.read.layer_route",
+          "grad_x_gate": 2.1701342234337062e-07
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S2.P0->P1.replace",
+          "grad_x_gate": 2.1701328023482347e-07
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S2.P0->P1.replace",
+          "grad_x_gate": 2.1701319496969518e-07
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S1.P0->P1.replace",
+          "grad_x_gate": 2.1701318075884046e-07
+        },
+        {
+          "type": "transition",
+          "address": "L0.B3.S2.P0->P1.replace",
+          "grad_x_gate": 2.1701318075884046e-07
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S1.P0->P1.replace",
+          "grad_x_gate": 2.1701306707200274e-07
+        },
+        {
+          "type": "transition",
+          "address": "L0.B2.S2.P0->P1.replace",
+          "grad_x_gate": 2.1701306707200274e-07
+        },
+        {
+          "type": "transition",
+          "address": "L0.B0.S0.P0->P1.replace",
+          "grad_x_gate": 2.170130386502933e-07
+        },
+        {
+          "type": "transition",
+          "address": "L0.B3.S1.P0->P1.replace",
+          "grad_x_gate": 2.1701295338516502e-07
+        },
+        {
+          "type": "transition",
+          "address": "L0.B1.S0.P0->P1.replace",
+          "grad_x_gate": 2.170129249634556e-07
+        },
+        {
+          "type": "transition",
+          "address": "L0.B2.S1.P0->P1.replace",
+          "grad_x_gate": 2.170129249634556e-07
+        }
+      ],
+      "by_address": {
+        "L0.B0.S1.P0.identity": 1.898871602179497e-07,
+        "L0.B0.S1.P1.identity": 1.898871602179497e-07,
+        "L0.B0.S2.P0.identity": 1.898871602179497e-07,
+        "L0.B0.S2.P1.identity": 1.898871602179497e-07,
+        "L0.B1.S1.P0.identity": 1.898871602179497e-07,
+        "L0.B1.S1.P1.identity": 1.898871602179497e-07,
+        "L0.B1.S2.P0.identity": 1.898871602179497e-07,
+        "L0.B1.S2.P1.identity": 1.898871602179497e-07,
+        "L0.B2.S1.P0.identity": 1.898871602179497e-07,
+        "L0.B2.S1.P1.identity": 1.898871602179497e-07,
+        "L0.B2.S2.P0.identity": 1.898871602179497e-07,
+        "L0.B2.S2.P1.identity": 1.898871602179497e-07,
+        "L0.B3.S1.P0.identity": 1.898871602179497e-07,
+        "L0.B3.S1.P1.identity": 1.898871602179497e-07,
+        "L0.B3.S2.P0.identity": 1.898871602179497e-07,
+        "L0.B3.S2.P1.identity": 1.898871602179497e-07,
+        "L1.B0.S0.P0.identity": 1.898871602179497e-07,
+        "L1.B0.S0.P1.identity": 1.898871602179497e-07,
+        "L1.B0.S1.P0.identity": 1.898871602179497e-07,
+        "L1.B0.S1.P1.identity": 1.898871602179497e-07,
+        "L1.B0.S2.P0.identity": 1.898871602179497e-07,
+        "L1.B0.S2.P1.identity": 1.898871602179497e-07,
+        "L1.B1.S0.P0.identity": 1.898871602179497e-07,
+        "L1.B1.S0.P1.identity": 1.898871602179497e-07,
+        "L1.B1.S1.P0.identity": 1.898871602179497e-07,
+        "L1.B1.S1.P1.identity": 1.898871602179497e-07,
+        "L1.B1.S2.P0.identity": 1.898871602179497e-07,
+        "L1.B1.S2.P1.identity": 1.898871602179497e-07,
+        "L1.B2.S0.P0.identity": 1.898871602179497e-07,
+        "L1.B2.S0.P1.identity": 1.898871602179497e-07,
+        "L1.B2.S1.P0.identity": 1.898871602179497e-07,
+        "L1.B2.S1.P1.identity": 1.898871602179497e-07,
+        "L1.B2.S2.P0.identity": 1.898871602179497e-07,
+        "L1.B2.S2.P1.identity": 1.898871602179497e-07,
+        "L1.B3.S0.P0.identity": 1.898871602179497e-07,
+        "L1.B3.S0.P1.identity": 1.898871602179497e-07,
+        "L1.B3.S1.P0.identity": 1.898871602179497e-07,
+        "L1.B3.S1.P1.identity": 1.898871602179497e-07,
+        "L1.B3.S2.P0.identity": 1.898871602179497e-07,
+        "L1.B3.S2.P1.identity": 1.898871602179497e-07,
+        "L2.B0.S0.P0->P1.replace": 2.1701372077131964e-07,
+        "L2.B0.S1.P0->P1.replace": 2.1701372077131964e-07,
+        "L2.B0.S2.P0->P1.replace": 2.1701372077131964e-07,
+        "L2.B1.S1.P0->P1.replace": 2.1701372077131964e-07,
+        "L2.B1.S2.P0->P1.replace": 2.1701372077131964e-07,
+        "L2.B3.S2.P0->P1.replace": 2.1701372077131964e-07,
+        "L1.B0.S2.P0->P1.replace": 2.1701363550619135e-07,
+        "L2.B1.S0.P0->P1.replace": 2.1701363550619135e-07,
+        "L2.B2.S0.P0->P1.replace": 2.1701363550619135e-07,
+        "L2.B2.S1.P0->P1.replace": 2.1701363550619135e-07,
+        "L2.B2.S2.P0->P1.replace": 2.1701363550619135e-07,
+        "L2.B3.S0.P0->P1.replace": 2.1701363550619135e-07,
+        "L2.B3.S1.P0->P1.replace": 2.1701363550619135e-07,
+        "L1.B0.S1.P0->P1.replace": 2.1701360708448192e-07,
+        "L1.B1.S2.P0->P1.replace": 2.1701360708448192e-07,
+        "L1.B0.S0.P0->P1.replace": 2.1701352181935363e-07,
+        "L1.B1.S1.P0->P1.replace": 2.1701352181935363e-07,
+        "L1.B2.S2.P0->P1.replace": 2.1701352181935363e-07,
+        "L1.B3.S1.P0->P1.replace": 2.1701352181935363e-07,
+        "L1.B3.S2.P0->P1.replace": 2.1701352181935363e-07,
+        "L1.B1.S0.P0->P1.replace": 2.170134933976442e-07,
+        "L1.B2.S0.P0->P1.replace": 2.170134933976442e-07,
+        "L1.B2.S1.P0->P1.replace": 2.170134933976442e-07,
+        "L1.B3.S0.P0->P1.replace": 2.170134933976442e-07,
+        "L0.B0.S2.P0->P1.replace": 2.1701328023482347e-07,
+        "L0.B1.S2.P0->P1.replace": 2.1701319496969518e-07,
+        "L0.B0.S1.P0->P1.replace": 2.1701318075884046e-07,
+        "L0.B3.S2.P0->P1.replace": 2.1701318075884046e-07,
+        "L0.B1.S1.P0->P1.replace": 2.1701306707200274e-07,
+        "L0.B2.S2.P0->P1.replace": 2.1701306707200274e-07,
+        "L0.B0.S0.P0->P1.replace": 2.170130386502933e-07,
+        "L0.B3.S1.P0->P1.replace": 2.1701295338516502e-07,
+        "L0.B1.S0.P0->P1.replace": 2.170129249634556e-07,
+        "L0.B2.S1.P0->P1.replace": 2.170129249634556e-07,
+        "L0.B2.S0.P0->P1.replace": 2.1701271180063486e-07,
+        "L0.B3.S0.P0->P1.replace": 2.1701271180063486e-07,
+        "L0.B2.S0.P0->P1.compare_mix": 2.067637727698468e-12,
+        "L0.B3.S0.P0->P1.compare_mix": 1.9907441580618856e-12,
+        "L0.B1.S0.P0->P1.compare_mix": 1.713651030972596e-12,
+        "L0.B2.S1.P0->P1.compare_mix": 1.632050506024385e-12,
+        "L1.B0.S0.read.layer_route": 2.170138770907215e-07,
+        "L2.B0.S0.read.layer_route": 2.170138770907215e-07,
+        "L2.B1.S0.read.layer_route": 2.170138770907215e-07,
+        "L2.B2.S0.read.layer_route": 2.170138770907215e-07,
+        "L2.B3.S0.read.layer_route": 2.170138770907215e-07,
+        "L1.B1.S0.read.layer_route": 2.1701384866901208e-07,
+        "L1.B2.S0.read.layer_route": 2.1701384866901208e-07,
+        "L1.B3.S0.read.layer_route": 2.1701384866901208e-07,
+        "L0.B0.S1.read.layer_route": 2.1701382024730265e-07,
+        "L0.B0.S2.read.layer_route": 2.1701382024730265e-07,
+        "L0.B1.S1.read.layer_route": 2.1701382024730265e-07,
+        "L0.B1.S2.read.layer_route": 2.1701382024730265e-07,
+        "L0.B2.S2.read.layer_route": 2.1701382024730265e-07,
+        "L0.B3.S2.read.layer_route": 2.1701382024730265e-07,
+        "L1.B0.S1.read.layer_route": 2.1701382024730265e-07,
+        "L1.B0.S2.read.layer_route": 2.1701382024730265e-07,
+        "L1.B1.S1.read.layer_route": 2.1701382024730265e-07,
+        "L1.B1.S2.read.layer_route": 2.1701382024730265e-07,
+        "L1.B2.S1.read.layer_route": 2.1701382024730265e-07,
+        "L1.B2.S2.read.layer_route": 2.1701382024730265e-07,
+        "L1.B3.S1.read.layer_route": 2.1701382024730265e-07,
+        "L1.B3.S2.read.layer_route": 2.1701382024730265e-07,
+        "L2.B0.S1.read.layer_route": 2.1701382024730265e-07,
+        "L2.B0.S2.read.layer_route": 2.1701382024730265e-07,
+        "L2.B1.S1.read.layer_route": 2.1701382024730265e-07,
+        "L2.B1.S2.read.layer_route": 2.1701382024730265e-07,
+        "L2.B2.S1.read.layer_route": 2.1701382024730265e-07,
+        "L2.B2.S2.read.layer_route": 2.1701382024730265e-07,
+        "L2.B3.S1.read.layer_route": 2.1701382024730265e-07,
+        "L2.B3.S2.read.layer_route": 2.1701382024730265e-07,
+        "L0.B2.S1.read.layer_route": 2.1701374919302907e-07,
+        "L0.B3.S1.read.layer_route": 2.1701374919302907e-07,
+        "L0.B0.S0.read.layer_route": 2.1701342234337062e-07,
+        "L0.B1.S0.read.layer_route": 2.1701342234337062e-07,
+        "L0.B2.S0.read.layer_route": 2.1701342234337062e-07,
+        "L0.B3.S0.read.layer_route": 2.1701342234337062e-07,
+        "L0.B2.S0.read.task": 8.12623460275802e-13,
+        "L0.B3.S0.read.task": 7.951143541316819e-13,
+        "L0.B2.S0.read.state": 7.879301052761412e-13,
+        "L0.B3.S0.read.state": 7.737547039719794e-13,
+        "L0.B2.S0.write_gate": 1.5754924491753752e-12,
+        "L0.B3.S0.write_gate": 1.459076132484527e-12,
+        "L0.B1.S0.write_gate": 1.3737054029017148e-12,
+        "L0.B0.S0.write_gate": 1.2650502390423868e-12,
+        "L0.B2.S1.write_gate": 1.2184802862871824e-12,
+        "L0.B3.S1.write_gate": 1.1408699505943698e-12,
+        "L0.B1.S1.write_gate": 1.0787825710859011e-12,
+        "L0.B0.S1.write_gate": 1.0011716932920023e-12,
+        "L0.B2.S2.write_gate": 9.701279493276593e-13,
+        "L0.B3.S2.write_gate": 9.235616828598414e-13,
+        "L0.B1.S2.write_gate": 8.692348056615895e-13,
+        "L0.B0.S2.write_gate": 8.226683765634457e-13,
+        "L1.B2.S0.write_gate": 5.199885118843672e-13,
+        "L1.B3.S0.write_gate": 4.889445510795898e-13,
+        "L1.B1.S0.write_gate": 4.734224080468752e-13,
+        "L1.B2.S1.write_gate": 4.579002650141606e-13,
+        "L1.B0.S0.write_gate": 4.3461740283079475e-13,
+        "L1.B3.S1.write_gate": 4.2685627710432883e-13,
+        "L1.B1.S1.write_gate": 4.1909528690313447e-13,
+        "L1.B2.S2.write_gate": 4.1133418828172286e-13,
+        "class.left.read.L2.B0.S2": 4.287765841581859e-05,
+        "class.left.read.L2.B1.S2": 4.246663593221456e-05,
+        "class.left.read.L2.B0.S1": 4.215343142277561e-05,
+        "class.left.read.L2.B2.S2": 4.214810178382322e-05,
+        "class.left.read.L2.B3.S2": 4.189887113170698e-05,
+        "class.left.read.L2.B1.S1": 4.1612576751504093e-05,
+        "class.left.read.L2.B0.S0": 4.127720603719354e-05,
+        "class.left.read.L2.B2.S1": 4.1276831325376406e-05,
+        "class.left.read.L2.B3.S1": 4.101622471353039e-05,
+        "class.down.read.L2.B0.S2": 4.073132004123181e-05,
+        "class.left.read.L2.B1.S0": 4.067387635586783e-05,
+        "class.left.read.L2.B2.S0": 4.026670285384171e-05,
+        "class.left.read.L2.B3.S0": 4.0023292967816815e-05,
+        "class.down.read.L2.B0.S1": 3.994427606812678e-05,
+        "class.down.read.L2.B1.S2": 3.985781950177625e-05,
+        "class.down.read.L2.B3.S2": 3.951065809815191e-05,
+        "class.down.read.L2.B2.S2": 3.930457751266658e-05,
+        "class.down.read.L2.B0.S0": 3.899747389368713e-05,
+        "class.down.read.L2.B1.S1": 3.8896741898497567e-05,
+        "class.go.read.L2.B0.S2": 3.864135214826092e-05,
+        "class.down.read.L2.B3.S1": 3.8550595490960404e-05,
+        "class.down.read.L2.B2.S1": 3.828443004749715e-05,
+        "class.go.read.L2.B1.S2": 3.803903382504359e-05,
+        "class.down.read.L2.B1.S0": 3.779839971684851e-05,
+        "class.go.read.L2.B0.S1": 3.775119694182649e-05,
+        "class.go.read.L2.B3.S2": 3.751823533093557e-05,
+        "class.go.read.L2.B2.S2": 3.750939868041314e-05,
+        "class.down.read.L2.B3.S0": 3.7418740248540416e-05,
+        "class.left.read.L1.B0.S2": 3.732984623638913e-05,
+        "class.down.read.L2.B2.S0": 3.7102377973496914e-05
+      }
+    }
+  }
+}

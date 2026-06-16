@@ -1,0 +1,1110 @@
+{
+  "run_dir": "runs/step_program_v2_fast_projected_topk_grad",
+  "num_epochs": 10,
+  "best": {
+    "epoch": 1.0,
+    "train_loss": 1.4586403487523396,
+    "train_ce": 1.4580956557591755,
+    "train_acc": 0.25983333333333336,
+    "val_loss": 4.560954826354981,
+    "val_acc": 0.186,
+    "best_acc": 0.186,
+    "cost_loss": 0.4136184767882029,
+    "primitive_entropy": 2.31419681485494,
+    "transition_entropy": 1.738067746480306,
+    "read_entropy": 1.8399462025960287,
+    "write_l1": 0.2621460434595744,
+    "exec_speedup": 1.0
+  },
+  "last": {
+    "epoch": 10.0,
+    "train_loss": 1.386835989634196,
+    "train_ce": 1.386586007754008,
+    "train_acc": 0.26266666666666666,
+    "val_loss": 6.4846092834472655,
+    "val_acc": 0.186,
+    "best_acc": 0.186,
+    "cost_loss": 0.05000000645716985,
+    "primitive_entropy": 2.1460386381780455e-06,
+    "transition_entropy": 4.176846664904587e-06,
+    "read_entropy": 2.029917822255811e-06,
+    "write_l1": 3.637553175129445e-07,
+    "exec_speedup": 1.6229508196721312
+  },
+  "latest_analysis_file": "runs/step_program_v2_fast_projected_topk_grad/analysis_epoch_010.json",
+  "latest_events_file": "runs/step_program_v2_fast_projected_topk_grad/events_epoch_010.jsonl",
+  "event_counts_by_type": {
+    "layer_route": 60,
+    "utility": 36,
+    "step_read": 288,
+    "primitive": 792,
+    "transition": 216,
+    "class_read": 370
+  },
+  "exec_stats": {
+    "computed_ops": 488.0,
+    "all_ops": 792.0,
+    "estimated_speedup": 1.6229508196721312
+  },
+  "top_grad": [
+    {
+      "type": "class_read",
+      "address": "class.left.read.L2.B0.S2",
+      "prob": 0.027410956099629402,
+      "grad_x_gate": 4.287765841581859e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.left.read.L2.B1.S2",
+      "prob": 0.02747964672744274,
+      "grad_x_gate": 4.246663593221456e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.left.read.L2.B0.S1",
+      "prob": 0.027360407635569572,
+      "grad_x_gate": 4.215343142277561e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.left.read.L2.B2.S2",
+      "prob": 0.027438996359705925,
+      "grad_x_gate": 4.214810178382322e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.left.read.L2.B3.S2",
+      "prob": 0.027432294562458992,
+      "grad_x_gate": 4.189887113170698e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.left.read.L2.B1.S1",
+      "prob": 0.027438580989837646,
+      "grad_x_gate": 4.1612576751504093e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.left.read.L2.B0.S0",
+      "prob": 0.027304502204060555,
+      "grad_x_gate": 4.127720603719354e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.left.read.L2.B2.S1",
+      "prob": 0.02739339880645275,
+      "grad_x_gate": 4.1276831325376406e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.left.read.L2.B3.S1",
+      "prob": 0.02738461084663868,
+      "grad_x_gate": 4.101622471353039e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.down.read.L2.B0.S2",
+      "prob": 0.02734670229256153,
+      "grad_x_gate": 4.073132004123181e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.left.read.L2.B1.S0",
+      "prob": 0.027392564341425896,
+      "grad_x_gate": 4.067387635586783e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.left.read.L2.B2.S0",
+      "prob": 0.027342023327946663,
+      "grad_x_gate": 4.026670285384171e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.left.read.L2.B3.S0",
+      "prob": 0.027329931035637856,
+      "grad_x_gate": 4.0023292967816815e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.down.read.L2.B0.S1",
+      "prob": 0.02733064629137516,
+      "grad_x_gate": 3.994427606812678e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.down.read.L2.B1.S2",
+      "prob": 0.027279822155833244,
+      "grad_x_gate": 3.985781950177625e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.down.read.L2.B3.S2",
+      "prob": 0.027285246178507805,
+      "grad_x_gate": 3.951065809815191e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.down.read.L2.B2.S2",
+      "prob": 0.027270255610346794,
+      "grad_x_gate": 3.930457751266658e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.down.read.L2.B0.S0",
+      "prob": 0.027313143014907837,
+      "grad_x_gate": 3.899747389368713e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.down.read.L2.B1.S1",
+      "prob": 0.02725359983742237,
+      "grad_x_gate": 3.8896741898497567e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.go.read.L2.B0.S2",
+      "prob": 0.02759617380797863,
+      "grad_x_gate": 3.864135214826092e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.down.read.L2.B3.S1",
+      "prob": 0.027258602902293205,
+      "grad_x_gate": 3.8550595490960404e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.down.read.L2.B2.S1",
+      "prob": 0.02724197320640087,
+      "grad_x_gate": 3.828443004749715e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.go.read.L2.B1.S2",
+      "prob": 0.02755829691886902,
+      "grad_x_gate": 3.803903382504359e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.down.read.L2.B1.S0",
+      "prob": 0.027224095538258553,
+      "grad_x_gate": 3.779839971684851e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.go.read.L2.B0.S1",
+      "prob": 0.0275532528758049,
+      "grad_x_gate": 3.775119694182649e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.go.read.L2.B3.S2",
+      "prob": 0.027581848204135895,
+      "grad_x_gate": 3.751823533093557e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.go.read.L2.B2.S2",
+      "prob": 0.027532242238521576,
+      "grad_x_gate": 3.750939868041314e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.down.read.L2.B3.S0",
+      "prob": 0.027229489758610725,
+      "grad_x_gate": 3.7418740248540416e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.left.read.L1.B0.S2",
+      "prob": 0.027178974822163582,
+      "grad_x_gate": 3.732984623638913e-05
+    },
+    {
+      "type": "class_read",
+      "address": "class.down.read.L2.B2.S0",
+      "prob": 0.02720957063138485,
+      "grad_x_gate": 3.7102377973496914e-05
+    }
+  ],
+  "top_utility": [
+    {
+      "type": "utility",
+      "address": "L0.B2.S0",
+      "write_gate": 1.6093257215743506e-07,
+      "class_read_mass": 0.025065917521715164,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 4.033922529345091e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B2.S1",
+      "write_gate": 1.4305113893442467e-07,
+      "class_read_mass": 0.0256075169891119,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.663184422464383e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S0",
+      "write_gate": 1.4305113893442467e-07,
+      "class_read_mass": 0.025280993431806564,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.6164748973277483e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B3.S0",
+      "write_gate": 1.4305113893442467e-07,
+      "class_read_mass": 0.025139546021819115,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.596240638614745e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B2.S2",
+      "write_gate": 1.2516976255483314e-07,
+      "class_read_mass": 0.02608705684542656,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.2653106885049965e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S1",
+      "write_gate": 1.2516976255483314e-07,
+      "class_read_mass": 0.025794560089707375,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.2286988638219327e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B3.S1",
+      "write_gate": 1.2516976255483314e-07,
+      "class_read_mass": 0.02566947042942047,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.213041610550249e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S0",
+      "write_gate": 1.2516976255483314e-07,
+      "class_read_mass": 0.02542414329946041,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.182333951912142e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S2",
+      "write_gate": 1.072883222263954e-07,
+      "class_read_mass": 0.026365553960204124,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 2.8287161502049685e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S2",
+      "write_gate": 1.072883222263954e-07,
+      "class_read_mass": 0.026261378079652786,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 2.817539090926857e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B3.S2",
+      "write_gate": 1.072883222263954e-07,
+      "class_read_mass": 0.026144590228796005,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 2.8050091138709377e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S1",
+      "write_gate": 1.072883222263954e-07,
+      "class_read_mass": 0.02591441199183464,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 2.7803137570003855e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B2.S0",
+      "write_gate": 8.940696716308594e-08,
+      "class_read_mass": 0.026841599494218826,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 2.399826115606629e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B1.S2",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027659595012664795,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9783683580243405e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B3.S2",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.0275568924844265,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9710224563596057e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B0.S1",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027523601427674294,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9686412500163897e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B2.S2",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027491707354784012,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.96635996374539e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B1.S1",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027385234832763672,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.958744499930276e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B3.S1",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.02726658061146736,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9502577330854365e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B0.S0",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027237001806497574,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9481420920897108e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B2.S1",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027193952351808548,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9450629995532154e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B1.S0",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027068769559264183,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9361090508596135e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B3.S0",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.02693188562989235,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.926318438094654e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B0.S2",
+      "write_gate": 5.36441611131977e-08,
+      "class_read_mass": 0.028744280338287354,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.5419627796831037e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B0.S1",
+      "write_gate": 5.36441611131977e-08,
+      "class_read_mass": 0.028623804450035095,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.5354999494121557e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B1.S2",
+      "write_gate": 5.36441611131977e-08,
+      "class_read_mass": 0.028606127947568893,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.5345517079268234e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B3.S2",
+      "write_gate": 5.3644171771338733e-08,
+      "class_read_mass": 0.028509894385933876,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.5293897259738287e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B0.S0",
+      "write_gate": 5.36441611131977e-08,
+      "class_read_mass": 0.028493989259004593,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.528536186512497e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B1.S1",
+      "write_gate": 5.36441611131977e-08,
+      "class_read_mass": 0.028468186035752296,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.5271519604453943e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B2.S2",
+      "write_gate": 5.3644171771338733e-08,
+      "class_read_mass": 0.028439048677682877,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.5255892105159319e-09
+    }
+  ],
+  "low_utility_writers": [
+    {
+      "type": "utility",
+      "address": "L0.B2.S0",
+      "write_gate": 1.6093257215743506e-07,
+      "class_read_mass": 0.025065917521715164,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 4.033922529345091e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S0",
+      "write_gate": 1.4305113893442467e-07,
+      "class_read_mass": 0.025280993431806564,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.6164748973277483e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B2.S1",
+      "write_gate": 1.4305113893442467e-07,
+      "class_read_mass": 0.0256075169891119,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.663184422464383e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B3.S0",
+      "write_gate": 1.4305113893442467e-07,
+      "class_read_mass": 0.025139546021819115,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.596240638614745e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S0",
+      "write_gate": 1.2516976255483314e-07,
+      "class_read_mass": 0.02542414329946041,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.182333951912142e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S1",
+      "write_gate": 1.2516976255483314e-07,
+      "class_read_mass": 0.025794560089707375,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.2286988638219327e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B2.S2",
+      "write_gate": 1.2516976255483314e-07,
+      "class_read_mass": 0.02608705684542656,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.2653106885049965e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B3.S1",
+      "write_gate": 1.2516976255483314e-07,
+      "class_read_mass": 0.02566947042942047,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 3.213041610550249e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S1",
+      "write_gate": 1.072883222263954e-07,
+      "class_read_mass": 0.02591441199183464,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 2.7803137570003855e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B0.S2",
+      "write_gate": 1.072883222263954e-07,
+      "class_read_mass": 0.026365553960204124,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 2.8287161502049685e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B1.S2",
+      "write_gate": 1.072883222263954e-07,
+      "class_read_mass": 0.026261378079652786,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 2.817539090926857e-09
+    },
+    {
+      "type": "utility",
+      "address": "L0.B3.S2",
+      "write_gate": 1.072883222263954e-07,
+      "class_read_mass": 0.026144590228796005,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 2.8050091138709377e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B2.S0",
+      "write_gate": 8.940696716308594e-08,
+      "class_read_mass": 0.026841599494218826,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 2.399826115606629e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B0.S0",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027237001806497574,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9481420920897108e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B0.S1",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027523601427674294,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9686412500163897e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B1.S0",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027068769559264183,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9361090508596135e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B1.S1",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027385234832763672,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.958744499930276e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B1.S2",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027659595012664795,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9783683580243405e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B2.S1",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027193952351808548,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9450629995532154e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B2.S2",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.027491707354784012,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.96635996374539e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B3.S0",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.02693188562989235,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.926318438094654e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B3.S1",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.02726658061146736,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9502577330854365e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B3.S2",
+      "write_gate": 7.152556946721234e-08,
+      "class_read_mass": 0.0275568924844265,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.9710224563596057e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B2.S2",
+      "write_gate": 5.3644171771338733e-08,
+      "class_read_mass": 0.028439048677682877,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.5255892105159319e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B3.S0",
+      "write_gate": 5.3644171771338733e-08,
+      "class_read_mass": 0.028184672817587852,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.511943459320264e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B3.S1",
+      "write_gate": 5.3644171771338733e-08,
+      "class_read_mass": 0.02835841104388237,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.5212634485450849e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B3.S2",
+      "write_gate": 5.3644171771338733e-08,
+      "class_read_mass": 0.028509894385933876,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.5293897259738287e-09
+    },
+    {
+      "type": "utility",
+      "address": "L1.B0.S2",
+      "write_gate": 5.36441611131977e-08,
+      "class_read_mass": 0.027787843719124794,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.4906555989568915e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B0.S0",
+      "write_gate": 5.36441611131977e-08,
+      "class_read_mass": 0.028493989259004593,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.528536186512497e-09
+    },
+    {
+      "type": "utility",
+      "address": "L2.B0.S1",
+      "write_gate": 5.36441611131977e-08,
+      "class_read_mass": 0.028623804450035095,
+      "safe_mass": 0.3333333432674408,
+      "nontrivial_mass": 0.0,
+      "expensive_mass": 0.0,
+      "utility_proxy": 1.5354999494121557e-09
+    }
+  ],
+  "competing_primitives_low_margin": [],
+  "expensive_low_grad_computed": [
+    {
+      "type": "primitive",
+      "address": "L0.B0.S0.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B0.S0.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B0.S1.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B0.S1.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B0.S2.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B0.S2.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B1.S0.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B1.S0.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B1.S1.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B1.S1.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B1.S2.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B1.S2.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B2.S0.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B2.S0.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B2.S1.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B2.S1.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B2.S2.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B2.S2.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B3.S0.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B3.S0.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B3.S1.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B3.S1.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B3.S2.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L0.B3.S2.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L1.B0.S0.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L1.B0.S0.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L1.B0.S1.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L1.B0.S1.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L1.B0.S2.P0.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    },
+    {
+      "type": "primitive",
+      "address": "L1.B0.S2.P1.compare",
+      "prob": 0.0,
+      "cost": 0.75,
+      "selected": true,
+      "computed": true,
+      "top_margin": 1.0
+    }
+  ],
+  "skipped_high_prob_primitives": [],
+  "suspicious": []
+}
