@@ -2,7 +2,7 @@
 
 Clean repository for the differentiable matrix-program architecture builder.
 
-## Active next experiment: v3.1 no-router matrix chain
+## Active next experiment: v3.1 no-router matrix chain with fixed input/head
 
 The current next experiment is:
 
@@ -10,20 +10,39 @@ The current next experiment is:
 experiments/step_program/run_step_program_v3_1_no_router_matrix_chain.py
 ```
 
-Core idea:
+Before running, commands apply:
+
+```text
+tools/patch_v3_block_input_concat_head.py
+```
+
+This fixes the shared v3/v3.1 failure mode:
+
+```text
+old: all blocks start from mean(evidence) + block_emb
+new: every block gets its own learned evidence projection
+
+old: final head receives mean(final_blocks)
+new: final head receives concat(final_blocks)
+
+old: input context starts very weak
+new: S0 gets strong input context, S1 medium, S2 weaker
+```
+
+Core idea remains natural and sequential:
 
 ```text
 Input/Evidence
+  -> block-specific input states
   -> L0 -> L1 -> L2 -> L3
   -> inside each layer: S0 -> S1 -> S2
   -> inside each step: fixed matrix-operation chain
+  -> concat final blocks
   -> final-layer output head
   -> loss
 ```
 
-v3.1 removes the remaining router-like softmax family choice from v3.
-
-There is no operation selection.  Every operation runs in fixed order and receives gradient:
+v3.1 has no operation selection. Every operation runs in fixed order and receives gradient:
 
 ```text
 h <- Norm(h + gain_small     * small_refine(h, ctx))
@@ -35,17 +54,11 @@ h <- Norm(h + gain_compare   * compare(h, ctx))
 h <- Norm(h + gain_normalize * normalize_delta(h))
 ```
 
-The gains are independent sigmoid gates, not a softmax.  Multiple operations can be active together.  Specialization is measured through `gain`, `update_norm`, and `grad_x_gain` per address.
+The gains are independent sigmoid gates, not a softmax. Multiple operations can be active together. Specialization is measured through `gain`, `update_norm`, and `grad_x_gain` per address.
 
-## Previous active line: v3 clean sequential
+## Previous reports
 
-The previous v3 file remains available:
-
-```text
-experiments/step_program/run_step_program_v3_clean_sequential.py
-```
-
-It removed the v2 layer/step/class-read shortcuts, but still had a softmax family gate. The first v3 report showed balanced data but no learning: val stayed at 10%, train stayed near 10%, and the confusion matrix predicted one class for all examples. Therefore v3.1 removes the family softmax and tests a fixed chain.
+The first v3 and v3.1 reports both stayed at 10% despite balanced data. v3.1 showed update norms growing, so operations were running, but the classifier still received no useful class signal. The likely issue was shared block initialization plus final block averaging.
 
 ## Archived v2 line
 
@@ -54,8 +67,6 @@ The v2/v2.1/v2.2 experiments are diagnostic/archive only. See:
 ```text
 archive/v2/README.md
 ```
-
-They remain in the repository so old reports can be reproduced, but they are no longer the main development path.
 
 ## Development log
 
@@ -87,7 +98,7 @@ If the dataset is somewhere else:
 DATA_ROOT=/path/to/speechcommands/root bash commands/run_v3_1_no_router_chain_speechcommands.sh
 ```
 
-Older v3 softmax-family commands:
+Older v3 softmax-family commands, also patched with fixed block input/head:
 
 ```bash
 bash commands/run_v3_clean_seq_smoke.sh
@@ -111,7 +122,7 @@ runs/<run>/last.pt
 Example query:
 
 ```bash
-python tools/query_events.py ./runs/step_program_v3_1_no_router_chain_speechcommands/events_epoch_001.jsonl --top 20 --sort grad_x_gain
+python tools/query_events.py ./runs/step_program_v3_1_no_router_chain_fixed_input/events_epoch_001.jsonl --top 20 --sort grad_x_gain
 ```
 
 ## Auto-analysis
@@ -119,13 +130,13 @@ python tools/query_events.py ./runs/step_program_v3_1_no_router_chain_speechcomm
 Create a compact summary:
 
 ```bash
-python tools/analyze_run.py ./runs/step_program_v3_1_no_router_chain_speechcommands
+python tools/analyze_run.py ./runs/step_program_v3_1_no_router_chain_fixed_input
 ```
 
 Publish lightweight report files to GitHub, without checkpoints:
 
 ```bash
-bash commands/publish_run_report.sh ./runs/step_program_v3_1_no_router_chain_speechcommands step_program_v3_1_no_router_chain_speechcommands "Add v3.1 no-router chain report"
+bash commands/publish_run_report.sh ./runs/step_program_v3_1_no_router_chain_fixed_input step_program_v3_1_no_router_chain_fixed_input "Add v3.1 fixed-input no-router chain report"
 ```
 
 Published reports go to:
@@ -136,4 +147,4 @@ reports/<report_name>/
 
 ## Current rule
 
-Do not add attention, projected top-k, growth, or plateau controller until v3.1 proves whether the fixed sequential matrix-chain learns.
+Do not add attention, projected top-k, growth, or plateau controller until v3.1 fixed-input proves whether the fixed sequential matrix-chain learns.
